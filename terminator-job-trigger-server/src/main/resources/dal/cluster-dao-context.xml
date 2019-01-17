@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans>
+	<!-- cluster status -->
+	<bean id="taskDAO"
+		class="com.taobao.terminator.trigger.biz.dal.dao.impl.TaskDAOImpl"
+		parent="basicTerminatorTriggerDao" />
+	
+	
+
+	<!-- <bean id="clusterStatusDatasource" class="org.apache.commons.dbcp.BasicDataSource" 
+		destroy-method="close"> <property name="driverClassName" value="com.mysql.jdbc.Driver" 
+		/> <property name="url" value="jdbc:mysql://10.232.31.148:3306/terminator_stat?useUnicode=yes&amp;characterEncoding=utf8" 
+		/> <property name="username" value="term_stat_app" /> <property name="password" 
+		value="app_123" /> <property name="validationQuery" value="select 1" /> </bean> -->
+	<bean id="basicTerminatorTriggerDao"
+		class="org.springframework.orm.ibatis.support.SqlMapClientDaoSupport"
+		abstract="true">
+		<property name="dataSource" ref="terminatorTriggerBizDalDatasource" />
+		<property name="sqlMapClient">
+			<bean class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+				<property name="configLocation" value="classpath:/dal/trigger-sqlmap-config.xml" />
+			</bean>
+		</property>
+	</bean>
+</beans>

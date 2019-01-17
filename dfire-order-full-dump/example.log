@@ -1,0 +1,85 @@
+DEBUG main org.apache.hadoop.util.Shell - Failed to detect a valid hadoop home directory
+  java.io.IOException: HADOOP_HOME or hadoop.home.dir are not set.
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:302)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:327)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.findHadoopBinary(HiveConf.java:2180)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.<clinit>(HiveConf.java:351)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:133)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:118)
+	at com.dfire.tis.fullbuild.taskflow.hive.HiveInsertFromSelectParser.<clinit>(HiveInsertFromSelectParser.java:176)
+ERROR main org.apache.hadoop.util.Shell - Failed to locate the winutils binary in the hadoop binary path
+  java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.findHadoopBinary(HiveConf.java:2180)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.<clinit>(HiveConf.java:351)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:133)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:118)
+	at com.dfire.tis.fullbuild.taskflow.hive.HiveInsertFromSelectParser.<clinit>(HiveInsertFromSelectParser.java:176)
+INFO main hive.ql.parse.ParseDriver - Parsing command: select col1 from user
+  INFO main hive.ql.parse.ParseDriver - Parse Completed
+  DEBUG main org.apache.hadoop.util.Shell - Failed to detect a valid hadoop home directory
+  java.io.IOException: HADOOP_HOME or hadoop.home.dir are not set.
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:302)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:327)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.findHadoopBinary(HiveConf.java:2180)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.<clinit>(HiveConf.java:351)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:133)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:118)
+	at com.dfire.tis.fullbuild.taskflow.hive.HiveInsertFromSelectParser.<clinit>(HiveInsertFromSelectParser.java:176)
+ERROR main org.apache.hadoop.util.Shell - Failed to locate the winutils binary in the hadoop binary path
+  java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.findHadoopBinary(HiveConf.java:2180)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.<clinit>(HiveConf.java:351)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:133)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:118)
+	at com.dfire.tis.fullbuild.taskflow.hive.HiveInsertFromSelectParser.<clinit>(HiveInsertFromSelectParser.java:176)
+INFO main hive.ql.parse.ParseDriver - Parsing command: select col1 from user
+  INFO main hive.ql.parse.ParseDriver - Parse Completed
+  DEBUG main org.apache.hadoop.util.Shell - Failed to detect a valid hadoop home directory
+  java.io.IOException: HADOOP_HOME or hadoop.home.dir are not set.
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:302)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:327)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.findHadoopBinary(HiveConf.java:2180)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.<clinit>(HiveConf.java:351)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:133)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:118)
+	at com.dfire.tis.fullbuild.taskflow.hive.HiveInsertFromSelectParser.<clinit>(HiveInsertFromSelectParser.java:176)
+ERROR main org.apache.hadoop.util.Shell - Failed to locate the winutils binary in the hadoop binary path
+  java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.findHadoopBinary(HiveConf.java:2180)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.<clinit>(HiveConf.java:351)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:133)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:118)
+	at com.dfire.tis.fullbuild.taskflow.hive.HiveInsertFromSelectParser.<clinit>(HiveInsertFromSelectParser.java:176)
+INFO main hive.ql.parse.ParseDriver - Parsing command: select col1 from user
+  INFO main hive.ql.parse.ParseDriver - Parse Completed
+  DEBUG main org.apache.hadoop.util.Shell - Failed to detect a valid hadoop home directory
+  java.io.IOException: HADOOP_HOME or hadoop.home.dir are not set.
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:302)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:327)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.findHadoopBinary(HiveConf.java:2180)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.<clinit>(HiveConf.java:351)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:133)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:118)
+	at com.dfire.tis.fullbuild.taskflow.hive.HiveInsertFromSelectParser.<clinit>(HiveInsertFromSelectParser.java:176)
+ERROR main org.apache.hadoop.util.Shell - Failed to locate the winutils binary in the hadoop binary path
+  java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.findHadoopBinary(HiveConf.java:2180)
+	at org.apache.hadoop.hive.conf.HiveConf$ConfVars.<clinit>(HiveConf.java:351)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:133)
+	at org.apache.hadoop.hive.ql.Context.<init>(Context.java:118)
+	at com.dfire.tis.fullbuild.taskflow.hive.HiveInsertFromSelectParser.<clinit>(HiveInsertFromSelectParser.java:176)
+INFO main hive.ql.parse.ParseDriver - Parsing command: select col1 from user
+  INFO main hive.ql.parse.ParseDriver - Parse Completed
+  

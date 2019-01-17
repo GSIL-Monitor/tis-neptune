@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="supplier_goods" >
+  <resultMap id="ibatorgenerated_BaseResultMap" class="com.taobao.com.dfire.tis.supplyGoods.pojo.SupplierGoods" >
+    <!--
+      WARNING - if you hava any question please contact to baisui(baisui@taobao.com)
+    -->
+    <result column="id" property="id" jdbcType="VARCHAR" />
+    <result column="entity_id" property="entityId" jdbcType="VARCHAR" />
+    <result column="supplier_id" property="supplierId" jdbcType="VARCHAR" />
+    <result column="goods_id" property="goodsId" jdbcType="VARCHAR" />
+    <result column="num_unit_id" property="numUnitId" jdbcType="VARCHAR" />
+    <result column="weight_unit_id" property="weightUnitId" jdbcType="VARCHAR" />
+    <result column="goods_num" property="goodsNum" jdbcType="DECIMAL" />
+    <result column="goods_weight" property="goodsWeight" jdbcType="DECIMAL" />
+    <result column="price" property="price" jdbcType="BIGINT" />
+    <result column="is_valid" property="isValid" jdbcType="BIT" />
+    <result column="create_time" property="createTime" jdbcType="BIGINT" />
+    <result column="op_time" property="opTime" jdbcType="BIGINT" />
+    <result column="last_ver" property="lastVer" jdbcType="INTEGER" />
+    <result column="extend_fields" property="extendFields" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="ibatorgenerated_Example_Where_Clause" >
+    <!--
+      WARNING - if you hava any question please contact to baisui(baisui@taobao.com)
+    -->
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$
+            #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <select id="ibatorgenerated_selectByExample" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.taobao.com.dfire.tis.supplyGoods.pojo.SupplierGoodsCriteria" >
+    <!--
+      WARNING - if you hava any question please contact to baisui(baisui@taobao.com)
+    -->
+    select aa.id, entity_id, supplier_id, goods_id, num_unit_id, weight_unit_id, goods_num,
+      goods_weight, price, is_valid, create_time, op_time, last_ver, extend_fields
+     from ( select id from supplier_goods 
+    <isParameterPresent >
+      <include refid="supplier_goods.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+      limit #skip#,#pageSize#
+    </isParameterPresent>
+       ) bb inner join supplier_goods aa on aa.id=bb.id
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.taobao.com.dfire.tis.supplyGoods.pojo.SupplierGoods" >
+    <!--
+      WARNING - if you hava any question please contact to baisui(baisui@taobao.com)
+    -->
+    select id, entity_id, supplier_id, goods_id, num_unit_id, weight_unit_id, goods_num,
+      goods_weight, price, is_valid, create_time, op_time, last_ver, extend_fields
+    from supplier_goods
+    where id = #id:VARCHAR#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.taobao.com.dfire.tis.supplyGoods.pojo.SupplierGoods" >
+    <!--
+      WARNING - if you hava any question please contact to baisui(baisui@taobao.com)
+    -->
+    delete from supplier_goods
+    where id = #id:VARCHAR#
+  </delete>
+  <delete id="ibatorgenerated_deleteByExample" parameterClass="com.taobao.com.dfire.tis.supplyGoods.pojo.SupplierGoodsCriteria" >
+    <!--
+      WARNING - if you hava any question please contact to baisui(baisui@taobao.com)
+    -->
+    delete from supplier_goods
+    <include refid="supplier_goods.ibatorgenerated_Example_Where_Clause" />
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.taobao.com.dfire.tis.supplyGoods.pojo.SupplierGoods" >
+    <!--
+      WARNING - if you hava any question please contact to baisui(baisui@taobao.com)
+    -->
+    insert into supplier_goods (id, entity_id, supplier_id, goods_id, num_unit_id, weight_unit_id,
+      goods_num, goods_weight, price, is_valid, create_time, op_time, last_ver, extend_fields)
+    values (#id:VARCHAR#, #entityId:VARCHAR#, #supplierId:VARCHAR#, #goodsId:VARCHAR#,
+      #numUnitId:VARCHAR#, #weightUnitId:VARCHAR#, #goodsNum:DECIMAL#, #goodsWeight:DECIMAL#,
+      #price:BIGINT#, #isValid:BIT#, #createTime:BIGINT#, #opTime:BIGINT#, #lastVer:INTEGER#,
+      #extendFields:VARCHAR#)
+  </insert>
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.taobao.com.dfire.tis.supplyGoods.pojo.SupplierGoods" >
+    <!--
+      WARNING - if you hava any question please contact to baisui(baisui@taobao.com)
+    -->
+    insert into supplier_goods
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="entityId" >
+        entity_id
+      </isNotNull>
+      <isNotNull prepend="," property="supplierId" >
+        supplier_id
+      </isNotNull>
+      <isNotNull prepend="," property="goodsId" >
+        goods_id
+      </isNotNull>
+      <isNotNull prepend="," property="numUnitId" >
+        num_unit_id
+      </isNotNull>
+      <isNotNull prepend="," property="weightUnitId" >
+        weight_unit_id
+      </isNotNull>
+      <isNotNull prepend="," property="goodsNum" >
+        goods_num
+      </isNotNull>
+      <isNotNull prepend="," property="goodsWeight" >
+        goods_weight
+      </isNotNull>
+      <isNotNull prepend="," property="price" >
+        price
+      </isNotNull>
+      <isNotNull prepend="," property="isValid" >
+        is_valid
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        create_time
+      </isNotNull>
+      <isNotNull prepend="," property="opTime" >
+        op_time
+      </isNotNull>
+      <isNotNull prepend="," property="lastVer" >
+        last_ver
+      </isNotNull>
+      <isNotNull prepend="," property="extendFields" >
+        extend_fields
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="entityId" >
+        #entityId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="supplierId" >
+        #supplierId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="goodsId" >
+        #goodsId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="numUnitId" >
+        #numUnitId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="weightUnitId" >
+        #weightUnitId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="goodsNum" >
+        #goodsNum:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="goodsWeight" >
+        #goodsWeight:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="price" >
+        #price:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="isValid" >
+        #isValid:BIT#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        #createTime:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="opTime" >
+        #opTime:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="lastVer" >
+        #lastVer:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="extendFields" >
+        #extendFields:VARCHAR#
+      </isNotNull>
+      )
+    </dynamic>
+  </insert>
+  <select id="ibatorgenerated_countByExample" parameterClass="com.taobao.com.dfire.tis.supplyGoods.pojo.SupplierGoodsCriteria" resultClass="java.lang.Integer" >
+    <!--
+      WARNING - if you hava any question please contact to baisui(baisui@taobao.com)
+    -->
+    select count(*) from supplier_goods
+    <include refid="supplier_goods.ibatorgenerated_Example_Where_Clause" />
+  </select>
+  <update id="ibatorgenerated_updateByExampleSelective" >
+    <!--
+      WARNING - if you hava any question please contact to baisui(baisui@taobao.com)
+    -->
+    update supplier_goods
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.entityId" >
+        entity_id = #record.entityId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.supplierId" >
+        supplier_id = #record.supplierId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.goodsId" >
+        goods_id = #record.goodsId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.numUnitId" >
+        num_unit_id = #record.numUnitId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.weightUnitId" >
+        weight_unit_id = #record.weightUnitId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.goodsNum" >
+        goods_num = #record.goodsNum:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.goodsWeight" >
+        goods_weight = #record.goodsWeight:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.price" >
+        price = #record.price:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.isValid" >
+        is_valid = #record.isValid:BIT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createTime" >
+        create_time = #record.createTime:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.opTime" >
+        op_time = #record.opTime:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.lastVer" >
+        last_ver = #record.lastVer:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.extendFields" >
+        extend_fields = #record.extendFields:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="supplier_goods.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExample" >
+    <!--
+      WARNING - if you hava any question please contact to baisui(baisui@taobao.com)
+    -->
+    update supplier_goods
+    set id = #record.id:VARCHAR#,
+      entity_id = #record.entityId:VARCHAR#,
+      supplier_id = #record.supplierId:VARCHAR#,
+      goods_id = #record.goodsId:VARCHAR#,
+      num_unit_id = #record.numUnitId:VARCHAR#,
+      weight_unit_id = #record.weightUnitId:VARCHAR#,
+      goods_num = #record.goodsNum:DECIMAL#,
+      goods_weight = #record.goodsWeight:DECIMAL#,
+      price = #record.price:BIGINT#,
+      is_valid = #record.isValid:BIT#,
+      create_time = #record.createTime:BIGINT#,
+      op_time = #record.opTime:BIGINT#,
+      last_ver = #record.lastVer:INTEGER#,
+      extend_fields = #record.extendFields:VARCHAR#
+    <isParameterPresent >
+      <include refid="supplier_goods.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+</sqlMap>

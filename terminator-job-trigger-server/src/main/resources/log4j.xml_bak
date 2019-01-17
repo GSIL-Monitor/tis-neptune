@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="INDEX_DUMP" class="org.apache.log4j.ConsoleAppender">
+		<param name="Append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM-dd HH:mm:ss} %p %l - %m%n" />
+		</layout>
+	</appender>
+
+
+	<appender name="allFile" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/home/admin/logs/trigger-server-all.log" />
+		<param name="MaxFileSize" value="4048KB" />
+		<param name="MaxBackupIndex" value="15" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM-dd HH:mm:ss} %p [%c{2}] %l - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="jetty" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/home/admin/logs/trigger-server-jetty.log" />
+		<param name="MaxFileSize" value="4048KB" />
+		<param name="MaxBackupIndex" value="15" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM-dd HH:mm:ss} %p [%c{2}] %l - %m%n" />
+		</layout>
+	</appender>
+<!-- 
+	<logger name="io.netty">
+		<level value="DEBUG" />
+		<appender-ref ref="INDEX_DUMP" />
+		<appender-ref ref="allFile" />
+	</logger>
+ -->
+	<logger name="com.taobao.terminator">
+		<level value="DEBUG" />
+		<appender-ref ref="INDEX_DUMP" />
+		<appender-ref ref="allFile" />
+	</logger>
+
+	<logger name="org.mortbay.log">
+		<level value="DEBUG" />
+		<appender-ref ref="INDEX_DUMP" />
+		<appender-ref ref="jetty" />
+	</logger>
+
+</log4j:configuration>

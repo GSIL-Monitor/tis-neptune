@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+
+		<!DOCTYPE schema PUBLIC ""
+		"http://terminator.admin.taobao.org:9999/dtd/solrschema.dtd">
+	<!--
+		<!DOCTYPE schema SYSTEM
+		"D:\\j2ee_solution\\mvn_test\\terminator-job-trigger-test\\solrschema.dtd">
+	-->
+<schema name="search4taodan" version="1.1">
+	<types>
+		<fieldType name="string_pd" class="solr.TextField"
+			sortMissingLast="true" omitNorms="true">
+			<analyzer class="net.paoding.analysis.analyzer.PaodingAnalyzer"></analyzer>
+		</fieldType>
+		<fieldType name="int" class="solr.IntField" omitNorms="true" />
+		<fieldType name="short" class="solr.ShortField" omitNorms="true" />
+		<fieldType name="sint" class="solr.SortableIntField"
+			omitNorms="true" />
+		<fieldType name="long" class="solr.LongField" omitNorms="true" />
+		<fieldType name="slong" class="solr.SortableLongField"
+			tokenized="false" omitNorms="true" omitTermFreqAndPositions="true" />
+		<fieldType name="tlong" class="solr.TrieLongField"
+			precisionStep="8" omitNorms="true" positionIncrementGap="0" />
+		<fieldType name="srlong"
+			class="com.taobao.terminator.core.fieldx.SLongRangeField" tokenized="false"
+			omitNorms="true" omitTermFreqAndPositions="true" />
+		<fieldType name="tint" class="solr.TrieIntField"
+			precisionStep="8" omitNorms="true" positionIncrementGap="0" />
+	</types>
+	<fields>
+		<field name="id" type="tlong" indexed="true" stored="true"
+			multiValued="false" required="true" />
+		<field name="userId" type="slong" indexed="true" stored="true"
+			multiValued="false" />
+		<field name="itemId" type="long" indexed="true" stored="true"
+			multiValued="false" />
+		<field name="categoryId" type="long" indexed="true" stored="true"
+			multiValued="false" />
+		<field name="topCategoryId" type="long" indexed="true" stored="true"
+			multiValued="false" />
+		<field name="buyState" type="int" indexed="true" stored="true"
+			multiValued="false" />
+		<field name="showFlag" type="int" indexed="true" stored="true"
+			multiValued="false" />
+		<field name="gmtCreate" type="tlong" indexed="true" stored="true"
+			multiValued="false" />
+		<field name="gmtModified" type="tlong" indexed="true" stored="true"
+			multiValued="false" />
+		<field name="imgQuality" type="sint" indexed="true" stored="true"
+			multiValued="false" />
+		<field name="source" type="string_pd" indexed="true" stored="true"
+			multiValued="false" />
+		<field name="_SFS_" type="slong" indexed="true" stored="true"
+			multiValued="false" default="categoryId:L,imgQuality:S,gmtModified:L" />
+	</fields>
+	<!-- field to use to determine and enforce document uniqueness. -->
+	<uniqueKey>id</uniqueKey>
+
+	<!--
+		field for the QueryParser to use when an explicit fieldname is absent
+	-->
+	<defaultSearchField>id</defaultSearchField>
+	<similarity
+		class="com.taobao.terminator.service.payload.PayloadSimilarityFactory">
+		<str name="1_categoryId">LONG</str>
+		<str name="2_imgQuality">SHORT</str>
+		<str name="3_gmtModified">LONG</str>
+	</similarity>
+
+
+	<!-- SolrQueryParser configuration: defaultOperator="AND|OR" -->
+	<solrQueryParser defaultOperator="OR" />
+</schema>

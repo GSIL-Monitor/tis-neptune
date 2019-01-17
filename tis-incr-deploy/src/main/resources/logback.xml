@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="false">
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<target>System.out</target>
+		<encoding>${loggingCharset}</encoding>
+		<!-- <filter class="com.alibaba.citrus.logconfig.logback.LevelRangeFilter"> 
+			<levelMax>INFO</levelMax> </filter> -->
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern><![CDATA[%d{yyyy-MM-dd HH:mm:ss} %level %X{app} %logger{35}- %msg%n]]></pattern>
+		</layout>
+	</appender>
+
+
+	<appender name="incrDeployAppender" class="ch.qos.logback.classic.sift.SiftingAppender">
+		<discriminator>
+			<Key>app</Key>
+			<DefaultValue>unknown</DefaultValue>
+		</discriminator>
+		<sift>
+			<appender name="FILE-${app}"
+				class="ch.qos.logback.core.rolling.RollingFileAppender">
+				<File>${log.dir}/incrDeploy/${app}.log</File>
+				<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+					<fileNamePattern>${log.dir}/incrDeploy/bak/%d{yyyy-MM-dd}-${app}.log
+					</fileNamePattern>
+					<maxHistory>10</maxHistory>
+				</rollingPolicy>
+				<encoder>
+					<pattern><![CDATA[%d{MM-dd HH:mm:ss} %level %logger{35}-%msg%n]]></pattern>
+				</encoder>
+			</appender>
+		</sift>
+	</appender>
+
+
+	<logger name="incr_deploy">
+		<level value="INFO" />
+		<appender-ref ref="incrDeployAppender" />
+	</logger>
+
+
+
+
+	<root>
+		<level value="ERROR" />
+		<appender-ref ref="STDOUT" /> 
+	</root>
+
+</configuration>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- <import resource="classpath:/conf/terminatorTriggerBizDal-dao-context.xml" 
+		/> <import resource="classpath:/conf/terminator-job-trigger-relation-context.xml" 
+		/> -->
+	<!-- from /conf/terminator-job-trigger-relation-context.xml -->
+	<!-- <bean id="feebackServer" class="com.taobao.terminator.trigger.feedback.FeebackServer"> 
+		<property name="exportPort" value="8091" /> <property name="triggerBizDAO" 
+		ref="terminatorTriggerBizDalDaoFacade" /> <property name="jobMetaDataDAO" 
+		ref="jobMetaDataDAO" /> </bean> -->
+	<!-- will connect to 7777 -->
+
+	<bean id="taskDAO"
+		class="com.taobao.terminator.trigger.biz.dal.dao.impl.TaskDAOImpl"
+		parent="basicTerminatorTriggerDao" />
+
+	<bean id="terminatorTriggerBizDalDatasource" class="com.taobao.tddl.jdbc.group.TGroupDataSource"
+		init-method="init">
+		<property name="appName" value="JST_TERMJOB_APP" />
+		<property name="dbGroupKey" value="JST_TERMINATOR_JOB_GROUP" />
+	</bean>
+
+
+	<!-- <bean id="clusterStatusDatasource" class="org.apache.commons.dbcp.BasicDataSource" 
+		destroy-method="close"> <property name="driverClassName" value="com.mysql.jdbc.Driver" 
+		/> <property name="url" value="jdbc:mysql://10.232.31.148:3306/terminator_stat?useUnicode=yes&amp;characterEncoding=utf8" 
+		/> <property name="username" value="term_stat_app" /> <property name="password" 
+		value="app_123" /> <property name="validationQuery" value="select 1" /> </bean> -->
+	<bean id="basicTerminatorTriggerDao"
+		class="org.springframework.orm.ibatis.support.SqlMapClientDaoSupport"
+		abstract="true">
+		<property name="dataSource" ref="terminatorTriggerBizDalDatasource" />
+		<property name="sqlMapClient">
+			<bean class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+				<property name="configLocation" value="classpath:/dal/trigger-sqlmap-config.xml" />
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="triggerServerRegister"
+		class="com.taobao.terminator.trigger.utils.TriggerServerRegisterFactory" />
+
+
+	<bean id="logCollector" class="com.taobao.terminator.trigger.jst.LogCollector">
+		<constructor-arg index="0" ref="feedbackService" />
+	</bean>
+
+
+	<bean id="dumpOverNotifyClient" class="com.taobao.terminator.trigger.jst.DumpOverNotifyClient">
+		<property name="feedbackService" ref="feedbackService" />
+		<property name="triggerServerRegister" ref="triggerServerRegister" />
+	</bean>
+
+	<bean id="tddlDumpAndBuildClient"
+		class="com.taobao.terminator.trigger.jst.TddlDumpAndBuildClient">
+		<property name="feedbackService" ref="feedbackService" />
+	</bean>
+
+	<bean id="tairCache" class="com.taobao.terminator.trigger.cache.TSearchCacheFactory">
+		<property name="configID" value="${tair.namespace}"></property>
+		<property name="dynamicConfig" value="true"></property>
+	</bean>
+
+
+	<bean id="triggerJobManage" class="com.taobao.terminator.trigger.TriggerJobManage">
+		<property name="triggerServerRegister" ref="triggerServerRegister" />
+	</bean>
+
+
+	<bean id="triggerJobServer" class="com.taobao.terminator.trigger.socket.TriggerJobServer">
+		<constructor-arg index="0" value="9998" />
+		<property name="dumpOverNotifyClient" ref="dumpOverNotifyClient" />
+		<property name="triggerServerRegister" ref="triggerServerRegister" />
+		<property name="tddlDumpAndBuildClient" ref="tddlDumpAndBuildClient" />
+		<property name="taskDAO" ref="taskDAO" />
+		<property name="cache" ref="tairCache" />
+		<property name="feedbackService" ref="feedbackService" />
+	</bean>
+
+	<bean id="feedbackService" class="com.taobao.terminator.trigger.feedback.FeedbackService">
+		<constructor-arg index="0" ref="tairCache" />
+		<property name="taskDAO" ref="taskDAO" />
+	</bean>
+
+	<bean id="distributeComponentLogCollect"
+		class="com.taobao.terminator.trigger.socket.DistributeComponentLogCollect">
+		<property name="feedbackService" ref="feedbackService" />
+	</bean>
+
+	<!-- <bean id="consoleTriggerJobService" class="org.springframework.remoting.rmi.RmiServiceExporter"> 
+		<property name="serviceName"> <value>consoleTriggerJobService</value> </property> 
+		<property name="service" ref="triggerJobServer" /> <property name="serviceInterface"> 
+		<value>com.taobao.terminator.trigger.rmi.TriggerJobConsole</value> </property> 
+		<property name="registry"> <bean class="org.springframework.remoting.rmi.RmiRegistryFactoryBean"> 
+		<property name="port" value="9997" /> </bean> </property> </bean> -->
+
+</beans>

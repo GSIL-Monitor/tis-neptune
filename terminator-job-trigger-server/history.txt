@@ -1,0 +1,2 @@
+version:758
+最终使用block io方式，之后的提交是为了将triggerserver改造成为nio的方式采用多路复用

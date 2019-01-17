@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<import resource="classpath:/conf/terminatorTriggerBizDal-dao-context.xml" />
+	<import resource="classpath:/conf/terminator-job-trigger-relation-context.xml" />
+
+	<import
+		resource="classpath:/config/terminatorTriggerBizDal-datasource-context.xml" />
+
+	<import resource="/config/terminator-job-trigger-config-context.xml" />
+
+
+	<bean id="feedbackService" class="com.taobao.terminator.trigger.feedback.FeedbackService">
+		<property name="taskDAO" ref="taskDAO" />
+	</bean>
+
+</beans>

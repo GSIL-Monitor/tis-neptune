@@ -1,0 +1,2 @@
+入口类以及方法
+BasicTerminatorClient.executeDumpTask

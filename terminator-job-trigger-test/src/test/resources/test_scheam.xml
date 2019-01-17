@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+	<!--
+		<!DOCTYPE schema PUBLIC ""
+		"http://10.232.136.79:8080/doc/solrschema.dtd">
+	-->
+ <!DOCTYPE schema PUBLIC "" "http://terminator.admin.taobao.org:9999/dtd/solrschema.dtd">
+<schema name="search4barbarian" version="1.1">
+	<types>
+
+		<fieldType name="text_paoding" class="solr.TextField"
+			sortMissingLast="true" omitNorms="true" autoGeneratePhraseQueries="false">
+			<analyzer class="net.paoding.analysis.analyzer.PaodingAnalyzer" />
+		</fieldType>
+
+		<fieldType name="text_sem" class="solr.TextField"
+			positionIncrementGap="100" autoGeneratePhraseQueries="false">
+			<analyzer>
+				<tokenizer class="solr.PatternTokenizerFactory" pattern="[^;]+"
+					group="0" />
+			</analyzer>
+		</fieldType>
+
+		<fieldType name="tdouble" class="solr.TrieDoubleField"
+			precisionStep="8" omitNorms="true" positionIncrementGap="0" />
+
+		<fieldType name="text_ws" class="solr.TextField"
+			positionIncrementGap="100" autoGeneratePhraseQueries="false">
+			<analyzer>
+				<tokenizer class="solr.WhitespaceTokenizerFactory" />
+			</analyzer>
+		</fieldType>
+
+		<fieldType name="tfloat" class="solr.TrieFloatField"
+			omitNorms="true" />
+
+		<fieldType name="string" class="solr.TextField"
+			sortMissingLast="true" omitNorms="true" />
+		<fieldType name="tlong" class="solr.TrieLongField"
+			precisionStep="0" omitNorms="true" positionIncrementGap="0" />
+		<fieldType name="long" class="solr.LongField" omitNorms="true" />
+		<fieldType name="int" class="solr.IntField" omitNorms="true" />
+		<fieldType name="short" class="solr.ShortField" omitNorms="true" />
+		<fieldType name="slong" class="solr.SortableLongField"
+			omitNorms="true" />
+		<fieldType name="sdouble" class="solr.SortableDoubleField"
+			omitNorms="true" />
+	</types>
+	<fields>
+
+		<field name="item_title" type="text_paoding" indexed="true"
+			stored="true" />
+		<field name="item_id" type="long" indexed="true" stored="true"
+			required="true" />
+		<field name="reserve_price" type="tdouble" indexed="true"
+			stored="true" />
+		<field name="price" type="tdouble" indexed="true" stored="true" />
+		<field name="deal_count" type="tlong" indexed="true" stored="true" />
+		<field name="appraise_count" type="tlong" indexed="true" stored="true" />
+		<field name="seller_id" type="long" indexed="false" stored="true" />
+		<field name="division_desc" type="text_ws" indexed="true"
+			stored="true" />
+		<field name="tags" type="text_sem" indexed="true" stored="true" />
+		<field name="shop_rate" type="tfloat" indexed="true" stored="true" />
+
+	</fields>
+	
+	<uniqueKey>item_id</uniqueKey>
+	<defaultSearchField>item_title</defaultSearchField>
+	<solrQueryParser defaultOperator="OR" />
+</schema>

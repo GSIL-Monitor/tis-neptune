@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tsearcher="http://www.taobao.com/terminator/tsearcher"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+       http://www.taobao.com/terminator/tsearcher http://www.taobao.com/terminator/tsearcher.xsd">
+<!-- --> 
+    <tsearcher:realtime id="search4union_template_detail"
+        justDump="true">
+        <tsearcher:fulldump ref="templateDetail"
+            waitQueueSize="2" maxPoolSize="2" />
+        <tsearcher:grouprouter
+            class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+    </tsearcher:realtime>
+
+
+    <!--1 supplier_goods 表-->
+    <tsearcher:realtime id="search4union_supplier_goods" justDump="true">
+        <tsearcher:fulldump ref="supplierGoodsProvider"
+                            waitQueueSize="2" maxPoolSize="2"/>
+        <tsearcher:grouprouter
+                class="com.taobao.terminator.hdfs.client.router.Group32RandRouter"/>
+    </tsearcher:realtime>
+
+    <!--2 warehouse_goods 表-->
+    <tsearcher:realtime id="search4union_warehouse_goods" justDump="true">
+        <tsearcher:fulldump ref="warehouseGoodsProvider"
+                            waitQueueSize="2" maxPoolSize="2"/>
+        <tsearcher:grouprouter
+                class="com.taobao.terminator.hdfs.client.router.Group32RandRouter"/>
+    </tsearcher:realtime>
+
+<!--3 stock_change_log 表
+    <tsearcher:realtime id="search4union_stock_change_log" justDump="true">
+        <tsearcher:fulldump ref="stockChangeLogProvider"
+                            waitQueueSize="2" maxPoolSize="2"/>
+        <tsearcher:grouprouter
+                class="com.taobao.terminator.hdfs.client.router.Group32RandRouter"/>
+    </tsearcher:realtime>
+-->
+    <!--4 goods_sale_allow 表-->
+    <tsearcher:realtime id="search4union_goods_sale_allow" justDump="true">
+        <tsearcher:fulldump ref="goodsSaleAllowProvider"
+                            waitQueueSize="2" maxPoolSize="2"/>
+        <tsearcher:grouprouter
+                class="com.taobao.terminator.hdfs.client.router.Group32RandRouter"/>
+    </tsearcher:realtime>
+
+    <!--5 provide_goods 表-->
+    <tsearcher:realtime id="search4union_provide_goods" justDump="true">
+        <tsearcher:fulldump ref="provideGoodsProvider"
+                            waitQueueSize="2" maxPoolSize="2"/>
+        <tsearcher:grouprouter
+                class="com.taobao.terminator.hdfs.client.router.Group32RandRouter"/>
+    </tsearcher:realtime>
+
+    <!--6 int_day_consume 表-->
+    <tsearcher:realtime id="search4union_int_day_consume" justDump="true">
+        <tsearcher:fulldump ref="intDayConsumeProvider"
+                            waitQueueSize="2" maxPoolSize="2"/>
+        <tsearcher:grouprouter
+                class="com.taobao.terminator.hdfs.client.router.Group32RandRouter"/>
+    </tsearcher:realtime>
+
+    <!--7 int_shop_goods_supplier 表-->
+    <tsearcher:realtime id="search4union_int_shop_goods_supplier" justDump="true">
+        <tsearcher:fulldump ref="intShopGoodsSupplierProvider"
+                            waitQueueSize="2" maxPoolSize="2"/>
+        <tsearcher:grouprouter
+                class="com.taobao.terminator.hdfs.client.router.Group32RandRouter"/>
+    </tsearcher:realtime>
+
+    <!--8 stock_goods_alert 表-->
+    <tsearcher:realtime id="search4union_stock_goods_alert" justDump="true">
+        <tsearcher:fulldump ref="stockGoodsAlertProvider"
+                            waitQueueSize="2" maxPoolSize="2"/>
+        <tsearcher:grouprouter
+                class="com.taobao.terminator.hdfs.client.router.Group32RandRouter"/>
+    </tsearcher:realtime>
+
+    <!--9 menu_goods 表-->
+    <tsearcher:realtime id="search4union_menu_goods_alert" justDump="true">
+        <tsearcher:fulldump ref="menuGoodsAlertProvider"
+                            waitQueueSize="2" maxPoolSize="2"/>
+        <tsearcher:grouprouter
+                class="com.taobao.terminator.hdfs.client.router.Group32RandRouter"/>
+    </tsearcher:realtime>
+
+    <tsearcher:realtime id="search4bom_info" justDump="true">
+        <tsearcher:fulldump ref="bomInfoProvider"
+                            waitQueueSize="2" maxPoolSize="2" />
+        <tsearcher:grouprouter
+                class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+    </tsearcher:realtime>
+
+    <tsearcher:realtime id="search4stock_num" justDump="true">
+        <tsearcher:fulldump ref="stockumProvider"
+                            waitQueueSize="2" maxPoolSize="2" />
+        <tsearcher:grouprouter
+                class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+    </tsearcher:realtime>
+
+    <!-- Provider start-->
+    <!--1 supplier_goods 表-->
+    <bean id="supplierGoodsProvider"
+          class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.supply.enum}">
+                    <value>
+                        <![CDATA[
+                        SELECT id, goods_id, entity_id, is_valid, last_ver,supplier_id, create_time,is_relation_dmall
+                        FROM supplier_goods
+                        ]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--2 warehouse_goods 表-->
+    <bean id="warehouseGoodsProvider"
+          class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.supply.enum}">
+                    <value>
+                        <![CDATA[
+                        SELECT id, goods_id, entity_id, self_entity_id, is_valid, last_ver, warehouse_id, create_time
+                        FROM warehouse_goods
+                        ]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--3 stock_change_log 表
+    <bean id="stockChangeLogProvider"
+          class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.supply.enum}">
+                    <value>
+                        <![CDATA[
+                        SELECT id, goods_id, entity_id, self_entity_id, is_valid, last_ver, warehouse_id, op_time, op_status
+                        FROM stock_change_log
+                        ]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+-->
+    <!--4 goods_sale_allow 表-->
+    <bean id="goodsSaleAllowProvider"
+          class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.dmall.enum}">
+                    <value>
+                        <![CDATA[
+                        SELECT id, goods_id, entity_id, is_valid, last_ver, create_time
+                        FROM goods_sale_allow
+                        ]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--5 provide_goods 表-->
+    <bean id="provideGoodsProvider"
+          class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.supply.enum}">
+                    <value>
+                        <![CDATA[
+                        SELECT id, goods_id, entity_id, is_valid, last_ver, create_time
+                        FROM provide_goods
+                        ]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--6 int_day_consume 表-->
+    <bean id="intDayConsumeProvider"
+          class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.supply.enum}">
+                    <value>
+                        <![CDATA[
+                        SELECT id, goods_id, entity_id, self_entity_id, is_valid, last_ver, warehouse_id,
+                        supplier_id, curr_date
+                        FROM int_day_consume
+                        ]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--7 int_shop_goods_supplier 表-->
+    <bean id="intShopGoodsSupplierProvider"
+          class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.supply.enum}">
+                    <value>
+                        <![CDATA[
+                        SELECT id, goods_id, entity_id, self_entity_id, is_valid, last_ver, warehouse_id,
+                        supplier_id
+                        FROM int_shop_goods_supplier
+                        ]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--8 stock_goods_alert 表-->
+    <bean id="stockGoodsAlertProvider"
+          class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.supply.enum}">
+                    <value>
+                        <![CDATA[
+                        SELECT id, goods_id, entity_id, self_entity_id, is_valid, last_ver,
+                        max_num,min_num,alert_status
+                        FROM stock_goods_alert
+                        ]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--8 menu_goods 表-->
+    <bean id="menuGoodsAlertProvider"
+          class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.supply.enum}">
+                    <value>
+                        <![CDATA[
+                        SELECT id, goods_id, entity_id, self_entity_id, is_valid,source_type,last_ver
+                        FROM menu_goods
+                        ]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!-- provider end-->
+    
+    
+        <bean id="templateDetail"
+        class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.supply.enum}">
+                    <value>
+                        <![CDATA[
+SELECT id, entity_id, self_entity_id, template_id, goods_id, is_valid
+       ,create_time, create_user_id, op_time, last_ver, op_user_id, op_user_name
+       ,extend_fields
+FROM `template_detail`
+                        ]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
+    <bean id="bomInfoProvider"
+          class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.supply.enum}">
+                    <value>
+                        <![CDATA[
+SELECT
+  id,
+  entity_id,
+  self_entity_id,
+  goods_id,
+  goods_num,
+  unit_id,
+  warehouse_id,
+  match_type,
+  is_valid,
+  create_time,
+  create_user_id,
+  op_time,
+  last_ver,
+  op_user_id,
+  op_user_name,
+  extend_fields
+FROM `bom_info`
+	        			]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="stockumProvider"
+          class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+        <property name="subTablesDesc">
+            <map>
+                <entry key="${datasource.supply.enum}">
+                    <value>
+                        <![CDATA[
+            SELECT id, goods_id, entity_id, self_entity_id,is_valid ,stock_num FROM `stock_num` WHERE is_valid=1
+	        			]]>
+                    </value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+    
+</beans>

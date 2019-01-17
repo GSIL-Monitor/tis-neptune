@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="GBK"?>
+<project>
+	<parent>
+		<groupId>com.dfire.tis</groupId>
+		<artifactId>terminator-job-trigger-parent</artifactId>
+		<version>3.7.47</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dfire.tis</groupId>
+	<artifactId>tsearcher-cloud-common</artifactId>
+	<version>3.7.47</version>
+	<name>tsearcher-cloud-common</name>
+	<properties>
+		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<!-- <dependency> <groupId>com.taobao.tsearcher</groupId> <artifactId>tsearcher-hdfs</artifactId> 
+			</dependency> <dependency> <groupId>javax.servlet</groupId> <artifactId>servlet-api</artifactId> 
+			</dependency> -->
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-pubhook-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.9</version>
+		</dependency>
+
+	</dependencies>
+</project>

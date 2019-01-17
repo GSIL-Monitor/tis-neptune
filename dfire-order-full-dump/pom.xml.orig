@@ -1,0 +1,367 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<parent>
+		<groupId>com.dfire.tis</groupId>
+		<artifactId>terminator-job-trigger-parent</artifactId>
+<<<<<<< HEAD
+		<version>3.6.5-SNAPSHOT</version>
+=======
+		<version>3.6.6</version>
+>>>>>>> f2bb0789969c6ad130687741d61579759d496dbc
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<groupId>com.dfire.tis</groupId>
+	<artifactId>dfire-order-full-dump</artifactId>
+<<<<<<< HEAD
+	<version>3.6.5-SNAPSHOT</version>
+=======
+	<version>3.6.6</version>
+>>>>>>> f2bb0789969c6ad130687741d61579759d496dbc
+	<packaging>war</packaging>
+
+	<name>dfire-order-full-dump</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring-version>3.0.6.RELEASE</spring-version>
+	</properties>
+
+	<dependencies>
+		<!-- <dependency> <groupId>asm</groupId> <artifactId>asm</artifactId> <version>5.0.1</version> 
+			</dependency> -->
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-hdfs-extends</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-digester</groupId>
+			<artifactId>commons-digester</artifactId>
+			<version>2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-yarn-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>velocity-tools</groupId>
+			<artifactId>velocity-tools-view</artifactId>
+			<version>2.0-beta1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.shared</groupId>
+			<artifactId>dfire-servlet-monitor</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-manage-pojo</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.flume</groupId>
+			<artifactId>flume-ng-node</artifactId>
+			<version>1.6.0-cdh5.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-client-standalone</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.hadoop</groupId>
+					<artifactId>hadoop-client</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-solr-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-mapreduce-client-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hive</groupId>
+			<artifactId>hive-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hive</groupId>
+			<artifactId>hive-exec</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>global-diamond-config</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tsearcher-builder-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-job-trigger-server</artifactId>
+			<version>${project.version}</version>
+
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.hbase</groupId>
+					<artifactId>hbase</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-websocket</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlet</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+
+		</dependency>
+
+
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-job-trigger-common</artifactId>
+			<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-solrj-client</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+
+		</dependency>
+
+		<dependency>
+			<groupId>commons-daemon</groupId>
+			<artifactId>commons-daemon</artifactId>
+			<version>1.0.15</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>com.dfire.tis</groupId> <artifactId>tis-client-standalone</artifactId> 
+			<version>1.0.1-SNAPSHOT</version> <exclusions> <exclusion> <groupId>commons-logging</groupId> 
+			<artifactId>commons-logging</artifactId> </exclusion> <exclusion> <groupId>org.mortbay.jetty</groupId> 
+			<artifactId>jsp-api-2.1</artifactId> </exclusion> <exclusion> <groupId>org.mortbay.jetty</groupId> 
+			<artifactId>jsp</artifactId> </exclusion> <exclusion> <groupId>tomcat</groupId> 
+			<artifactId>jasper-runtime</artifactId> </exclusion> <exclusion> <groupId>tomcat</groupId> 
+			<artifactId>jasper-compiler</artifactId> </exclusion> </exclusions> </dependency> -->
+	</dependencies>
+	<build>
+		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
+		<finalName>full-dump-assemble</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<filters>
+			<filter>src/main/filters/${env}.properties</filter>
+		</filters>
+
+		<plugins>
+
+		
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.2</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			
+			
+			<plugin>
+				<groupId>com.dfire.tis</groupId>
+				<artifactId>tiswar-maven-plugin</artifactId>
+				<configuration>
+					<appnamePattern>full-dump-assemble</appnamePattern>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>com.dfire.tis</groupId>
+				<artifactId>tisasm-maven-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<configuration>
+					<descriptor>./assembly.xml</descriptor>
+					<outputDirectory>../</outputDirectory>
+					<finalName>full-dump-assemble</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+					<tarLongFileMode>gnu</tarLongFileMode>
+					<!-- <appnamePattern>full-dump-assemble</appnamePattern> -->
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>tisasm</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<env>test</env>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>daily</id>
+			<properties>
+				<env>test</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>pre</id>
+			<properties>
+				<env>online</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>publish</id>
+			<properties>
+				<env>online</env>
+			</properties>
+		</profile>
+	</profiles>
+</project>

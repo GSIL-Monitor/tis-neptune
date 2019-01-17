@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.dfire.tis</groupId>
+		<artifactId>terminator-job-trigger-parent</artifactId>
+<<<<<<< HEAD
+		<version>3.6.5-SNAPSHOT</version>
+	</parent>
+	<groupId>com.dfire.tis</groupId>
+	<artifactId>tis-client-standalone</artifactId>
+	<version>3.6.5-SNAPSHOT</version>
+=======
+		<version>3.6.6</version>
+	</parent>
+	<groupId>com.dfire.tis</groupId>
+	<artifactId>tis-client-standalone</artifactId>
+	<version>3.6.6</version>
+>>>>>>> f2bb0789969c6ad130687741d61579759d496dbc
+
+	<packaging>jar</packaging>
+	<url>http://maven.apache.org</url>
+	<build>
+		<plugins>
+
+		</plugins>
+	</build>
+	<dependencies>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-hdfs-extends</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.hive</groupId>
+			<artifactId>hive-jdbc</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hive</groupId>
+			<artifactId>hive-exec</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-pubhook-common</artifactId>
+			<version>${project.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.1.41</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- <dependency> <groupId>com.taobao.terminator</groupId> <artifactId>terminator-client-standalone-solrj3</artifactId> 
+			<version>1.0.0</version> </dependency> -->
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-solrj-client</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+
+
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>global-diamond-config</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+
+		</dependency>
+		<!-- <dependency> <groupId>org.apache.hadoop</groupId> <artifactId>hadoop-core</artifactId> 
+			<version>1.2.1</version> </dependency> -->
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>jdom</groupId>
+			<artifactId>jdom</artifactId>
+		</dependency>
+		<!-- <dependency> <groupId>com.alibaba.toolkit.common.lang</groupId> <artifactId>lang</artifactId> 
+			<version>1.0</version> </dependency> -->
+		<!-- <dependency> <groupId>com.taobao.terminator</groupId> <artifactId>terminator-job-trigger-client</artifactId> 
+			<version>3.1.2-SNAPSHOT</version> </dependency> -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring</artifactId>
+			<version>2.5.6</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+	</dependencies>
+
+	<properties>
+		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+	</properties>
+
+</project>

@@ -1,0 +1,264 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>com.dfire.tis</groupId>
+		<artifactId>terminator-job-trigger-parent</artifactId>
+		<version>3.7.47</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dfire.tis</groupId>
+	<artifactId>solr-webapp</artifactId>
+	<packaging>jar</packaging>
+	<version>3.7.47</version>
+	<name>solr-webapp Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+		<assembly-include.base.directory>true</assembly-include.base.directory>
+		<springboot.version>1.4.0.RELEASE</springboot.version>
+		<dfire.springboot.version>1.1.9</dfire.springboot.version>	
+	</properties>
+	<dependencies>
+		
+		<dependency>
+			<artifactId>logback-flume-appender</artifactId>
+			<groupId>com.gilt.logback</groupId>
+			<version>towdfire-0.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-webapp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlet</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-solrcore-extend</artifactId>
+			<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.shared</groupId>
+			<artifactId>dfire-servlet-monitor</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-web</artifactId> 
+			<version>${springboot.version}</version> </dependency> <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-logging</artifactId> <version>${springboot.version}</version> 
+			</dependency> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-test</artifactId> 
+			<version>${springboot.version}</version> </dependency> <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-legacy</artifactId> <version>1.1.1.RELEASE</version> 
+			</dependency> <dependency> <groupId>com.2dfire.spring.boot</groupId> <artifactId>spring-boot-autoconfigure-monitor</artifactId> 
+			<version>${dfire.springboot.version}</version> </dependency> <dependency> 
+			<groupId>org.springframework</groupId> <artifactId>spring-context</artifactId> 
+			<version>4.3.2.RELEASE</version> </dependency> <dependency> <groupId>org.springframework</groupId> 
+			<artifactId>spring-core</artifactId> <version>4.3.2.RELEASE</version> </dependency> 
+			<dependency> <groupId>org.springframework</groupId> <artifactId>spring-web</artifactId> 
+			<version>4.3.2.RELEASE</version> </dependency> <dependency> <groupId>org.springframework</groupId> 
+			<artifactId>spring-webmvc</artifactId> <version>4.3.2.RELEASE</version> </dependency> -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.8.1</version>
+		</dependency>
+
+	</dependencies>
+
+
+	<!--各研发环境配置 -->
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<env>dev</env>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>daily</id>
+			<properties>
+				<env>daily</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>pre</id>
+			<properties>
+				<env>pre</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>publish</id>
+			<properties>
+				<env>publish</env>
+			</properties>
+		</profile>
+		<profile>
+            <id>online2</id>
+            <properties>
+                <env>online2</env>
+            </properties>
+        </profile> 
+        <profile>
+            <id>tha</id>
+            <properties>
+                <env>tha</env>
+            </properties>
+        </profile>
+        
+         <profile>
+             <id>kr</id>
+            <properties>
+                <env>kr</env>
+            </properties>
+        </profile>
+        
+	</profiles>
+
+
+	<build>
+		<finalName>${appname}</finalName>
+		<filters>
+			<filter>src/main/filter/${env}.properties</filter>
+		</filters>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/**</include>
+				</includes>
+			</resource>
+
+
+			<!--环境资源文件 -->
+			<resource>
+				<directory>./</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>env.conf</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-war-plugin</artifactId> 
+				<version>2.6</version> <configuration> <warSourceExcludes></warSourceExcludes> 
+				<packagingExcludes>WEB-INF/lib/solr-core-5.3.0.jar,WEB-INF/weblogic.xml</packagingExcludes> 
+				<webResources> </webResources> </configuration> </plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.2</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+
+			<!-- <plugin> <groupId>com.dfire.tis</groupId> <artifactId>tiswar-maven-plugin</artifactId> 
+				<configuration> <appnamePattern>solr.*</appnamePattern> <webResources> <resource> 
+				<directory>src/main/resources/version</directory> <targetPath>/</targetPath> 
+				<filtering>true</filtering> <includes> <include>**/*.jsp</include> </includes> 
+				</resource> </webResources> </configuration> </plugin> -->
+
+			<plugin>
+				<groupId>com.dfire.tis</groupId>
+				<artifactId>tisasm-maven-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<configuration>
+					<descriptor>assembly.xml</descriptor>
+					<appnamePattern>solr.*</appnamePattern>
+					<finalName>${appname}</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+					<outputDirectory>../</outputDirectory>
+					<tarLongFileMode>posix</tarLongFileMode>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>tisasm</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.dfire.tis.Application</mainClass>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<useUniqueVersions>false</useUniqueVersions>
+						</manifest>
+						<manifestEntries>
+							<class-path>conf/</class-path>
+						</manifestEntries>
+					</archive>
+					<excludes>
+						<exclude>env.conf</exclude>
+						<exclude>*.yml</exclude>
+						<exclude>*.xml</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-assembly-plugin</artifactId> 
+				<version>2.6</version> <configuration> <descriptor>assembly.xml</descriptor> 
+				<appendAssemblyId>false</appendAssemblyId> <outputDirectory>../</outputDirectory> 
+				<tarLongFileMode>posix</tarLongFileMode> </configuration> <executions> <execution> 
+				<id>make-assembly</id> <phase>package</phase> <goals> <goal>single</goal> 
+				</goals> </execution> </executions> </plugin> -->
+
+
+		</plugins>
+
+	</build>
+</project>

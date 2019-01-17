@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tsearcher="http://www.taobao.com/terminator/tsearcher"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.taobao.com/terminator/tsearcher http://www.taobao.com/terminator/tsearcher.xsd">
+
+
+	<bean class="com.dfire.tis.order.dump.task.DataSourceRegister">
+		<property name="processDbs" value="${datasource.enum}" />
+	</bean>
+
+	<tsearcher:realtime id="search4waitInstance">
+		<tsearcher:fulldump ref="waitinginstanceProvider"
+			waitQueueSize="30" maxPoolSize="10" />
+		<tsearcher:grouprouter shardKey="entity_id" />
+	</tsearcher:realtime>
+
+	<tsearcher:realtime id="search4waitingorder2"
+		justDump="true">
+		<tsearcher:fulldump ref="waitingorderProvider"
+			waitQueueSize="2" maxPoolSize="2" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+
+	<bean id="waitinginstanceProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.enum}">
+					<value>
+						<![CDATA[ 	
+  SELECT waitinginstance_id, waitingorder_id, kind, kindmenu_id, kindmenu_name, name, menu_id, make_id, makename, make_price, make_pricemode, 
+	spec_detail_name, spec_detail_id, spec_pricemode, spec_detail_price, num, account_num, unit, account_unit, memo, original_price, 
+	price, member_price, fee, is_ratio, taste, ratio, ratio_fee, is_backauth, parent_id, price_mode, child_id, service_feemode, service_fee, 
+	`status` as instance_status, entity_id, is_valid
+        , DATE_FORMAT(from_unixtime(create_time/1000),'%Y%m%d%H%i%s') as create_time
+        , DATE_FORMAT(from_unixtime(op_time/1000),'%Y%m%d%H%i%s') as op_time 
+  FROM  
+      waitinginstanceinfo
+	        			]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="waitingorderProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.enum}">
+					<value>
+						<![CDATA[
+SELECT
+	waitingorder_id,
+	order_from,
+	batch_msg,
+	kind,
+	code,
+	seat_code,
+	name,
+	people_count,
+	mobile,
+	tel,
+	reserve_date,
+	memo,
+	total_price,
+	real_price,
+	shopname,
+	address,
+	pay_mode,
+	pay_type,
+	pay_memo,
+	outfee,
+	card_entity_id,
+	card_id,
+	pay_id,
+	advance_pay
+	advance_seat_pay,
+	pay_status,
+	reserve_seat_id,
+	reserve_time_id,
+	status,
+	hide_status,
+	reserve_status,
+	audit_status,
+	order_id,
+	deal_message,
+	errormessage,
+	sender,
+	sender_id,
+	customerregister_id,
+	entity_id,
+	is_valid
+	 , DATE_FORMAT(from_unixtime(create_time/1000),'%Y%m%d%H%i%s') as create_time
+	 , DATE_FORMAT(from_unixtime(op_time/1000),'%Y%m%d%H%i%s') as op_time 
+	,last_ver,
+	out_id,
+	out_type
+FROM `waitingorderdetail`
+	        			]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+
+</beans>

@@ -1,0 +1,1 @@
+mvn compile test -Dtest=TestFeedBackService -DargLine="-Dsun.misc.URLClassPath.debugg=false -Xrunjdwp:transport=dt_socket,address=9992,suspend=n,server=y -Dterminator_project=jst -Ddaily=true -Dtest=true"

@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<parent>
+		<groupId>com.dfire.tis</groupId>
+		<artifactId>terminator-job-trigger-parent</artifactId>
+		<version>3.7.47</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<groupId>com.dfire.tis</groupId>
+	<artifactId>tis-solrj-client</artifactId>
+	<version>3.7.47</version>
+	<packaging>jar</packaging>
+
+	<name>tis-solrj-client</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.dfire</groupId>
+			<artifactId>magiceye-client</artifactId>
+			<version>1.0.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.kafka</groupId>
+					<artifactId>kafka-clients</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.kafka</groupId>
+					<artifactId>kafka_2.10</artifactId>
+				</exclusion>
+<!-- 
+				<exclusion>
+					<groupId>io.protostuff</groupId>
+					<artifactId>protostuff-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>io.protostuff</groupId>
+					<artifactId>protostuff-runtime</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.google.auto.service</groupId>
+					<artifactId>auto-service</artifactId>
+				</exclusion>
+ -->
+			</exclusions>
+	
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-solrj</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-solr-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+</project>

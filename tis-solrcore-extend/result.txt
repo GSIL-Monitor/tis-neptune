@@ -1,0 +1,1050 @@
+
+D:\j2ee_solution\eclipse-java-oxygen-mars-develop\workspace\tis-mars\tis-solrcore-extend>mvn  test -Dtest=TestEmbeddedSolrServer -DargLine="-Dconfig.load.local=true -Xrunjdwp:transport=dt_socket,address=9990,suspend=y,server=y" 
+Listening for transport dt_socket at address: 8888
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tis-solrcore-extend 3.7.17
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tis-solrcore-extend ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ tis-solrcore-extend ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 223 source files to D:\j2ee_solution\eclipse-java-oxygen-mars-develop\workspace\tis-mars\tis-solrcore-extend\target\classes
+[INFO] /D:/j2ee_solution/eclipse-java-oxygen-mars-develop/workspace/tis-mars/tis-solrcore-extend/src/main/java/com/dfire/tis/solrextend/fieldtype/TisDateField.java: ĳЩ�����ļ�ʹ�û򸲸����ѹ�ʱ�� API��
+[INFO] /D:/j2ee_solution/eclipse-java-oxygen-mars-develop/workspace/tis-mars/tis-solrcore-extend/src/main/java/com/dfire/tis/solrextend/fieldtype/TisDateField.java: �й���ϸ��Ϣ, ��ʹ�� -Xlint:deprecation ���±��롣
+[INFO] /D:/j2ee_solution/eclipse-java-oxygen-mars-develop/workspace/tis-mars/tis-solrcore-extend/src/main/java/com/dfire/tis/solrextend/queryparse/s4userRecommend/mahoutCore/UserRecommendFastByIDMap.java: ĳЩ�����ļ�ʹ����δ�����򲻰�ȫ�Ĳ�����
+[INFO] /D:/j2ee_solution/eclipse-java-oxygen-mars-develop/workspace/tis-mars/tis-solrcore-extend/src/main/java/com/dfire/tis/solrextend/queryparse/s4userRecommend/mahoutCore/UserRecommendFastByIDMap.java: �й���ϸ��Ϣ, ��ʹ�� -Xlint:unchecked ���±��롣
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tis-solrcore-extend ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\j2ee_solution\eclipse-java-oxygen-mars-develop\workspace\tis-mars\tis-solrcore-extend\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ tis-solrcore-extend ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to D:\j2ee_solution\eclipse-java-oxygen-mars-develop\workspace\tis-mars\tis-solrcore-extend\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ tis-solrcore-extend ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Listening for transport dt_socket at address: 9990
+Running com.dfire.tis.solrextend.core.TestEmbeddedSolrServer
+20:10:17.024 [main] INFO  o.a.solr.core.SolrResourceLoader - new SolrResourceLoader for directory: 'D:\solr\solrhome'
+20:10:17.039 [main] INFO  o.a.solr.core.SolrResourceLoader - JNDI not configured for solr (NoInitialContextEx)
+20:10:17.039 [main] INFO  o.a.solr.core.SolrResourceLoader - solr home defaulted to 'solr/' (could not find system property or JNDI)
+20:10:17.048 [main] INFO  org.apache.solr.core.SolrXmlConfig - Loading container configuration from D:\solr\solrhome\solr.xml
+20:10:17.466 [main] DEBUG org.apache.solr.core.Config - null missing optional solr/@coreLoadThreads
+20:10:17.467 [main] DEBUG org.apache.solr.core.Config - null missing optional solr/@persistent
+20:10:17.468 [main] DEBUG org.apache.solr.core.Config - null missing optional solr/@sharedLib
+20:10:17.469 [main] DEBUG org.apache.solr.core.Config - null missing optional solr/@zkHost
+20:10:17.470 [main] DEBUG org.apache.solr.core.Config - null missing optional solr/cores
+20:10:17.497 [main] INFO  o.a.solr.core.CorePropertiesLocator - Config-defined core root directory: D:\solr\solrhome
+20:10:17.545 [main] INFO  org.apache.solr.core.CoreContainer - New CoreContainer 2037764568
+20:10:17.545 [main] INFO  org.apache.solr.core.CoreContainer - Loading cores into CoreContainer [instanceDir=D:\solr\solrhome]
+20:10:17.546 [main] WARN  org.apache.solr.core.CoreContainer - Couldn't add files from D:\solr\solrhome\lib to classpath: D:\solr\solrhome\lib
+20:10:17.566 [main] INFO  o.a.s.h.c.HttpShardHandlerFactory - created with socketTimeout : 600000,connTimeout : 60000,maxConnectionsPerHost : 20,maxConnections : 10000,corePoolSize : 0,maximumPoolSize : 2147483647,maxThreadIdleTime : 5,sizeOfQueue : -1,fairnessPolicy : false,useRetries : false,
+20:10:17.575 [main] DEBUG o.a.s.c.solrj.impl.HttpClientUtil - Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=600000&connTimeout=60000&retry=false
+20:10:17.906 [main] INFO  o.a.solr.update.UpdateShardHandler - Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+20:10:17.906 [main] DEBUG o.a.s.c.solrj.impl.HttpClientUtil - Creating new http client, config:socketTimeout=600000&connTimeout=60000&retry=true
+20:10:17.909 [main] INFO  org.apache.solr.logging.LogWatcher - SLF4J impl is ch.qos.logback.classic.util.ContextSelectorStaticBinder
+20:10:17.909 [main] INFO  org.apache.solr.logging.LogWatcher - No LogWatcher configured
+20:10:17.911 [main] INFO  org.apache.solr.core.CoreContainer - Security conf doesn't exist. Skipping setup for authorization module.
+20:10:17.911 [main] INFO  org.apache.solr.core.CoreContainer - No authentication plugin used.
+20:10:17.975 [main] INFO  o.a.solr.core.CorePropertiesLocator - Looking for core definitions underneath D:\solr\solrhome
+20:10:17.981 [main] INFO  org.apache.solr.core.CoreDescriptor - Created CoreDescriptor: {name=s4presellStock, config=solrconfig.xml, loadOnStartup=true, schema=schema.xml, configSetProperties=configsetprops.json, transient=false, dataDir=data}
+20:10:17.981 [main] INFO  o.a.solr.core.CorePropertiesLocator - Found core s4presellStock in D:\solr\solrhome\s4presellStock
+20:10:17.981 [main] INFO  o.a.solr.core.CorePropertiesLocator - Found 1 core definitions
+20:10:18.043 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.core.SolrResourceLoader - new SolrResourceLoader for directory: 'D:\solr\solrhome\s4presellStock'
+20:10:18.044 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.core.SolrResourceLoader - JNDI not configured for solr (NoInitialContextEx)
+20:10:18.045 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.core.SolrResourceLoader - solr home defaulted to 'solr/' (could not find system property or JNDI)
+20:10:18.116 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.SolrConfig - current version of requestparams : -1
+20:10:18.122 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml luceneMatchVersion=6.0.0
+20:10:18.127 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexDefaults
+20:10:18.129 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional mainIndex
+20:10:18.131 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/nrtMode
+20:10:18.132 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/unlockOnStartup
+20:10:18.144 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/mergeScheduler
+20:10:18.145 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/mergePolicy
+20:10:18.147 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/luceneAutoCommit
+20:10:18.148 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/useCompoundFile
+20:10:18.150 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/maxBufferedDocs
+20:10:18.152 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/maxMergeDocs
+20:10:18.154 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/mergeFactor
+20:10:18.155 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/ramBufferSizeMB
+20:10:18.157 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/writeLockTimeout
+20:10:18.158 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml indexConfig/lockType=native
+20:10:18.166 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/termIndexInterval
+20:10:18.167 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml indexConfig/infoStream=true
+20:10:18.169 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/infoStream/@file
+20:10:18.169 [coreLoadExecutor-6-thread-1] INFO  o.apache.solr.update.SolrIndexConfig - IndexWriter infoStream solr logging is enabled
+20:10:18.172 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional indexConfig/checkIntegrityAtMerge
+20:10:18.178 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml query/maxBooleanClauses=1024
+20:10:18.179 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.SolrConfig - Using Lucene MatchVersion: 6.0.0
+20:10:18.180 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional query/boolTofilterOptimizer
+20:10:18.182 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional query/HashDocSet
+20:10:18.183 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional query/useFilterForSortedQuery
+20:10:18.185 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml query/queryResultWindowSize=20
+20:10:18.186 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml query/queryResultMaxDocsCached=200
+20:10:18.188 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml query/enableLazyFieldLoading=true
+20:10:18.219 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional query/fieldValueCache
+20:10:18.221 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml query/useColdSearcher=false
+20:10:18.222 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml dataDir=./data
+20:10:18.296 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional //HashDocSet/@loadFactor
+20:10:18.298 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional //HashDocSet/@maxSize
+20:10:18.301 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml requestDispatcher/httpCaching/@never304=true
+20:10:18.302 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional requestDispatcher/httpCaching/@etagSeed
+20:10:18.305 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional requestDispatcher/httpCaching/@lastModFrom
+20:10:18.308 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional requestDispatcher/httpCaching/cacheControl
+20:10:18.312 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional jmx/@agentId
+20:10:18.313 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional jmx/@serviceUrl
+20:10:18.314 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional jmx/@rootName
+20:10:18.316 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml query/maxWarmingSearchers=2
+20:10:18.317 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml query/slowQueryThresholdMillis=800
+20:10:18.345 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml updateHandler/@class=org.apache.solr.update.TisDirectUpdateHandler2
+20:10:18.346 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml updateHandler/autoCommit/maxDocs=99999999
+20:10:18.348 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml updateHandler/autoCommit/maxTime=900000
+20:10:18.349 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional updateHandler/indexWriter/closeWaitsForMerges
+20:10:18.350 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml updateHandler/autoCommit/openSearcher=false
+20:10:18.352 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml updateHandler/autoSoftCommit/maxDocs=99999999
+20:10:18.353 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml updateHandler/autoSoftCommit/maxTime=2000
+20:10:18.355 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml missing optional updateHandler/commitWithin/softCommit
+20:10:18.356 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml requestDispatcher/requestParsers/@multipartUploadLimitInKB=2048000
+20:10:18.358 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml requestDispatcher/requestParsers/@formdataUploadLimitInKB=2048
+20:10:18.360 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml requestDispatcher/requestParsers/@enableRemoteStreaming=true
+20:10:18.361 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml requestDispatcher/@handleSelect=false
+20:10:18.401 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - solrconfig.xml requestDispatcher/requestParsers/@addHttpRequestToContext=false
+20:10:18.417 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.SolrConfig - Loaded SolrConfig: solrconfig.xml
+20:10:18.444 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.schema.IndexSchema - [s4presellStock] Schema name=template
+20:10:18.446 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.core.Config - schema /schema/@version=1.5
+20:10:18.550 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.u.plugin.AbstractPluginLoader - created string: org.apache.solr.schema.StrField
+20:10:18.574 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.u.plugin.AbstractPluginLoader - created double: org.apache.solr.schema.TrieDoubleField
+20:10:18.578 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.u.plugin.AbstractPluginLoader - created tdouble: org.apache.solr.schema.TrieDoubleField
+20:10:18.586 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.u.plugin.AbstractPluginLoader - created float: org.apache.solr.schema.TrieFloatField
+20:10:18.594 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.u.plugin.AbstractPluginLoader - created tfloat: org.apache.solr.schema.TrieFloatField
+20:10:18.600 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.u.plugin.AbstractPluginLoader - created int: org.apache.solr.schema.TrieIntField
+20:10:18.608 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.u.plugin.AbstractPluginLoader - created tint: org.apache.solr.schema.TrieIntField
+20:10:18.615 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.u.plugin.AbstractPluginLoader - created long: org.apache.solr.schema.TrieLongField
+20:10:18.619 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.u.plugin.AbstractPluginLoader - created tlong: org.apache.solr.schema.TrieLongField
+20:10:18.639 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.u.plugin.AbstractPluginLoader - created location: com.dfire.tis.solrextend.fieldtype.DocValuesLatLonType
+20:10:18.643 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: presell_stock_id{type=long,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,required, required=true}
+20:10:18.643 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - presell_stock_id is required in this schema
+20:10:18.647 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: presell_sku_id{type=long,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,required, required=true}
+20:10:18.647 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - presell_sku_id is required in this schema
+20:10:18.647 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: entity_id{type=string,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,sortMissingLast,required,docValues, required=true}
+20:10:18.648 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - entity_id is required in this schema
+20:10:18.648 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: week_id{type=int,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,docValues}
+20:10:18.648 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: city_id{type=string,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,sortMissingLast,docValues}
+20:10:18.648 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: stock_time{type=tlong,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,docValues}
+20:10:18.648 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: sell_time{type=tlong,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,docValues}
+20:10:18.648 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: time_frame_id{type=int,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,docValues}
+20:10:18.649 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: seat_type_id{type=int,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,docValues}
+20:10:18.649 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: discount{type=int,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,docValues}
+20:10:18.649 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: remain_volume{type=int,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,docValues}
+20:10:18.649 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: sales_volume{type=int,properties=stored,docValues}
+20:10:18.649 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: total{type=int,properties=stored,docValues}
+20:10:18.649 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: create_time{type=tlong,properties=stored}
+20:10:18.649 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: op_time{type=tlong,properties=stored}
+20:10:18.649 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: last_ver{type=int,properties=stored}
+20:10:18.649 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: is_valid{type=int,properties=indexed,stored,omitNorms,omitTermFreqAndPositions}
+20:10:18.649 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: enable{type=int,properties=indexed,stored,omitNorms,omitTermFreqAndPositions}
+20:10:18.650 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: coordinate{type=location,properties=stored,docValues}
+20:10:18.650 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: period_score{type=double,properties=stored,docValues}
+20:10:18.650 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: _version_{type=long,properties=indexed,stored,omitNorms,omitTermFreqAndPositions,docValues}
+20:10:18.651 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: text{type=string,properties=indexed,omitNorms,omitTermFreqAndPositions,multiValued,sortMissingLast}
+20:10:18.651 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - field defined: is_test{type=int,properties=indexed,stored,omitNorms,omitTermFreqAndPositions}
+20:10:18.655 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.schema.IndexSchema - dynamic field defined: *_coordinate{type=tdouble,properties=indexed,omitNorms,omitTermFreqAndPositions}
+20:10:18.660 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.schema.IndexSchema - default search field in schema is presell_stock_id
+20:10:18.661 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.schema.IndexSchema - query parser default operator is AND
+20:10:18.663 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.schema.IndexSchema - unique key field: presell_stock_id
+20:10:18.667 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.core.ConfigSetProperties - Did not find ConfigSet properties, assuming default properties: Can't find resource 'configsetprops.json' in classpath or 'D:\solr\solrhome\s4presellStock'
+20:10:18.668 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.CoreContainer - Creating SolrCore 's4presellStock' using configuration from instancedir D:\solr\solrhome\s4presellStock
+20:10:18.739 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.SolrCore - solr.NRTCachingDirectoryFactory
+20:10:18.761 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.SolrCore - [[s4presellStock] ] Opening new SolrCore at [D:\solr\solrhome\s4presellStock], dataDir=[D:\solr\solrhome\s4presellStock\data\]
+20:10:18.763 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.JmxMonitoredMap - No JMX servers found, not exposing Solr information with JMX.
+20:10:18.769 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.SolrCore - [[s4presellStock] ] Added SolrEventListener for newSearcher: [org.apache.solr.core.QuerySenderListener{queries=[]}]
+20:10:18.769 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.SolrCore - [[s4presellStock] ] Added SolrEventListener for firstSearcher: [org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}]
+20:10:18.778 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.core.SchemaCodecFactory - Using default compressionMode: BEST_SPEED
+20:10:18.896 [coreLoadExecutor-6-thread-1] INFO  o.a.s.core.CachingDirectoryFactory - return new directory for D:\solr\solrhome\s4presellStock\data
+20:10:18.896 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.core.CachingDirectoryFactory - Releasing directory: D:\solr\solrhome\s4presellStock\data 0 false
+20:10:18.896 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.SolrCore - New index directory detected: old=null new=D:\solr\solrhome\s4presellStock\data\index/
+20:10:18.898 [coreLoadExecutor-6-thread-1] INFO  o.a.s.core.CachingDirectoryFactory - return new directory for D:\solr\solrhome\s4presellStock\data\index
+20:10:18.914 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.core.CachingDirectoryFactory - Releasing directory: D:\solr\solrhome\s4presellStock\data\index 0 false
+20:10:18.914 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.core.CachingDirectoryFactory - Reusing cached directory: CachedDir<<refCount=1;path=D:\solr\solrhome\s4presellStock\data;done=false>>
+20:10:18.914 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.core.CachingDirectoryFactory - Releasing directory: D:\solr\solrhome\s4presellStock\data 0 false
+20:10:18.914 [OldIndexDirectoryCleanupThreadForCore-s4presellStock] INFO  org.apache.solr.core.SolrCore - Looking for old index directories to cleanup for core s4presellStock in D:\solr\solrhome\s4presellStock\data\
+20:10:18.970 [coreLoadExecutor-6-thread-1] WARN  org.apache.solr.core.PluginBag - Multiple entries of queryParser with name termPos
+20:10:19.104 [coreLoadExecutor-6-thread-1] INFO  o.a.s.u.p.UpdateRequestProcessorChain - creating updateRequestProcessorChain "ignore-commit-from-client" (default)
+20:10:19.170 [coreLoadExecutor-6-thread-1] DEBUG o.a.solr.handler.loader.XMLLoader - Unable to set the 'reuse-instance' property for the input chain: com.ctc.wstx.stax.WstxInputFactory@6015b2a3
+20:10:19.173 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.handler.loader.XMLLoader - xsltCacheLifetimeSeconds=60
+20:10:19.176 [coreLoadExecutor-6-thread-1] DEBUG o.a.solr.handler.loader.XMLLoader - Unable to set the 'reuse-instance' property for the input chain: com.ctc.wstx.stax.WstxInputFactory@53d159d3
+20:10:19.177 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.handler.loader.XMLLoader - xsltCacheLifetimeSeconds=60
+20:10:19.178 [coreLoadExecutor-6-thread-1] DEBUG o.a.solr.handler.loader.XMLLoader - Unable to set the 'reuse-instance' property for the input chain: com.ctc.wstx.stax.WstxInputFactory@71e0fdee
+20:10:19.178 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.handler.loader.XMLLoader - xsltCacheLifetimeSeconds=60
+20:10:19.179 [coreLoadExecutor-6-thread-1] DEBUG o.a.solr.handler.loader.XMLLoader - Unable to set the 'reuse-instance' property for the input chain: com.ctc.wstx.stax.WstxInputFactory@78494e97
+20:10:19.179 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.handler.loader.XMLLoader - xsltCacheLifetimeSeconds=60
+20:10:19.307 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.RequestHandlers - Registered paths: /admin/mbeans,/update/csv,/sql,/update/json/docs,/admin/luke,/export,/select,/admin/segments,/get,/admin/system,/replication,/admin/properties,/config,/stream,/schema,/admin/plugins,/admin/logging,/update/json,/admin/ping,/admin/threads,/query,/update,/admin/file
+20:10:19.307 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.SolrCore - Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+20:10:19.327 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.update.UpdateLog - Initializing UpdateLog: dataDir=tlog defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+20:10:19.330 [coreLoadExecutor-6-thread-1] DEBUG org.apache.solr.update.UpdateLog - UpdateHandler init: tlogDir=D:\solr\solrhome\s4presellStock\data\tlog, existing tlogs=[], next id=0
+20:10:19.343 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.update.CommitTracker - Hard AutoCommit: if uncommited for 900000ms; if 99999999 uncommited docs 
+20:10:19.343 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.update.CommitTracker - Soft AutoCommit: if uncommited for 2000ms; if 99999999 uncommited docs 
+20:10:19.343 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.core.CachingDirectoryFactory - Reusing cached directory: CachedDir<<refCount=1;path=D:\solr\solrhome\s4presellStock\data;done=false>>
+20:10:19.344 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.core.CachingDirectoryFactory - Releasing directory: D:\solr\solrhome\s4presellStock\data 0 false
+20:10:19.344 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.core.CachingDirectoryFactory - Reusing cached directory: CachedDir<<refCount=1;path=D:\solr\solrhome\s4presellStock\data;done=false>>
+20:10:19.344 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.core.CachingDirectoryFactory - Releasing directory: D:\solr\solrhome\s4presellStock\data 0 false
+20:10:19.345 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.core.CachingDirectoryFactory - Reusing cached directory: CachedDir<<refCount=1;path=D:\solr\solrhome\s4presellStock\data\index;done=false>>
+20:10:19.431 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IFD][coreLoadExecutor-6-thread-1]: init: current segments file is "segments_3"; deletionPolicy=org.apache.solr.core.IndexDeletionPolicyWrapper@471f8c7c
+20:10:19.432 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IFD][coreLoadExecutor-6-thread-1]: init: load commit "segments_3"
+20:10:19.438 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IFD][coreLoadExecutor-6-thread-1]: init: seg=_a set nextWriteFieldInfosGen=2 vs current=1
+20:10:19.438 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IFD][coreLoadExecutor-6-thread-1]: init: seg=_a set nextWriteDocValuesGen=2 vs current=1
+20:10:19.439 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IFD][coreLoadExecutor-6-thread-1]: delete []
+20:10:19.440 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.core.SolrDeletionPolicy - SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@D:\solr\solrhome\s4presellStock\data\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6bbbb23; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_3,generation=3}
+20:10:19.441 [coreLoadExecutor-6-thread-1] DEBUG o.a.solr.core.SolrDeletionPolicy - SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@D:\solr\solrhome\s4presellStock\data\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6bbbb23; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_3,generation=3,filenames=[_c_Lucene50_0.tip, _a_Lucene50_0.doc, _a.si, _d.fdx, _c_Lucene50_0.tim, _d_Lucene54_0.dvm, _c.si, _c.fdt, _e_Lucene50_0.doc, _e_Lucene54_0.dvm, _b.fnm, _a_1.liv, _d_Lucene54_0.dvd, _a.fnm, _d_Lucene50_0.tip, _c.fdx, _d_Lucene50_0.tim, _a_Lucene54_0.dvm, _b_Lucene50_0.doc, _d.si, _a_Lucene54_0.dvd, _d.fdt, _e_Lucene54_0.dvd, _e.fnm, _a.fdt, _a_Lucene50_0.tim, _a.fdx, _b_Lucene54_0.dvm, _c_Lucene50_0.doc, _d.fnm, _a_Lucene50_0.tip, _b.si, _e_Lucene50_0.tim, _e.fdt, _e_Lucene50_0.tip, _b_Lucene54_0.dvd, segments_3, _e.fdx, _b_Lucene50_0.tip, _d_Lucene50_0.doc, _b_Lucene50_0.tim, _c_Lucene54_0.dvm, _e.si, _b.fdx, _b.fdt, _c_Lucene54_0.dvd, _c.fnm]}
+20:10:19.441 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.core.SolrDeletionPolicy - newest commit generation = 3
+20:10:19.441 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IFD][coreLoadExecutor-6-thread-1]: now checkpoint "_a(6.0.0):C752/5:delGen=1 _b(6.0.0):C5 _c(6.0.0):C1 _d(6.0.0):C1 _e(6.0.0):C1" [5 segments ; isCommit = false]
+20:10:19.442 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IFD][coreLoadExecutor-6-thread-1]: delete []
+20:10:19.442 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IFD][coreLoadExecutor-6-thread-1]: 0 msec to checkpoint
+20:10:19.455 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IW][coreLoadExecutor-6-thread-1]: init: create=false
+20:10:19.455 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IW][coreLoadExecutor-6-thread-1]: 
+dir=NRTCachingDirectory(MMapDirectory@D:\solr\solrhome\s4presellStock\data\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6bbbb23; maxCacheMB=48.0 maxMergeSizeMB=4.0)
+index=_a(6.0.0):C752/5:delGen=1 _b(6.0.0):C5 _c(6.0.0):C1 _d(6.0.0):C1 _e(6.0.0):C1
+version=6.0.0
+analyzer=org.apache.solr.update.SolrIndexConfig$DelayedSchemaAnalyzer
+ramBufferSizeMB=100.0
+maxBufferedDocs=-1
+maxBufferedDeleteTerms=-1
+mergedSegmentWarmer=null
+delPolicy=org.apache.solr.core.IndexDeletionPolicyWrapper
+commit=null
+openMode=APPEND
+similarity=org.apache.solr.search.similarities.SchemaSimilarityFactory$1
+mergeScheduler=ConcurrentMergeScheduler: maxThreadCount=-1, maxMergeCount=-1, ioThrottle=true
+codec=Lucene60
+infoStream=org.apache.solr.update.LoggingInfoStream
+mergePolicy=[TieredMergePolicy: maxMergeAtOnce=10, maxMergeAtOnceExplicit=30, maxMergedSegmentMB=5120.0, floorSegmentMB=2.0, forceMergeDeletesPctAllowed=10.0, segmentsPerTier=10.0, maxCFSSegmentSizeMB=8.796093022207999E12, noCFSRatio=0.1
+indexerThreadPool=org.apache.lucene.index.DocumentsWriterPerThreadPool@4bf39b43
+readerPooling=false
+perThreadHardLimitMB=1945
+useCompoundFile=false
+commitOnClose=true
+writer=org.apache.solr.update.SolrIndexWriter@40e6d479
+
+20:10:19.455 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IW][coreLoadExecutor-6-thread-1]: MMapDirectory.UNMAP_SUPPORTED=true
+20:10:19.455 [coreLoadExecutor-6-thread-1] DEBUG o.apache.solr.update.SolrIndexWriter - Opened Writer DirectUpdateHandler2
+20:10:19.457 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IW][coreLoadExecutor-6-thread-1]: flush at getReader
+20:10:19.457 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [DW][coreLoadExecutor-6-thread-1]: startFullFlush
+20:10:19.457 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IW][coreLoadExecutor-6-thread-1]: apply all deletes during flush
+20:10:19.457 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IW][coreLoadExecutor-6-thread-1]: now apply all deletes for all segments maxDoc=760
+20:10:19.457 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [BD][coreLoadExecutor-6-thread-1]: applyDeletes: open segment readers took 0 msec
+20:10:19.458 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [BD][coreLoadExecutor-6-thread-1]: applyDeletes: no segments; skipping
+20:10:19.459 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [BD][coreLoadExecutor-6-thread-1]: prune sis=segments_3: _a(6.0.0):C752/5:delGen=1 _b(6.0.0):C5 _c(6.0.0):C1 _d(6.0.0):C1 _e(6.0.0):C1 minGen=0 packetCount=0
+20:10:19.584 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IW][coreLoadExecutor-6-thread-1]: incRefDeleter for NRT reader version=46 segments=_a(6.0.0):C752/5:delGen=1 _b(6.0.0):C5 _c(6.0.0):C1 _d(6.0.0):C1 _e(6.0.0):C1
+20:10:19.584 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IW][coreLoadExecutor-6-thread-1]: return reader version=46 reader=StandardDirectoryReader(segments_3:46:nrt _a(6.0.0):C752/5:delGen=1 _b(6.0.0):C5 _c(6.0.0):C1 _d(6.0.0):C1 _e(6.0.0):C1)
+20:10:19.584 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [DW][coreLoadExecutor-6-thread-1]: coreLoadExecutor-6-thread-1 finishFullFlush success=true
+20:10:19.584 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.update.LoggingInfoStream - [IW][coreLoadExecutor-6-thread-1]: getReader took 127 msec
+20:10:19.609 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.search.SolrIndexSearcher - Opening [Searcher@6dd8d90c[s4presellStock] main]
+20:10:19.609 [coreLoadExecutor-6-thread-1] DEBUG o.a.s.core.CachingDirectoryFactory - incRef'ed: CachedDir<<refCount=2;path=D:\solr\solrhome\s4presellStock\data\index;done=false>>
+20:10:19.710 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.rest.ManagedResourceStorage - File-based storage initialized to use dir: D:\solr\solrhome\s4presellStock\conf
+20:10:19.711 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.rest.RestManager - Initializing RestManager with initArgs: {storageDir=D:\solr\solrhome\s4presellStock\conf}
+20:10:19.730 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.rest.ManagedResourceStorage - Reading _rest_managed.json using file:dir=D:\solr\solrhome\s4presellStock\conf
+20:10:19.731 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.rest.RestManager - Initializing 0 registered ManagedResources
+20:10:19.744 [coreLoadExecutor-6-thread-1] INFO  o.a.solr.handler.ReplicationHandler - Commits will be reserved for  10000
+20:10:19.757 [searcherExecutor-7-thread-1-processing-x:s4presellStock] INFO  o.a.solr.core.QuerySenderListener - QuerySenderListener sending requests to Searcher@6dd8d90c[s4presellStock] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_a(6.0.0):C752/5:delGen=1) Uninverting(_b(6.0.0):C5) Uninverting(_c(6.0.0):C1) Uninverting(_d(6.0.0):C1) Uninverting(_e(6.0.0):C1)))}
+20:10:19.759 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.update.UpdateLog - Looking up max value of version field to seed version buckets
+20:10:19.761 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.update.VersionInfo - Refreshing highest value of _version_ for 65536 version buckets from index
+20:10:19.763 [searcherExecutor-7-thread-1-processing-x:s4presellStock] DEBUG o.apache.solr.core.SolrCore.Request - [s4presellStock]  webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher}
+20:10:19.771 [searcherExecutor-7-thread-1-processing-x:s4presellStock] DEBUG o.a.s.h.component.SearchHandler - Adding  component:org.apache.solr.handler.component.QueryComponent@7be10468
+20:10:19.771 [searcherExecutor-7-thread-1-processing-x:s4presellStock] DEBUG o.a.s.h.component.SearchHandler - Adding  component:com.dfire.tis.solrextend.handler.component.s4shop.GroupStockComponent@9dca20e
+20:10:19.771 [searcherExecutor-7-thread-1-processing-x:s4presellStock] DEBUG o.a.s.h.component.SearchHandler - Adding  component:com.dfire.tis.solrextend.handler.component.s4shop.ShopMinDiscountComponent@754733fc
+20:10:19.772 [searcherExecutor-7-thread-1-processing-x:s4presellStock] DEBUG o.a.s.h.component.SearchHandler - Adding  component:com.dfire.tis.solrextend.handler.component.s4shop.ShopRemainMinDiscountComponent@4c12e41d
+20:10:19.772 [searcherExecutor-7-thread-1-processing-x:s4presellStock] DEBUG o.a.s.h.component.SearchHandler - Adding  component:org.apache.solr.handler.component.FacetComponent@3f236bb3
+20:10:19.772 [searcherExecutor-7-thread-1-processing-x:s4presellStock] DEBUG o.a.s.h.component.SearchHandler - Adding  component:org.apache.solr.handler.component.StatsComponent@5303628b
+20:10:19.799 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.update.VersionInfo - Found MAX value 20180716040000 from Terms for _version_ in index
+20:10:19.806 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.update.UpdateLog - Took 45.0ms to seed version buckets with highest version 20180716040000
+20:10:19.807 [coreLoadExecutor-6-thread-1] INFO  org.apache.solr.core.CoreContainer - registering core: s4presellStock
+20:10:19.827 [searcherExecutor-7-thread-1-processing-x:s4presellStock] DEBUG o.a.s.h.component.QueryComponent - process: q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&df=text&event=firstSearcher&rows=10&echoParams=explicit
+20:10:19.829 [searcherExecutor-7-thread-1-processing-x:s4presellStock] DEBUG o.a.s.search.stats.LocalStatsCache - ## GET {q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&df=text&event=firstSearcher&rows=10&echoParams=explicit}
+20:10:19.839 [main] DEBUG o.apache.solr.core.SolrCore.Request - [s4presellStock]  webapp=null path=/select params={q=_query_:"*:*"+_val_:"{!func}distScore()"&fq={!geofilt+sfield%3Dcoordinate}&pt=30.29592,120.13432&d=2147483647&sfield=coordinate&sort=score+asc&rq={!rerank+reRankQuery%3D$rqq+reRankDocs%3D1000+reRankWeight%3D1}&rqq=_val_:"{!func}shuffleScore()"&fl=*,score&rows=800}
+20:10:19.920 [searcherExecutor-7-thread-1-processing-x:s4presellStock] INFO  o.apache.solr.core.SolrCore.Request - [s4presellStock]  webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=158
+20:10:19.921 [searcherExecutor-7-thread-1-processing-x:s4presellStock] INFO  o.a.solr.core.QuerySenderListener - QuerySenderListener done.
+20:10:19.921 [searcherExecutor-7-thread-1-processing-x:s4presellStock] INFO  org.apache.solr.core.SolrCore - [s4presellStock] Registered new searcher Searcher@6dd8d90c[s4presellStock] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_a(6.0.0):C752/5:delGen=1) Uninverting(_b(6.0.0):C5) Uninverting(_c(6.0.0):C1) Uninverting(_d(6.0.0):C1) Uninverting(_e(6.0.0):C1)))}
+20:10:19.953 [main] DEBUG o.a.s.h.component.QueryComponent - process: q=_query_:"*:*"+_val_:"{!func}distScore()"&df=text&rqq=_val_:"{!func}shuffleScore()"&pt=30.29592,120.13432&d=2147483647&echoParams=explicit&fl=*,score&fq={!geofilt+sfield%3Dcoordinate}&sort=score+asc&sfield=coordinate&rows=800&rq={!rerank+reRankQuery%3D$rqq+reRankDocs%3D1000+reRankWeight%3D1}
+20:10:19.953 [main] DEBUG o.a.s.search.stats.LocalStatsCache - ## GET {q=_query_:"*:*"+_val_:"{!func}distScore()"&df=text&rqq=_val_:"{!func}shuffleScore()"&pt=30.29592,120.13432&d=2147483647&echoParams=explicit&fl=*,score&fq={!geofilt+sfield%3Dcoordinate}&sort=score+asc&sfield=coordinate&rows=800&rq={!rerank+reRankQuery%3D$rqq+reRankDocs%3D1000+reRankWeight%3D1}}
+20:10:59.564 [main] INFO  o.apache.solr.core.SolrCore.Request - [s4presellStock]  webapp=null path=/select params={q=_query_:"*:*"+_val_:"{!func}distScore()"&fq={!geofilt+sfield%3Dcoordinate}&pt=30.29592,120.13432&d=2147483647&sfield=coordinate&sort=score+asc&rq={!rerank+reRankQuery%3D$rqq+reRankDocs%3D1000+reRankWeight%3D1}&rqq=_val_:"{!func}shuffleScore()"&fl=*,score&rows=800} hits=755 status=0 QTime=39724
+20:10:59.564 [main] WARN  org.apache.solr.core.SolrCore - slow: [s4presellStock]  webapp=null path=/select params={q=_query_:"*:*"+_val_:"{!func}distScore()"&fq={!geofilt+sfield%3Dcoordinate}&pt=30.29592,120.13432&d=2147483647&sfield=coordinate&sort=score+asc&rq={!rerank+reRankQuery%3D$rqq+reRankDocs%3D1000+reRankWeight%3D1}&rqq=_val_:"{!func}shuffleScore()"&fl=*,score&rows=800} hits=755 status=0 QTime=39724
+numFound:755
+333094848905183232,99001331,score:1102.0
+333094850452914176,99932333,score:1102.0
+333094851316940800,99001125,score:1102.0
+333094851421765632,99001125,score:1102.0
+333094851472097280,99001125,score:1102.0
+333457236124860416,99180079,score:1102.0
+333457237928411136,99001125,score:1102.0
+333457237991358464,99001125,score:1102.0
+333457238054273024,99001125,score:1102.0
+333457238100377600,99001125,score:1102.0
+333819624955183104,99934192,score:1102.0
+333819626653876224,99001125,score:1102.0
+333819626720985088,99001125,score:1102.0
+333819626783866880,99001125,score:1102.0
+333819626846814208,99001125,score:1102.0
+334182012371992576,99932333,score:1102.0
+334182013722525696,99001125,score:1102.0
+334182013764501504,99001125,score:1102.0
+334182013852549120,99001125,score:1102.0
+334182013902913536,99001125,score:1102.0
+334182013986766848,99001125,score:1102.0
+334182014062264320,99001125,score:1102.0
+334182014167121920,99001125,score:1102.0
+334182014242619392,99001125,score:1102.0
+334182014309761024,99001125,score:1102.0
+334182014364286976,99001125,score:1102.0
+334182014414618624,99001125,score:1102.0
+334182014456561664,99001125,score:1102.0
+334544400266952704,99934192,score:1102.0
+334544400967368704,99001125,score:1102.0
+334544401013538816,99001125,score:1102.0
+334544401063870465,99001125,score:1102.0
+334544401130979328,99001125,score:1102.0
+334544401193893888,99001125,score:1102.0
+334665141876523008,99180079,score:1102.0
+334906787927031808,99934192,score:1102.0
+334906788589731840,99001125,score:1102.0
+334906788614897665,99001125,score:1102.0
+334906788648452097,99001125,score:1102.0
+334906788677812224,99001125,score:1102.0
+334906788715528193,99001125,score:1102.0
+334906788770086912,99001125,score:1102.0
+334906788812029953,99001125,score:1102.0
+334906788866523136,99001125,score:1102.0
+335269178044940288,99934192,score:1102.0
+333094848875855872,99001331,score:1102.0
+333094850134147072,99925788,score:1102.0
+333094850473852928,99932333,score:1102.0
+333094850503245824,99932333,score:1102.0
+333094850561933313,99934192,score:1102.0
+333094851316908032,99001125,score:1102.0
+333094851384016896,99001125,score:1102.0
+333094851434348545,99001125,score:1102.0
+333094851472130049,99001125,score:1102.0
+333457236921810944,99932333,score:1102.0
+333457237957804032,99001125,score:1102.0
+333457238033268736,99001125,score:1102.0
+333457238075244544,99001125,score:1102.0
+333457238117187584,99001125,score:1102.0
+333819626528014336,99001125,score:1102.0
+333819626658070528,99001125,score:1102.0
+333819626725146625,99001125,score:1102.0
+333819626783899648,99001125,score:1102.0
+333819626850975744,99001125,score:1102.0
+334182012573319168,99934192,score:1102.0
+334182013726720000,99001125,score:1102.0
+334182013785473024,99001125,score:1102.0
+334182013877714944,99001125,score:1102.0
+334182013915463681,99001125,score:1102.0
+334182013999382528,99001125,score:1102.0
+334182014049714177,99001125,score:1102.0
+334182014104240128,99001125,score:1102.0
+334182014175510528,99001125,score:1102.0
+334182014221680640,99001125,score:1102.0
+334182014267817984,99001125,score:1102.0
+334182014326505472,99001125,score:1102.0
+334182014368448512,99001125,score:1102.0
+334182014418812928,99001125,score:1102.0
+334182014481694720,99001125,score:1102.0
+334544400900259840,99001125,score:1102.0
+334544400975790080,99001125,score:1102.0
+334544401030316032,99001125,score:1102.0
+334544401084809216,99001125,score:1102.0
+334544401147756544,99001125,score:1102.0
+334544401302913024,99001125,score:1102.0
+334705748284112896,99934192,score:1102.0
+334906787960553472,99934192,score:1102.0
+334906788640030720,99001125,score:1102.0
+334906788677779456,99001125,score:1102.0
+334906788719755264,99001125,score:1102.0
+334906788774281216,99001125,score:1102.0
+334906788845551616,99001125,score:1102.0
+335269178028163072,99934192,score:1102.0
+333094848875823104,99001331,score:1102.0
+333094848917798912,99001331,score:1102.0
+333094850146729984,99925788,score:1102.0
+333094850473885697,99932333,score:1102.0
+333094850507407360,99932333,score:1102.0
+333094851300130816,99001125,score:1102.0
+333094851396599808,99001125,score:1102.0
+333094851451125760,99001125,score:1102.0
+333094851493068801,99001125,score:1102.0
+333457237152464896,99934192,score:1102.0
+333457237970386944,99001125,score:1102.0
+333457238041690112,99001125,score:1102.0
+333457238079438848,99001125,score:1102.0
+333457238121381888,99001125,score:1102.0
+333819626540630016,99001125,score:1102.0
+333819626670653440,99001125,score:1102.0
+333819626737762304,99001125,score:1102.0
+333819626796482560,99001125,score:1102.0
+334182012581675008,99934192,score:1102.0
+334182013735141376,99001125,score:1102.0
+334182013793861632,99001125,score:1102.0
+334182013881942016,99001125,score:1102.0
+334182013919657984,99001125,score:1102.0
+334182013965795328,99001125,score:1102.0
+334182014024515584,99001125,score:1102.0
+334182014079074304,99001125,score:1102.0
+334182014137794560,99001125,score:1102.0
+334182014196482049,99001125,score:1102.0
+334182014238457856,99001125,score:1102.0
+334182014301339648,99001125,score:1102.0
+334182014343315456,99001125,score:1102.0
+334182014381031424,99001125,score:1102.0
+334182014431363072,99001125,score:1102.0
+334397113528057856,99934192,score:1102.0
+334544400271114240,99934192,score:1102.0
+334544400942235648,99001125,score:1102.0
+334544400992534528,99001125,score:1102.0
+334544401021927424,99001125,score:1102.0
+334544401063870464,99001125,score:1102.0
+334544401101619200,99001125,score:1102.0
+334544401160339456,99001125,score:1102.0
+334544401202282496,99001125,score:1102.0
+334906787922837504,99934192,score:1102.0
+334906788610703360,99001125,score:1102.0
+334906788661035008,99001125,score:1102.0
+334906788694589441,99001125,score:1102.0
+334906788753309696,99001125,score:1102.0
+334906788816224256,99001125,score:1102.0
+334906788874911744,99001125,score:1102.0
+333457236250689536,99001331,score:1102.0
+333457236238106624,99001331,score:1102.0
+333819623545896960,99001331,score:1102.0
+333457236233912320,99001331,score:1102.0
+333819623600422912,99001331,score:1102.0
+333457236208779264,99001331,score:1102.0
+333819623571030016,99001331,score:1102.0
+333819623642365953,99001331,score:1102.0
+333094848884244481,99001331,score:1002.0
+333094850150891520,99925788,score:1002.0
+333094851308552192,99001125,score:1002.0
+333094851400826880,99001125,score:1002.0
+333094851459514368,99001125,score:1002.0
+333094851497263104,99001125,score:1002.0
+333457237894856705,99001125,score:1002.0
+333457237982937088,99001125,score:1002.0
+333457238045884416,99001125,score:1002.0
+333457238087827456,99001125,score:1002.0
+333819624942567424,99934192,score:1002.0
+333819626611933184,99001125,score:1002.0
+333819626699980800,99001125,score:1002.0
+333819626771283968,99001125,score:1002.0
+333819626830004224,99001125,score:1002.0
+334182013709942784,99001125,score:1002.0
+334182013751918592,99001125,score:1002.0
+334182013823188993,99001125,score:1002.0
+334182013890330624,99001125,score:1002.0
+334182013953212416,99001125,score:1002.0
+334182014049681408,99001125,score:1002.0
+334182014141988864,99001125,score:1002.0
+334182014225842176,99001125,score:1002.0
+334182014292983808,99001125,score:1002.0
+334182014355865601,99001125,score:1002.0
+334182014397808640,99001125,score:1002.0
+334182014443945984,99001125,score:1002.0
+334544400254369792,99934192,score:1002.0
+334544400942202880,99001125,score:1002.0
+334544401005150208,99001125,score:1002.0
+334544401055449088,99001125,score:1002.0
+334544401109975040,99001125,score:1002.0
+334544401177083904,99001125,score:1002.0
+334544401323917312,99001125,score:1002.0
+334906787893477376,99934192,score:1002.0
+334906788585537536,99001125,score:1002.0
+334906788614897664,99001125,score:1002.0
+334906788640063488,99001125,score:1002.0
+334906788673617920,99001125,score:1002.0
+334906788711366656,99001125,score:1002.0
+334906788757504000,99001125,score:1002.0
+334906788807835648,99001125,score:1002.0
+334906788849778688,99001125,score:1002.0
+335269178036551680,99934192,score:1002.0
+333094848821329920,99001331,score:1002.0
+333094850461302784,99932333,score:1002.0
+333094850494857216,99932333,score:1002.0
+333094850549350400,99934192,score:1002.0
+333094851304325120,99001125,score:1002.0
+333094851367272448,99001125,score:1002.0
+333094851425959936,99001125,score:1002.0
+333094851459547137,99001125,score:1002.0
+333094851509846016,99001125,score:1002.0
+333457237945221120,99001125,score:1002.0
+333457238020718592,99001125,score:1002.0
+333457238062661632,99001125,score:1002.0
+333457238104604673,99001125,score:1002.0
+333819624959377408,99934192,score:1002.0
+333819626653843456,99001125,score:1002.0
+333819626716758016,99001125,score:1002.0
+333819626779672576,99001125,score:1002.0
+333819626830036992,99001125,score:1002.0
+334182013709942785,99001125,score:1002.0
+334182013760307200,99001125,score:1002.0
+334182013860970496,99001125,score:1002.0
+334182013902913537,99001125,score:1002.0
+334182013978378240,99001125,score:1002.0
+334182014041292800,99001125,score:1002.0
+334182014095851520,99001125,score:1002.0
+334182014150377472,99001125,score:1002.0
+334182014217486336,99001125,score:1002.0
+334182014251008000,99001125,score:1002.0
+334182014313955328,99001125,score:1002.0
+334182014355898368,99001125,score:1002.0
+334182014397841408,99001125,score:1002.0
+334182014452367360,99001125,score:1002.0
+334544400262725632,99934192,score:1002.0
+334544400950591488,99001125,score:1002.0
+334544401013538817,99001125,score:1002.0
+334544401072259072,99001125,score:1002.0
+334544401135173632,99001125,score:1002.0
+334544401202249728,99001125,score:1002.0
+334705575705313280,99934192,score:1002.0
+334906787935420416,99934192,score:1002.0
+334906788623286272,99001125,score:1002.0
+334906788673585152,99001125,score:1002.0
+334906788702978048,99001125,score:1002.0
+334906788757504001,99001125,score:1002.0
+334906788812029952,99001125,score:1002.0
+335120955590410240,99180079,score:1002.0
+333094848850690048,99001331,score:1002.0
+333094848913571840,99001331,score:1002.0
+333094850138341376,99925788,score:1002.0
+333094850465497088,99932333,score:1002.0
+333094850499018752,99932333,score:1002.0
+333094851224633344,99001125,score:1002.0
+333094851371433984,99001125,score:1002.0
+333094851438575616,99001125,score:1002.0
+333094851476324352,99001125,score:1002.0
+333457237957771264,99001125,score:1002.0
+333457238029107200,99001125,score:1002.0
+333457238075211776,99001125,score:1002.0
+333457238112993280,99001125,score:1002.0
+333819624955150336,99934192,score:1002.0
+333819626658037760,99001125,score:1002.0
+333819626725146624,99001125,score:1002.0
+333819626792255488,99001125,score:1002.0
+333819626846814209,99001125,score:1002.0
+334182012376186880,99932333,score:1002.0
+334182013726752768,99001125,score:1002.0
+334182013768663040,99001125,score:1002.0
+334182013873520640,99001125,score:1002.0
+334182013907107840,99001125,score:1002.0
+334182013953245184,99001125,score:1002.0
+334182014016126976,99001125,score:1002.0
+334182014066458624,99001125,score:1002.0
+334182014129373184,99001125,score:1002.0
+334182014188126208,99001125,score:1002.0
+334182014230036480,99001125,score:1002.0
+334182014280368128,99001125,score:1002.0
+334182014339121152,99001125,score:1002.0
+334182014368481280,99001125,score:1002.0
+334182014418812929,99001125,score:1002.0
+334354268175859712,99934192,score:1002.0
+334544400262758400,99934192,score:1002.0
+334544400938008576,99001125,score:1002.0
+334544400988340224,99001125,score:1002.0
+334544401017733120,99001125,score:1002.0
+334544401047093248,99001125,score:1002.0
+334544401084841984,99001125,score:1002.0
+334544401147723776,99001125,score:1002.0
+334544401193861120,99001125,score:1002.0
+334906787755032576,99932333,score:1002.0
+334906788598087680,99001125,score:1002.0
+334906788644257792,99001125,score:1002.0
+334906788682006529,99001125,score:1002.0
+334906788740694017,99001125,score:1002.0
+334906788807802880,99001125,score:1002.0
+334906788853940224,99001125,score:1002.0
+335269178040745984,99934192,score:1002.0
+333457236280049664,99001331,score:1002.0
+333819623558447104,99001331,score:1002.0
+333819623512342528,99001331,score:1002.0
+333457236267466752,99001331,score:1002.0
+333819623617200128,99001331,score:1002.0
+333457236171030528,99001331,score:1002.0
+333819623633977344,99001331,score:1002.0
+333094848863272960,99001331,score:902.0
+333094850499051520,99932333,score:902.0
+333094851371466752,99001125,score:902.0
+333094851446931456,99001125,score:902.0
+333094851493068800,99001125,score:902.0
+333457237961998336,99001125,score:902.0
+333457238033301504,99001125,score:902.0
+333457238079406080,99001125,score:902.0
+333457238121349120,99001125,score:902.0
+333819624653160448,99932333,score:902.0
+333819626565763072,99001125,score:902.0
+333819626683203584,99001125,score:902.0
+333819626746150912,99001125,score:902.0
+333819626804871168,99001125,score:902.0
+334182013680615424,99001125,score:902.0
+334182013739302912,99001125,score:902.0
+334182013798055937,99001125,score:902.0
+334182013886103552,99001125,score:902.0
+334182013936467968,99001125,score:902.0
+334182014016159744,99001125,score:902.0
+334182014116790272,99001125,score:902.0
+334182014217453568,99001125,score:902.0
+334182014292951040,99001125,score:902.0
+334182014347476992,99001125,score:902.0
+334182014381031425,99001125,score:902.0
+334182014427201536,99001125,score:902.0
+334544400040460288,99932333,score:902.0
+334544400917069824,99001125,score:902.0
+334544400988372992,99001125,score:902.0
+334544401038671873,99001125,score:902.0
+334544401093197824,99001125,score:902.0
+334544401156112384,99001125,score:902.0
+334544401311334400,99001125,score:902.0
+334906787742449664,99932333,score:902.0
+334906788577148928,99001125,score:902.0
+334906788606509056,99001125,score:902.0
+334906788635869184,99001125,score:902.0
+334906788669390848,99001125,score:902.0
+334906788694589440,99001125,score:902.0
+334906788740726784,99001125,score:902.0
+334906788795219969,99001125,score:902.0
+334906788837195776,99001125,score:902.0
+335269178023968768,99934192,score:902.0
+335269178065911808,99934192,score:902.0
+333094848917766144,99001331,score:902.0
+333094850142535680,99925788,score:902.0
+333094850486468609,99932333,score:902.0
+333094850545188864,99934192,score:902.0
+333094851291742208,99001125,score:902.0
+333094851358851072,99001125,score:902.0
+333094851413377024,99001125,score:902.0
+333094851451158528,99001125,score:902.0
+333094851493101568,99001125,score:902.0
+333457237940994048,99001125,score:902.0
+333457237991325697,99001125,score:902.0
+333457238054240256,99001125,score:902.0
+333457238096216064,99001125,score:902.0
+333819623633944576,99925788,score:902.0
+333819624946794496,99934192,score:902.0
+333819626582573056,99001125,score:902.0
+333819626695819265,99001125,score:902.0
+333819626758733824,99001125,score:902.0
+333819626813259776,99001125,score:902.0
+334182013705748480,99001125,score:902.0
+334182013743497216,99001125,score:902.0
+334182013839966208,99001125,score:902.0
+334182013894492160,99001125,score:902.0
+334182013961633792,99001125,score:902.0
+334182014032936960,99001125,score:902.0
+334182014083268608,99001125,score:902.0
+334182014137794561,99001125,score:902.0
+334182014209097728,99001125,score:902.0
+334182014242652160,99001125,score:902.0
+334182014305533952,99001125,score:902.0
+334182014347476993,99001125,score:902.0
+334182014389452800,99001125,score:902.0
+334182014431395840,99001125,score:902.0
+334544400250175488,99934192,score:902.0
+334544400929652736,99001125,score:902.0
+334544401000955904,99001125,score:902.0
+334544401059676160,99001125,score:902.0
+334544401110007808,99001125,score:902.0
+334544401181310976,99001125,score:902.0
+334544401332305920,99001125,score:902.0
+334906787901833216,99934192,score:902.0
+334906788610670592,99001125,score:902.0
+334906788665229312,99001125,score:902.0
+334906788690395136,99001125,score:902.0
+334906788749082624,99001125,score:902.0
+334906788799414272,99001125,score:902.0
+334906788879106048,99001125,score:902.0
+335269178057523200,99934192,score:902.0
+333094848896827392,99001331,score:902.0
+333094850134147073,99925788,score:902.0
+333094850457108480,99932333,score:902.0
+333094850490630144,99932333,score:902.0
+333094850561933312,99934192,score:902.0
+333094851346300928,99001125,score:902.0
+333094851430154240,99001125,score:902.0
+333094851463708672,99001125,score:902.0
+333457236267499521,99925788,score:902.0
+333457237945188352,99001125,score:902.0
+333457237995552768,99001125,score:902.0
+333457238058467329,99001125,score:902.0
+333457238104571904,99001125,score:902.0
+333819623629750272,99925788,score:902.0
+333819624938405888,99934192,score:902.0
+333819626607738880,99001125,score:902.0
+333819626712596480,99001125,score:902.0
+333819626779705344,99001125,score:902.0
+333819626838392832,99001125,score:902.0
+334182013718331392,99001125,score:902.0
+334182013756112896,99001125,score:902.0
+334182013848387584,99001125,score:902.0
+334182013894492161,99001125,score:902.0
+334182013944856576,99001125,score:902.0
+334182014007738368,99001125,score:902.0
+334182014049714176,99001125,score:902.0
+334182014100045824,99001125,score:902.0
+334182014150377473,99001125,score:902.0
+334182014221647872,99001125,score:902.0
+334182014263623680,99001125,score:902.0
+334182014318149632,99001125,score:902.0
+334182014364254208,99001125,score:902.0
+334182014414585856,99001125,score:902.0
+334182014464917504,99001125,score:902.0
+334544400254337024,99934192,score:902.0
+334544400925425664,99001125,score:902.0
+334544400975757312,99001125,score:902.0
+334544401009344512,99001125,score:902.0
+334544401038704640,99001125,score:902.0
+334544401076453376,99001125,score:902.0
+334544401135173633,99001125,score:902.0
+334544401177116672,99001125,score:902.0
+334544401298718720,99001125,score:902.0
+334906788585504768,99001125,score:902.0
+334906788631674880,99001125,score:902.0
+334906788673617921,99001125,score:902.0
+334906788723916800,99001125,score:902.0
+334906788786864128,99001125,score:902.0
+334906788845584384,99001125,score:902.0
+335269178032357376,99934192,score:902.0
+333457236242333696,99001331,score:902.0
+333819623550058496,99001331,score:902.0
+333457236313636864,99001331,score:902.0
+333457236259110913,99001331,score:902.0
+333819623613005825,99001331,score:902.0
+333457236200357888,99001331,score:902.0
+333819623629783040,99001331,score:902.0
+333094848640942080,99180079,score:802.0
+333094848917798913,99001331,score:802.0
+333094850486468608,99932333,score:802.0
+333094851367239680,99001125,score:802.0
+333094851430187008,99001125,score:802.0
+333094851476291584,99001125,score:802.0
+333457236271693824,99925788,score:802.0
+333457237953576960,99001125,score:802.0
+333457238020718593,99001125,score:802.0
+333457238066855936,99001125,score:802.0
+333457238108798976,99001125,score:802.0
+333819624967733248,99934192,score:802.0
+333819626662264833,99001125,score:802.0
+333819626725179392,99001125,score:802.0
+333819626792255489,99001125,score:802.0
+333819626859364352,99001125,score:802.0
+334182012577480704,99934192,score:802.0
+334182013730914304,99001125,score:802.0
+334182013772857344,99001125,score:802.0
+334182013873520641,99001125,score:802.0
+334182013915496448,99001125,score:802.0
+334182014011932672,99001125,score:802.0
+334182014087462912,99001125,score:802.0
+334182014192287744,99001125,score:802.0
+334182014251040768,99001125,score:802.0
+334182014339088384,99001125,score:802.0
+334182014372642816,99001125,score:802.0
+334182014422974464,99001125,score:802.0
+334354956008161280,99934192,score:802.0
+334544400900292608,99001125,score:802.0
+334544400979984384,99001125,score:802.0
+334544401026121728,99001125,score:802.0
+334544401076453377,99001125,score:802.0
+334544401143529472,99001125,score:802.0
+334544401210638336,99001125,score:802.0
+334705575709507584,99934192,score:802.0
+334906787939614720,99934192,score:802.0
+334906788606476289,99001125,score:802.0
+334906788627480576,99001125,score:802.0
+334906788652613632,99001125,score:802.0
+334906788686200832,99001125,score:802.0
+334906788732338176,99001125,score:802.0
+334906788791058432,99001125,score:802.0
+334906788820418560,99001125,score:802.0
+335121030848839680,99180079,score:802.0
+335269178061750272,99934192,score:802.0
+333094848896794624,99001331,score:802.0
+333094850138308608,99925788,score:802.0
+333094850478047232,99932333,score:802.0
+333094850511601664,99932333,score:802.0
+333094851254026240,99001125,score:802.0
+333094851329490944,99001125,score:802.0
+333094851400794112,99001125,score:802.0
+333094851442737152,99001125,score:802.0
+333094851476324353,99001125,score:802.0
+333457237915860992,99001125,score:802.0
+333457237974548480,99001125,score:802.0
+333457238045851648,99001125,score:802.0
+333457238083633153,99001125,score:802.0
+333819624934211584,99934192,score:802.0
+333819626557407232,99001125,score:802.0
+333819626674847744,99001125,score:802.0
+333819626741956608,99001125,score:802.0
+333819626792288256,99001125,score:802.0
+334182012590063616,99934192,score:802.0
+334182013735108608,99001125,score:802.0
+334182013806444544,99001125,score:802.0
+334182013886136320,99001125,score:802.0
+334182013919690752,99001125,score:802.0
+334182014011965440,99001125,score:802.0
+334182014079041536,99001125,score:802.0
+334182014129373185,99001125,score:802.0
+334182014192320512,99001125,score:802.0
+334182014230069248,99001125,score:802.0
+334182014297178112,99001125,score:802.0
+334182014343282688,99001125,score:802.0
+334182014372675584,99001125,score:802.0
+334182014427168768,99001125,score:802.0
+334354091683741696,99934192,score:802.0
+334544400917037056,99001125,score:802.0
+334544400996728832,99001125,score:802.0
+334544401042898944,99001125,score:802.0
+334544401101586432,99001125,score:802.0
+334544401168695296,99001125,score:802.0
+334544401319690240,99001125,score:802.0
+334906787750838272,99932333,score:802.0
+334906788606476288,99001125,score:802.0
+334906788648452096,99001125,score:802.0
+334906788682006528,99001125,score:802.0
+334906788740694016,99001125,score:802.0
+334906788795219968,99001125,score:802.0
+334906788853972992,99001125,score:802.0
+335269178049134592,99934192,score:802.0
+333094848884244480,99001331,score:802.0
+333094850448719872,99932333,score:802.0
+333094850482241536,99932333,score:802.0
+333094850515795968,99932333,score:802.0
+333094851312713729,99001125,score:802.0
+333094851404988416,99001125,score:802.0
+333094851459547136,99001125,score:802.0
+333094851505651712,99001125,score:802.0
+333457237924249600,99001125,score:802.0
+333457237987131392,99001125,score:802.0
+333457238050078720,99001125,score:802.0
+333457238092021760,99001125,score:802.0
+333819623625555968,99925788,score:802.0
+333819624644771840,99932333,score:802.0
+333819626582540288,99001125,score:802.0
+333819626695786496,99001125,score:802.0
+333819626758733825,99001125,score:802.0
+333819626825842688,99001125,score:802.0
+334182011726036992,99925788,score:802.0
+334182013693198336,99001125,score:802.0
+334182013743529984,99001125,score:802.0
+334182013810638848,99001125,score:802.0
+334182013890297856,99001125,score:802.0
+334182013932240896,99001125,score:802.0
+334182013990993920,99001125,score:802.0
+334182014037098496,99001125,score:802.0
+334182014091657216,99001125,score:802.0
+334182014150344704,99001125,score:802.0
+334182014213292032,99001125,score:802.0
+334182014246846464,99001125,score:802.0
+334182014309728256,99001125,score:802.0
+334182014351671296,99001125,score:802.0
+334182014393647104,99001125,score:802.0
+334182014448173057,99001125,score:802.0
+334544400245948416,99934192,score:802.0
+334544400908681216,99001125,score:802.0
+334544400967401472,99001125,score:802.0
+334544401000923136,99001125,score:802.0
+334544401038671872,99001125,score:802.0
+334544401068064768,99001125,score:802.0
+334544401126785024,99001125,score:802.0
+334544401172889600,99001125,score:802.0
+334544401286168576,99001125,score:802.0
+334906787947970560,99934192,score:802.0
+334906788619091968,99001125,score:802.0
+334906788669423616,99001125,score:802.0
+334906788715528192,99001125,score:802.0
+334906788761698304,99001125,score:802.0
+334906788824612864,99001125,score:802.0
+335269178011418624,99934192,score:802.0
+333457236212973568,99001331,score:802.0
+333819623524925440,99001331,score:802.0
+333457236309442560,99001331,score:802.0
+333457236259078145,99001331,score:802.0
+333819623604617216,99001331,score:802.0
+333457236275888128,99001331,score:802.0
+333819623625588737,99001331,score:802.0
+333819623642365952,99001331,score:802.0
+335993952631128064,99001125,score:802.0
+335993952337494016,99001125,score:802.0
+335993950945017856,99001331,score:802.0
+333819623973715968,99927145,score:302.007
+333819623969521664,99927145,score:302.007
+333912680450588672,99932129,score:302.00568
+333912680517730304,99932129,score:302.00568
+333912680572256256,99932129,score:302.00568
+333912680664530945,99932129,score:302.00568
+333912680790327296,99932129,score:302.00568
+333912680857436160,99932129,score:302.00568
+333912680911994880,99932129,score:302.00568
+333912680983265280,99932129,score:302.00568
+333912681130098688,99932129,score:302.00568
+333912681184591872,99932129,score:302.00568
+333912681218146304,99932129,score:302.00568
+333912681243312129,99932129,score:302.00568
+333912681255927809,99932129,score:302.00568
+333912681276899328,99932129,score:302.00568
+333912680454782976,99932129,score:302.00568
+333912680526086144,99932129,score:302.00568
+333912680576450561,99932129,score:302.00568
+333912680672886784,99932129,score:302.00568
+333912680786132992,99932129,score:302.00568
+333912680849080321,99932129,score:302.00568
+333912680911962112,99932129,score:302.00568
+333912680974909440,99932129,score:302.00568
+333912681117515776,99932129,score:302.00568
+333912681180397568,99932129,score:302.00568
+333912680387674112,99932129,score:302.00568
+333912680479948800,99932129,score:302.00568
+333912680542896128,99932129,score:302.00568
+333912680635138049,99932129,score:302.00568
+333912680744222720,99932129,score:302.00568
+333912680811331584,99932129,score:302.00568
+333912680874246144,99932129,score:302.00568
+333912680932966400,99932129,score:302.00568
+333912681046179841,99932129,score:302.00568
+333912681159426048,99932129,score:302.00568
+333912681209757696,99932129,score:302.00568
+333912681281093633,99932129,score:302.00568
+334182012099362816,99927145,score:202.00699
+333094849920237568,99927145,score:202.00699
+334182012128690176,99927145,score:202.00699
+333457236615626752,99927145,score:202.00699
+333912680421228544,99932129,score:202.00566
+333912680505147392,99932129,score:202.00566
+333912680559673344,99932129,score:202.00566
+333912680656109569,99932129,score:202.00566
+333912680769388544,99932129,score:202.00566
+333912680849080320,99932129,score:202.00566
+333912680903606272,99932129,score:202.00566
+333912680962326528,99932129,score:202.00566
+333912681100738561,99932129,score:202.00566
+333912681172008960,99932129,score:202.00566
+333912681213952000,99932129,score:202.00566
+333912681234956288,99932129,score:202.00566
+333912681251733504,99932129,score:202.00566
+333912681272705024,99932129,score:202.00566
+333912680438005760,99932129,score:202.00566
+333912680509341696,99932129,score:202.00566
+333912680568029184,99932129,score:202.00566
+333912680656142336,99932129,score:202.00566
+333912680773582848,99932129,score:202.00566
+333912680840658945,99932129,score:202.00566
+333912680891023360,99932129,score:202.00566
+333912680949743616,99932129,score:202.00566
+333912681083961344,99932129,score:202.00566
+333912681163620352,99932129,score:202.00566
+333912680459010048,99932129,score:202.00566
+333912680530280449,99932129,score:202.00566
+333912680618393600,99932129,score:202.00566
+333912680677081088,99932129,score:202.00566
+333912680802910208,99932129,score:202.00566
+333912680857468928,99932129,score:202.00566
+333912680920383488,99932129,score:202.00566
+333912681008431104,99932129,score:202.00566
+333912681142681600,99932129,score:202.00566
+333912681193013248,99932129,score:202.00566
+333912681226567680,99932129,score:202.00566
+333094849928626176,99927145,score:102.00698
+333457236619821056,99927145,score:102.00698
+334182012124495872,99927145,score:102.00698
+333912680391901184,99932129,score:102.00566
+333912680492531712,99932129,score:102.00566
+333912680547090432,99932129,score:102.00566
+333912680643526656,99932129,score:102.00566
+333912680748384256,99932129,score:102.00566
+333912680832303104,99932129,score:102.00566
+333912680882601984,99932129,score:102.00566
+333912680941355008,99932129,score:102.00566
+333912681046212608,99932129,score:102.00566
+333912681155231744,99932129,score:102.00566
+333912681201369088,99932129,score:102.00566
+333912681234923520,99932129,score:102.00566
+333912681247539201,99932129,score:102.00566
+333912681264316416,99932129,score:102.00566
+333912681297838080,99932129,score:102.00566
+333912680404451328,99932129,score:102.00566
+333912680496726016,99932129,score:102.00566
+333912680551284736,99932129,score:102.00566
+333912680647720960,99932129,score:102.00566
+333912680760999936,99932129,score:102.00566
+333912680828076033,99932129,score:102.00566
+333912680878407680,99932129,score:102.00566
+333912680932933632,99932129,score:102.00566
+333912681037824000,99932129,score:102.00566
+333912681146875904,99932129,score:102.00566
+333912681289482240,99932129,score:102.00566
+333912680442200064,99932129,score:102.00566
+333912680513503232,99932129,score:102.00566
+333912680568061952,99932129,score:102.00566
+333912680664498176,99932129,score:102.00566
+333912680777777153,99932129,score:102.00566
+333912680840691712,99932129,score:102.00566
+333912680907800576,99932129,score:102.00566
+333912680974876672,99932129,score:102.00566
+333912681121677312,99932129,score:102.00566
+333912681184591873,99932129,score:102.00566
+333912681218179072,99932129,score:102.00566
+333819623973683200,99927145,score:2.0069814
+333094849924431872,99927145,score:2.0069814
+333912680467365888,99932129,score:2.005663
+333912680534507520,99932129,score:2.005663
+333912680622587904,99932129,score:2.005663
+333912680710668288,99932129,score:2.005663
+333912680815525888,99932129,score:2.005663
+333912680865857536,99932129,score:2.005663
+333912680928739328,99932129,score:2.005663
+333912681033596928,99932129,score:2.005663
+333912681142648832,99932129,score:2.005663
+333912681188818944,99932129,score:2.005663
+333912681226534912,99932129,score:2.005663
+333912681247539200,99932129,score:2.005663
+333912681264283648,99932129,score:2.005663
+333912681281093632,99932129,score:2.005663
+333912680349925376,99932129,score:2.005663
+333912680475787264,99932129,score:2.005663
+333912680534507521,99932129,score:2.005663
+333912680635138048,99932129,score:2.005663
+333912680735801345,99932129,score:2.005663
+333912680807104512,99932129,score:2.005663
+333912680861663232,99932129,score:2.005663
+333912680916189184,99932129,score:2.005663
+333912680987459584,99932129,score:2.005663
+333912681134260224,99932129,score:2.005663
+333912681285287936,99932129,score:2.005663
+333912680404484097,99932129,score:2.005663
+333912680496726017,99932129,score:2.005663
+333912680555479040,99932129,score:2.005663
+333912680647753728,99932129,score:2.005663
+333912680760999937,99932129,score:2.005663
+333912680828108800,99932129,score:2.005663
+333912680886829056,99932129,score:2.005663
+333912680962293760,99932129,score:2.005663
+333912681100738560,99932129,score:2.005663
+333912681172041728,99932129,score:2.005663
+333912681213984768,99932129,score:2.005663
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.631 sec - in com.dfire.tis.solrextend.core.TestEmbeddedSolrServer
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:20 min
+[INFO] Finished at: 2018-07-19T20:11:01+08:00
+[INFO] Final Memory: 44M/542M
+[INFO] ------------------------------------------------------------------------

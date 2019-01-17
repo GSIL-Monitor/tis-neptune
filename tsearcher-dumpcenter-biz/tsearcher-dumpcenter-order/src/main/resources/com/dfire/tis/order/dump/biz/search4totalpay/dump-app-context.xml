@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tsearcher="http://www.taobao.com/terminator/tsearcher"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.taobao.com/terminator/tsearcher http://www.taobao.com/terminator/tsearcher.xsd">
+
+	<bean class="com.dfire.tis.order.dump.task.DataSourceRegister">
+		<property name="processDbs" value="${datasource.enum}" />
+	</bean>
+
+	
+	<tsearcher:realtime id="search4takeout_order_extra" justDump="true">
+		<tsearcher:fulldump ref="takeout_order_extra"
+			waitQueueSize="30" maxPoolSize="10" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+	<tsearcher:realtime id="search4specialfee" justDump="true">
+		<tsearcher:fulldump ref="specialfeeProvider"
+			waitQueueSize="30" maxPoolSize="10" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+	<!-- member start -->
+	<tsearcher:realtime id="search4card" justDump="true">
+		<tsearcher:fulldump ref="cardProvider"
+			waitQueueSize="2" maxPoolSize="2" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+
+	<tsearcher:realtime id="search4customer" justDump="true">
+		<tsearcher:fulldump ref="customerProvider"
+			waitQueueSize="2" maxPoolSize="2" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+	<!-- -->
+	<tsearcher:realtime id="search4instance" justDump="true">
+		<tsearcher:fulldump ref="instanceProvider"
+			waitQueueSize="30" maxPoolSize="25" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+
+	<tsearcher:realtime id="search4totalpay">
+		<tsearcher:fulldump ref="totalpayProvider"
+			waitQueueSize="30" maxPoolSize="10" />
+		<tsearcher:grouprouter shardKey="entity_id" />
+	</tsearcher:realtime>
+
+
+	<tsearcher:realtime id="search4pay" justDump="true">
+		<tsearcher:fulldump ref="payProvider"
+			waitQueueSize="30" maxPoolSize="10" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+
+	<tsearcher:realtime id="search4orderinfo" justDump="true">
+		<tsearcher:fulldump ref="orderinfoProvider"
+			waitQueueSize="30" maxPoolSize="10" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+	<!-- 20170422 add by baisui -->
+	<tsearcher:realtime id="search4orderbill" justDump="true">
+		<tsearcher:fulldump ref="orderbillProvider"
+			waitQueueSize="30" maxPoolSize="25" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+	<tsearcher:realtime id="search4servicebill"
+		justDump="true">
+		<tsearcher:fulldump ref="servicebillProvider"
+			waitQueueSize="30" maxPoolSize="25" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+	<!-- 20170422 add by baisui end -->
+
+	<!-- 20170815 add by baisui 企业卡 ent_expense和 ent_expense_order两张表 -->
+	<tsearcher:realtime id="search4ent_expense"
+		justDump="true">
+		<tsearcher:fulldump ref="ent_expense"
+			waitQueueSize="30" maxPoolSize="25" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+	<tsearcher:realtime id="search4ent_expense_order"
+		justDump="true">
+		<tsearcher:fulldump ref="ent_expense_order"
+			waitQueueSize="30" maxPoolSize="25" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+
+	<bean id="ent_expense"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${cardcenter-ds}">
+					<value>
+                        <![CDATA[   
+ SELECT id, customer_id, customer_name, mobile, expense_id, expense_type
+        , paid_amount, apply_expense_amount, approve_amount, approver_time
+	    , expense_status, approver, remark, attribute
+	    , DATE_FORMAT(from_unixtime(create_time/1000),'%Y%m%d%H%i%s') as create_time
+	    , last_ver
+	    , DATE_FORMAT(from_unixtime(op_time/1000),'%Y%m%d%H%i%s') as op_time, is_valid, type 
+	FROM `ent_expense`
+                        ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="ent_expense_order"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${cardcenter-ds}">
+					<value>
+                        <![CDATA[   
+    SELECT 	id, order_id, expense_id, shop_name, ticket_type, invoice_source
+        , invoice_id, can_invoice_amount, can_expense_amount 
+	    , totalpay_id, invoice_type, expense_platform, invoice_address, invoice_preview_address
+	    , people_num, entity_id, attribute
+	    , DATE_FORMAT(from_unixtime(create_time/1000),'%Y%m%d%H%i%s') as create_time
+	    , last_ver
+	    , DATE_FORMAT(from_unixtime(op_time/1000),'%Y%m%d%H%i%s') as op_time, is_valid, `type` 
+	FROM `ent_expense_order` 
+	                    ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!-- 20170815 add by baisui -->
+
+	<bean id="specialfeeProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.enum}">
+					<value>
+                        <![CDATA[   
+     SELECT specialfee_id, totalpay_id, order_id, kind, feedetail_id, fee, entity_id, is_valid
+     , DATE_FORMAT(from_unixtime(create_time/1000),'%Y%m%d%H%i%s') as  create_time
+     , DATE_FORMAT(from_unixtime(op_time/1000),'%Y%m%d%H%i%s') as op_time, 
+       last_ver, op_user_id 
+    FROM `specialfee` 
+                        ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+
+
+	<bean id="orderinfoProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.enum}">
+					<value>
+                        <![CDATA[   
+      SELECT  order_id, global_code, simple_code, seat_code, code,
+        DATE_FORMAT(curr_date,'%Y%m%d') as  curr_date, totalpay_id, 
+    seat_id, people_count, 
+    DATE_FORMAT(from_unixtime(open_time/1000),'%Y%m%d%H%i%s') as open_time
+    , status, memo, inner_code, menutime_id, worker_id, 
+    DATE_FORMAT(from_unixtime(end_time/1000),'%Y%m%d%H%i%s') as end_time
+    , feeplan_id, op_user_id, order_from, order_kind, area_id, name, mobile, 
+    tel, is_autocommit, send_time, address, paymode, outfee, sender_id, customerregister_id, 
+    waitingorder_id, send_status, audit_status, is_hide, entity_id, is_valid, 
+    create_time, op_time, last_ver, load_time
+    , DATE_FORMAT(from_unixtime(modify_time),'%Y%m%d%H%i%s') as modify_time
+    , scan_url, seat_mark, 
+    reservetime_id, is_wait, is_print, book_id, reserve_id, is_limittime ,status as order_status
+     FROM `orderdetail` WHERE modify_time > ${daysBefore}
+                        ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	
+
+
+	<bean id="instanceProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.enum}">
+					<value>
+                        <![CDATA[   
+SELECT instance_id, order_id, batch_msg, status ,is_valid,draw_status
+FROM 
+    `instancedetail` WHERE modify_time > ${daysBefore}
+
+                        ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<!-- ;orderds4;orderds5;orderds6;orderds7;orderds8;orderds9;orderds10;orderds11;orderds12;orderds13;orderds14;orderds15;orderds16;orderds17;orderds18 -->
+	<bean id="totalpayProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.enum}">
+					<value>
+                        <![CDATA[   
+SELECT  totalpay_id, DATE_FORMAT(curr_date,'%Y%m%d') as curr_date, outfee, source_amount, discount_amount, result_amount, recieve_amount, ratio, status, entity_id, 
+    is_valid,DATE_FORMAT(from_unixtime(create_time/1000),'%Y%m%d%H%i%s') as create_time
+    ,  DATE_FORMAT(from_unixtime(op_time/1000),'%Y%m%d%H%i%s') as op_time
+    , last_ver, op_user_id, discount_plan_id, operator
+    , DATE_FORMAT(from_unixtime(operate_date/1000),'%Y%m%d%H%i%s') as operate_date, card_id, card, card_entity_id, 
+    is_full_ratio, is_minconsume_ratio, is_servicefee_ratio, invoice_code, invoice_memo, invoice, over_status, 
+    is_hide
+    , DATE_FORMAT(from_unixtime(load_time),'%Y%m%d%H%i%s') as load_time
+    , DATE_FORMAT(from_unixtime(modify_time),'%Y%m%d%H%i%s') as modify_time
+    , printnum1, printnum2,coupon_discount
+FROM 
+   `totalpayinfo` WHERE modify_time > ${daysBefore}
+
+                        ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+
+
+
+
+	<bean id="payProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.enum}">
+					<value>
+                        <![CDATA[   
+    SELECT  pay_id, totalpay_id, kindpay_id, kindpayname, fee, operator, operator_name, pay_time, pay, charge, is_valid, entity_id, create_time, 
+      op_time, last_ver, opuser_id, card_id, card_entity_id, online_bill_id, type, code, waitingpay_id, load_time
+      , DATE_FORMAT(from_unixtime(modify_time),'%Y%m%d%H%i%s') as modify_time
+      , is_dealed, 
+      type_name,coupon_fee,coupon_cost,coupon_num
+      FROM  `payinfo`  WHERE modify_time > ${daysBefore}
+                        ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="customerProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${member.datasource.enum}">
+					<value>
+                        <![CDATA[   
+SELECT 
+    id                ,
+    mobile            ,      
+    phone             ,          
+    sex               ,      
+    birthday         ,         
+    certificate       ,    
+    spell              ,          
+    NAME               ,         
+    entity_id         ,          
+    is_valid         ,         
+create_time       ,
+ op_time ,
+    last_ver         ,      
+    contry_id         ,        
+    contry_code       ,        
+    consume_amount     ,        
+    last_consume_time  ,        
+    consume_num       ,        
+    extend_fields      
+FROM `customer` ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+
+	<!--card表 -->
+	<bean id="cardProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${member.datasource.enum}">
+					<value>
+                        <![CDATA[   
+    SELECT id, kind_card_id,  customer_id,  CODE,  inner_code,  pwd
+           ,  pay,  active_date,  pre_fee,  balance,  gift_balance,  real_balance
+           ,  degree,  pay_amount,  consume_amount,  ratio_amount,  STATUS
+           ,  get_status,  active_id,  entity_id,  is_valid,create_time,op_time 
+           ,  last_ver,  seller_id,  last_consume_time,  consume_num,  extend_fields
+      FROM `card`
+                        ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="orderbillProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.enum}">
+					<value>
+                        <![CDATA[   
+    SELECT id ,order_id ,entity_id,status ,final_amount ,is_valid,last_ver
+      FROM `order_bill`
+                        ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="servicebillProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.enum}">
+					<value>
+                        <![CDATA[   
+  SELECT servicebill_id,is_valid,final_amount,entity_id,last_ver,modify_time
+   FROM  `servicebillinfo`
+                        ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+
+	<bean id="takeout_order_extra"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.enum}">
+					<value>
+                        <![CDATA[   
+ SELECT
+ `order_id`,
+ `order_from`,  
+ `view_id`,
+ `has_invoiced`, 
+ `invoice_title`, 
+ `is_third_shipping`, 
+ `activity`,
+ `day_seq`,
+ `courier_name`, 
+ `courier_phone`, 
+ `cancel_reason`,
+ `entity_id`,
+ `ext` ,
+ `out_id`
+ FROM takeout_order_extra 
+                        ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+
+
+
+
+</beans>

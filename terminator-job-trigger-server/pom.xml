@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.dfire.tis</groupId>
+		<artifactId>terminator-job-trigger-parent</artifactId>
+		<version>3.7.47</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<groupId>com.dfire.tis</groupId>
+	<artifactId>terminator-job-trigger-server</artifactId>
+	<version>3.7.47</version>
+
+	<properties>
+		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+	</properties>
+
+	<name>terminator-job-trigger-server</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+	<dependency>
+		<groupId>com.dfire.tis</groupId>
+	    <artifactId>tis-hdfs-extends</artifactId>
+	</dependency>
+		<dependency>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>jetty</artifactId>
+			<version>6.1.26</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-solrj-client</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tsearcher-builder-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-solrj</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>global-diamond-config</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>commons-daemon</groupId>
+			<artifactId>commons-daemon</artifactId>
+			<version>1.0.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.1.5</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+       <dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-job-trigger-common</artifactId>
+			<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.hadoop</groupId>
+					<artifactId>hadoop-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.hadoop</groupId>
+					<artifactId>hadoop-client</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-job-trigger-dal</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-manage-pojo</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-pubhook-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jettison</groupId>
+			<artifactId>jettison</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-client</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>io.netty</groupId>
+					<artifactId>netty</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	
+		<!-- <dependency> <groupId>org.apache.hadoop.thirdparty.guava</groupId> 
+			<artifactId>guava</artifactId> <version>r09-jarjar</version> </dependency> -->
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>batchpubservice</artifactId>
+			<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.taobao.terminator</groupId>
+					<artifactId>terminator-cloud-client</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tsearcher-cloud-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>com.taobao.terminator</groupId> <artifactId>terminator-cloud-common</artifactId> 
+			<version>3.1.1.1-SNAPSHOT</version> <exclusions> <exclusion> <groupId>org.slf4j</groupId> 
+			<artifactId>jcl-over-slf4j</artifactId> </exclusion> <exclusion> <groupId>com.taobao.terminator</groupId> 
+			<artifactId>terminator-hdfs</artifactId> </exclusion> <exclusion> <groupId>com.taobao.terminator</groupId> 
+			<artifactId>terminator-pubhook-common</artifactId> </exclusion> <exclusion> 
+			<groupId>org.springframework</groupId> <artifactId>spring</artifactId> </exclusion> 
+			<exclusion> <groupId>opensymphony</groupId> <artifactId>quartz</artifactId> 
+			</exclusion> <exclusion> <groupId>org.apache.hadoop</groupId> <artifactId>zookeeper</artifactId> 
+			</exclusion> <exclusion> <groupId>apache-collections</groupId> <artifactId>commons-collections</artifactId> 
+			</exclusion> <exclusion> <groupId>jdom</groupId> <artifactId>jdom</artifactId> 
+			</exclusion> <exclusion> <groupId>xerces</groupId> <artifactId>xercesImpl</artifactId> 
+			</exclusion> </exclusions> </dependency> -->
+
+		<dependency>
+			<groupId>jdom</groupId>
+			<artifactId>jdom</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.1.41</version>
+		</dependency>
+
+
+
+
+
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+
+		</dependency>
+	</dependencies>
+
+	<build>
+
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>com.taobao.terminator.trigger.LaunchServer</mainClass>
+							<classpathPrefix>./dependency</classpathPrefix>
+						</manifest>
+
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

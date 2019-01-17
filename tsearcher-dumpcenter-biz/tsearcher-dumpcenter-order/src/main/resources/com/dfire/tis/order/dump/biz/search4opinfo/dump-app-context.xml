@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tsearcher="http://www.taobao.com/terminator/tsearcher"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.taobao.com/terminator/tsearcher http://www.taobao.com/terminator/tsearcher.xsd">
+
+
+	<!-- 标准库 -->
+	<tsearcher:realtime id="search4opinfo"
+		justDump="true">
+		<tsearcher:fulldump ref="opInfoProvider"
+			waitQueueSize="2" maxPoolSize="2" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+
+	<tsearcher:realtime id="search4userinfo" justDump="true">
+		<tsearcher:fulldump ref="userInfoProvider"
+			waitQueueSize="2" maxPoolSize="2" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+	<bean id="opInfoProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.cashlog.enum}">
+					<value>
+						<![CDATA[
+SELECT
+	op_info_id,
+    kind,
+    action,
+    source_id,
+    memo,
+    old_value,
+    new_value,
+    op_user_id,
+    entity_id,
+    is_valid,
+    DATE_FORMAT(from_unixtime(create_time/1000),'%Y%m%d%H%i%s') as  create_time,
+    DATE_FORMAT(from_unixtime(op_time/1000),'%Y%m%d%H%i%s') as op_time
+FROM op_info
+	        			]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="userInfoProvider"
+		class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${datasource.bps.enum}">
+					<value>
+						<![CDATA[
+SELECT
+	id,
+	card_no,
+    DATE_FORMAT(from_unixtime(create_time/1000),'%Y%m%d%H%i%s') as  create_time,
+    email,
+    employee_id,
+    entity_id,
+    finger_print,
+    is_all_branch,
+    is_all_plate,
+    is_all_shop,
+    is_card_seller,
+    is_supper,
+    is_valid,
+    name,
+    DATE_FORMAT(from_unixtime(op_time/1000),'%Y%m%d%H%i%s') as op_time,
+    user_name
+FROM user_info
+	        			]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

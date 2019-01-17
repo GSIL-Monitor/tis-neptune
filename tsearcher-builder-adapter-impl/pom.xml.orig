@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.dfire.tis</groupId>
+		<artifactId>terminator-job-trigger-parent</artifactId>
+<<<<<<< HEAD
+		<version>3.6.5-SNAPSHOT</version>
+=======
+		<version>3.6.6</version>
+>>>>>>> f2bb0789969c6ad130687741d61579759d496dbc
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<groupId>com.dfire.tis</groupId>
+	<artifactId>tsearcher-builder-adapter-impl</artifactId>
+<<<<<<< HEAD
+	<version>3.6.5-SNAPSHOT</version>
+=======
+	<version>3.6.6</version>
+>>>>>>> f2bb0789969c6ad130687741d61579759d496dbc
+	<packaging>jar</packaging>
+
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-builder</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-core</artifactId>
+			<version>0.20.2-cdh3u1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-job-trigger-server</artifactId>
+			<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.hadoop</groupId>
+					<artifactId>hadoop-client</artifactId>
+				</exclusion>
+			</exclusions>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>global-diamond-config</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tsearcher-builder-api</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+	</dependencies>
+</project>

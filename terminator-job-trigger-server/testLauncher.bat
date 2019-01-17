@@ -1,0 +1,1 @@
+mvn test -Dtest=TestLauncher -DargLine="-Dsun.misc.URLClassPath.debugg=false -Xrunjdwp:transport=dt_socket,address=9993,suspend=n,server=y -Dterminator_project=jst -Ddaily=true -Dtest=true"

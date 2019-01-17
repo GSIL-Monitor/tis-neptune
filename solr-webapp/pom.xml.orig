@@ -1,0 +1,185 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>com.dfire.tis</groupId>
+		<artifactId>terminator-job-trigger-parent</artifactId>
+<<<<<<< HEAD
+		<version>3.6.5-SNAPSHOT</version>
+=======
+		<version>3.6.6</version>
+>>>>>>> f2bb0789969c6ad130687741d61579759d496dbc
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dfire.tis</groupId>
+	<artifactId>solr-webapp</artifactId>
+	<packaging>war</packaging>
+<<<<<<< HEAD
+	<version>3.6.5-SNAPSHOT</version>
+=======
+	<version>3.6.6</version>
+>>>>>>> f2bb0789969c6ad130687741d61579759d496dbc
+	<name>solr-webapp Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+    <properties>
+        <timestamp>${maven.build.timestamp}</timestamp>
+        <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+    </properties>
+	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-solrcore-extend</artifactId>
+			<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.shared</groupId>
+			<artifactId>dfire-servlet-monitor</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<env>dev</env>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>daily</id>
+			<properties>
+				<env>daily</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>pre</id>
+			<properties>
+				<env>pre</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>publish</id>
+			<properties>
+				<env>publish</env>
+			</properties>
+		</profile>
+	</profiles>
+
+
+	<build>
+		<finalName>solr</finalName>
+		<filters>
+			<filter>src/main/filter/${env}.properties</filter>
+		</filters>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-war-plugin</artifactId> 
+				<version>2.6</version> <configuration> <warSourceExcludes></warSourceExcludes> 
+				<packagingExcludes>WEB-INF/lib/solr-core-5.3.0.jar,WEB-INF/weblogic.xml</packagingExcludes> 
+				<webResources> </webResources> </configuration> </plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.2</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+
+
+          <plugin>
+				<groupId>com.dfire.tis</groupId>
+				<artifactId>tiswar-maven-plugin</artifactId>
+				<configuration>
+					<appnamePattern>solr.*</appnamePattern>
+					<webResources>
+                    <resource>
+                         <directory>src/main/resources/version</directory>
+                        <targetPath>/</targetPath>
+                        <filtering>true</filtering>
+                        <includes>
+                            <include>**/*.jsp</include>
+                        </includes>
+                    </resource>
+                 </webResources>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+	<groupId>com.dfire.tis</groupId>
+	<artifactId>tisasm-maven-plugin</artifactId>
+	 <version>1.0-SNAPSHOT</version>
+				<configuration>
+					<descriptor>./assembly.xml</descriptor>
+					<finalName>${appname}</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+					<outputDirectory>../</outputDirectory>
+					<appnamePattern>solr.*</appnamePattern>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>tisasm</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+
+		</plugins>
+
+	</build>
+</project>

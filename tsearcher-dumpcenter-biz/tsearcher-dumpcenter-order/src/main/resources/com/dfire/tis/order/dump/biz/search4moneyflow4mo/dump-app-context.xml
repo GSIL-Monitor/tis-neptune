@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tsearcher="http://www.taobao.com/terminator/tsearcher"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.taobao.com/terminator/tsearcher http://www.taobao.com/terminator/tsearcher.xsd">
+<!-- 
+	<import resource="classpath:/com/dfire/tis/order/dump/biz/search4degreeflow/member-datasource-context.xml"/>
+ -->
+	<!-- datasource end -->
+
+
+	<!--card 表-->
+	<tsearcher:realtime id="search4card4mo" justDump="true">
+		<tsearcher:fulldump ref="cardProvider"
+			waitQueueSize="2" maxPoolSize="2" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+	<!--customer 表-->
+	<tsearcher:realtime id="search4customer4mo" justDump="true">
+		<tsearcher:fulldump ref="customerProvider"
+			waitQueueSize="2" maxPoolSize="2" />
+		<tsearcher:grouprouter
+			class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+	<!--money_folw 表-->
+	<tsearcher:realtime id="search4moneyflow4mo">
+		<tsearcher:fulldump ref="moneyflowProvider"
+			waitQueueSize="2" maxPoolSize="2" />
+		<tsearcher:grouprouter shardKey="entity_id" />
+
+	</tsearcher:realtime>
+	<!--shop 表-->
+	<tsearcher:realtime id="search4shop4mo" justDump="true">
+		<tsearcher:fulldump ref="shopProvider"
+							waitQueueSize="2" maxPoolSize="2" />
+		<tsearcher:grouprouter
+				class="com.taobao.terminator.hdfs.client.router.Group32RandRouter" />
+	</tsearcher:realtime>
+
+	<!-- Provider start-->
+	<!--card 表-->
+	<bean id="cardProvider"
+		  class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${member.datasource.enum}">
+					<value>
+						<![CDATA[
+			SELECT   id,  kind_card_id,  customer_id,  CODE,  inner_code,  pwd
+			,  pay,  active_date,  pre_fee,  balance,  gift_balance
+			,  real_balance,  degree,  pay_amount,  consume_amount
+			,  ratio_amount,  STATUS,  get_status,  active_id
+			,  entity_id,  is_valid, create_time,op_time 
+			,last_ver,  seller_id,  last_consume_time,  consume_num
+			,  extend_fields 
+			FROM `card`
+            			]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--customer 表-->
+	<bean id="customerProvider"
+		  class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${member.datasource.enum}">
+					<value>
+						<![CDATA[
+	SELECT id,mobile,phone,sex,birthday,certificate,spell,NAME,entity_id,is_valid,create_time,op_time ,last_ver,contry_id,contry_code,consume_amount,last_consume_time,consume_num,extend_fields 
+	  FROM `customer`
+ 						]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--money_flow 表 -->
+	<bean id="moneyflowProvider"
+		  class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="${member.datasource.enum}">
+					<value>
+						<![CDATA[
+  SELECT
+		id              ,
+		consume_date    ,
+		action          ,
+		card_id         ,
+		customer_id     ,
+		pay             ,
+		fee             ,
+		pay_id          ,
+		relation_id     ,
+	CASE
+    WHEN  shop_entity_id IS NULL OR  shop_entity_id = '' THEN entity_id
+    ELSE  shop_entity_id
+    END AS "shop_entity_id" ,
+		status          ,
+		entity_id       ,
+		is_valid        ,
+    DATE_FORMAT(from_unixtime(create_time/1000),'%Y%m%d%H%i%s') as create_time ,
+		operator_id     ,
+        DATE_FORMAT(from_unixtime(op_time/1000),'%Y%m%d%H%i%s') as op_time      ,
+		last_ver        ,
+		active_id       ,
+		pay_mode        ,
+		balance         ,
+		seller_id       ,
+		op_type         ,
+		dispose_name    ,
+		extend_fields
+   FROM `money_flow` ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--shop 表 -->
+	<bean id="shopProvider"
+		  class="com.taobao.terminator.hdfs.client.data.SourceDataProviderFactory">
+		<property name="subTablesDesc">
+			<map>
+				<entry key="shop-ds">
+					<value>
+						<![CDATA[
+  select
+  `id`,
+  `country_code`,
+  `shop_kind`,
+  `brand_id`,
+  `plate_id` ,
+  `name` ,
+  `english_name` ,
+  `spell` ,
+  `code` ,
+  `customer_kind`,
+  `join_mode`,
+  `phone1` ,
+  `phone2`,
+  `memo` ,
+  `introduce`,
+  `status` ,
+  `zip_code`,
+  `linkman`,
+  `business_time` ,
+  `longtitude`,
+  `latitude` ,
+  `country_id` ,
+  `province_id`,
+  `city_id`,
+  `town_id` ,
+  `address` ,
+  `attachment_id`,
+  `special_tag`,
+  `avg_price`,
+  `is_test`,
+  `sub_type`,
+  `entity_id`,
+  `is_valid` ,
+  `create_time` ,
+  `op_time` ,
+  `last_ver` ,
+  `industry`,
+  `merchant_id` ,
+  `qq` ,
+  `email`,
+  `area` ,
+  `weixin`,  `is_init` ,
+  `weixin_pay_status` ,
+  `map_address`  from `shop`
+ ]]>
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!-- provider end-->
+	</beans>

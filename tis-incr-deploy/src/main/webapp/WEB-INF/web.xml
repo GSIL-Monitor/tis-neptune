@@ -1,0 +1,27 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>tis-incr-deploy</display-name>
+	<servlet>
+		<servlet-name>monitorServlet</servlet-name>
+		<servlet-class>com.dihuo.app.common.monitor.MonitorServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>incrDeployServlet</servlet-name>
+		<servlet-class>com.dfire.tis.deploy.servlet.IncrDeployServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>monitorServlet</servlet-name>
+		<url-pattern>/check_health</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>incrDeployServlet</servlet-name>
+		<url-pattern>/incr-deploy</url-pattern>
+	</servlet-mapping>
+
+</web-app>

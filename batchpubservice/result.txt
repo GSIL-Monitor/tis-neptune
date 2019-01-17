@@ -1,0 +1,108 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building batchpubservice 1.0.3-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ batchpubservice ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\j2ee_solution\eclipse-standard-kepler-SR2-win32-x86_64\workspace\terminator-trigger-center\batchpubservice\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ batchpubservice ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- exec-maven-plugin:1.4.0:java (default-cli) @ batchpubservice ---
+buffer.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+buffer.append("<schema name=\"template\" version=\"1.5\">");
+buffer.append("<types>");
+buffer.append("     <fieldType name=\"string\" class=\"solr.StrField\"  sortMissingLast=\"true\" omitNorms=\"true\" omitTermFreqAndPositions=\"true\"/>");
+buffer.append("     <fieldType name=\"double\" class=\"solr.TrieDoubleField\" precisionStep=\"0\" positionIncrementGap=\"0\"/>");
+buffer.append("     <fieldType name=\"tdouble\" class=\"solr.TrieDoubleField\" precisionStep=\"8\" positionIncrementGap=\"0\"/>");
+buffer.append("    <fieldType name=\"float\" class=\"solr.TrieFloatField\" precisionStep=\"0\" positionIncrementGap=\"0\"/>");
+buffer.append("    <fieldType name=\"tfloat\" class=\"solr.TrieFloatField\" precisionStep=\"8\" positionIncrementGap=\"0\"/>");
+buffer.append("    <fieldType name=\"int\"  class=\"solr.TrieIntField\" precisionStep=\"0\" positionIncrementGap=\"0\"/>");
+buffer.append("    <fieldType name=\"tint\" class=\"solr.TrieIntField\" precisionStep=\"8\" positionIncrementGap=\"0\"/>");
+buffer.append("    <fieldType  name=\"long\" class=\"solr.TrieLongField\" precisionStep=\"0\" positionIncrementGap=\"0\"/>");
+buffer.append("    <fieldType name=\"tlong\" class=\"solr.TrieLongField\" precisionStep=\"8\" positionIncrementGap=\"0\"/>");
+buffer.append("   	<fieldType name=\"string_deli\" class=\"solr.TextField\" tokenized=\"true\" omitNorms=\"true\" omitTermFreqAndPositions=\"true\">");
+buffer.append("        <analyzer>");
+buffer.append("             <tokenizer class=\"solr.PatternTokenizerFactory\" pattern=\",\s*\" />");
+buffer.append("        </analyzer>");
+buffer.append("   </fieldType>");
+buffer.append("  <fieldType name=\"menuSpec\" class=\"com.dfire.tis.solrextend.fieldtype.s4menu.MenuSpecParserField\" tokenized=\"true\" omitNorms=\"true\" omitTermFreqAndPositions=\"true\"   />");
+buffer.append("  <fieldType name=\"cn_pinyin\" class=\"solr.TextField\" positionIncrementGap=\"100\" ");
+buffer.append("       autoGeneratePhraseQueries=\"false\"  omitNorms=\"true\" omitPositions=\"true\">  ");
+buffer.append("	<analyzer  type=\"index\">");
+buffer.append("        <tokenizer class=\"solr.PatternTokenizerFactory\" pattern=\",\s*\" />");
+buffer.append("	   <filter class=\"solr.NGramFilterFactory\"  minGramSize=\"1\" maxGramSize=\"7\" />");
+buffer.append("	   <filter class=\"solr.StandardFilterFactory\"/>");
+buffer.append("	   <filter class=\"solr.TrimFilterFactory\"/>");
+buffer.append("	   <filter class=\"com.dfire.tis.solrextend.fieldtype.pinyin.PinyinTokenFilterFactory\" />   ");
+buffer.append("	</analyzer> ");
+buffer.append("     <analyzer  type=\"query\">");
+buffer.append("       <tokenizer class=\"solr.PatternTokenizerFactory\" pattern=\",\s*\" />");
+buffer.append("	   <filter class=\"solr.LowerCaseFilterFactory\"/>");
+buffer.append("    </analyzer>");
+buffer.append("  </fieldType>");
+buffer.append("</types> ");
+buffer.append("<fields>");
+buffer.append("  <field name=\"menu_id\" type=\"string\" stored=\"true\" indexed=\"true\" required=\"true\"  docValues=\"true\"/>");
+buffer.append("  <field name=\"code\" type=\"string\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"sort_code\" type=\"tint\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"name\" type=\"string\" stored=\"true\" indexed=\"false\" required=\"false\"/>");
+buffer.append("  <field name=\"spell\" type=\"string\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"spell2\" type=\"string\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"taste\" type=\"string\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"price\" type=\"tdouble\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"server\" type=\"string\" stored=\"true\" indexed=\"false\" required=\"false\"/>");
+buffer.append("  <field name=\"path\" type=\"string\" stored=\"true\" indexed=\"false\" required=\"false\"/>");
+buffer.append("  <field name=\"buy_account\" type=\"string\" stored=\"true\" indexed=\"false\" required=\"false\"/>");
+buffer.append("  <field name=\"account\" type=\"string\" stored=\"true\" indexed=\"false\" required=\"false\"/>");
+buffer.append("  <field name=\"memo\" type=\"string\" stored=\"true\" indexed=\"false\" required=\"false\"/>");
+buffer.append("  <field name=\"is_style\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"is_special\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"is_self\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"is_print\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"is_ratio\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"is_reserve\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"is_additional\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"acrid_level\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"entity_id\" type=\"string\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"show_top\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"start_num\" type=\"int\" stored=\"true\" indexed=\"false\" required=\"false\"/>");
+buffer.append("  <field name=\"special_tag_id\" type=\"string\" stored=\"true\" indexed=\"false\" required=\"false\"/>");
+buffer.append("  <field name=\"tag_source\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"recommend_level\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"kind_menu_id\" type=\"string\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"kind_menu_name\" type=\"string\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"kind_menu_code\" type=\"string\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"kind_taste\" type=\"string\" stored=\"true\" indexed=\"false\" docValues=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"make_count\" type=\"int\" stored=\"true\" indexed=\"true\"  required=\"false\"/>");
+buffer.append("  <field name=\"all_child_make\" type=\"string\" stored=\"true\" indexed=\"false\"  docValues=\"true\"  required=\"false\"/>");
+buffer.append("  <field name=\"spec_count\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"all_child_spec\" type=\"string\" stored=\"true\" indexed=\"false\" docValues=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"is_include\" type=\"int\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"all_child_menu_gname\" type=\"string_deli\" stored=\"true\" indexed=\"true\"  required=\"false\"/>");
+buffer.append("  <field name=\"all_child_menu_name\" type=\"string_deli\" stored=\"true\" indexed=\"false\" required=\"false\"/>");
+buffer.append("  <field name=\"all_child_menu_code\" type=\"string_deli\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"all_child_menu_spell\" type=\"string_deli\" stored=\"true\" indexed=\"true\" required=\"false\"/>");
+buffer.append("  <field name=\"all_menu_name\" type=\"cn_pinyin\" stored=\"false\" indexed=\"true\" required=\"false\" multiValued=\"true\" />");
+buffer.append("  <field name=\"menu_spec\" type=\"menuSpec\" stored=\"true\" indexed=\"true\" required=\"false\" multiValued=\"false\"  docValues=\"true\" />");
+buffer.append("  <field name=\"_version_\" type=\"long\" indexed=\"false\" stored=\"true\" required=\"true\" docValues=\"true\"/>");
+buffer.append("  <field name=\"text\"      type=\"string\" indexed=\"true\" stored=\"false\" multiValued=\"true\"/>");
+buffer.append("</fields>");
+buffer.append("  <copyField source=\"name\" dest=\"all_menu_name\"  />");
+buffer.append("  <copyField source=\"all_child_menu_name\" dest=\"all_menu_name\"  />");
+buffer.append("<sharedKey>menu_id</sharedKey>");
+buffer.append("<uniqueKey>menu_id</uniqueKey>");
+buffer.append("<defaultSearchField>all_menu_name</defaultSearchField>");
+buffer.append("<solrQueryParser defaultOperator=\"AND\"/>");
+buffer.append("</schema>");
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.586 s
+[INFO] Finished at: 2016-05-05T18:26:16+08:00
+[INFO] Final Memory: 17M/208M
+[INFO] ------------------------------------------------------------------------

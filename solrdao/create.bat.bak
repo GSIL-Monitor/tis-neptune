@@ -1,0 +1,4 @@
+java  -Dserver_address=10.232.12.85 ^
+      -Dindex_name=search4acrm ^
+      -Dpkg=com.taobao.terminator ^
+      -Dpojo_name=Fang -Doutdir=outidr   -jar ./target/solrdao-1.0-SNAPSHOT.jar

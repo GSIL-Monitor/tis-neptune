@@ -1,0 +1,15 @@
+project.name=jst
+
+terminator.datasource.appname=TERMINATORHOME_APP
+terminator.datasource.group=TERMINATORHOME_GROUP
+
+#xianshang
+#log.source.address=10.143.32.153,10.143.32.154
+#richang
+log.source.address=10.125.12.99 
+
+#log.source.address=112.124.140.16,112.124.140.15
+
+log.source.address=10.125.12.99
+#log.source.address=10.68.211.76
+

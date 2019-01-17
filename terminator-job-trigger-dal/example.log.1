@@ -1,0 +1,602 @@
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDaoFacade' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'jobMetaDataDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'endSearchDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@4718df]
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.orm.ibatis.SqlMapClientTemplate - Opened SqlMapSession [com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl@b96fde] for iBATIS operation
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1bb137d: startup date [Wed Oct 12 18:59:08 CST 2016]; root of context hierarchy
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminatorTriggerBizDal-dao-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f]
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from location pattern [/conf/terminatorTriggerBizDal-dao-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@1bb137d: org.springframework.beans.factory.support.DefaultListableBeanFactory@19c5f1a: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@9e7ee8]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@76e6b0]
+  INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@19c5f1a: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'hdfsIndexDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'triggerJobDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskExecLogDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#91d63f#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDaoFacade' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@80cdf3]
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.orm.ibatis.SqlMapClientTemplate - Opened SqlMapSession [com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl@1e6e01c] for iBATIS operation
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1c2c22f3: startup date [Thu Feb 09 10:12:00 CST 2017]; root of context hierarchy
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminatorTriggerBizDal-dao-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66]
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from location pattern [/conf/terminatorTriggerBizDal-dao-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminator-job-trigger-relation-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/conf/terminator-job-trigger-relation-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [test-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/test-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@1c2c22f3: org.springframework.beans.factory.support.DefaultListableBeanFactory@3c09711b: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,jobMetaDataDAO,endSearchDatasource,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@6f7fd0e6]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@6a4f787b]
+  INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3c09711b: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,jobMetaDataDAO,endSearchDatasource,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'hdfsIndexDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'triggerJobDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskExecLogDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDaoFacade' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'jobMetaDataDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'endSearchDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@4206a205]
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.orm.ibatis.SqlMapClientTemplate - Opened SqlMapSession [com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl@57d5872c] for iBATIS operation
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@769e7ee8: startup date [Thu Feb 09 10:12:22 CST 2017]; root of context hierarchy
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminatorTriggerBizDal-dao-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197]
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from location pattern [/conf/terminatorTriggerBizDal-dao-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@769e7ee8: org.springframework.beans.factory.support.DefaultListableBeanFactory@7c469c48: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@7ee955a8]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@1677d1]
+  INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7c469c48: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'hdfsIndexDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'triggerJobDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskExecLogDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDaoFacade' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@1d119efb]
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.orm.ibatis.SqlMapClientTemplate - Opened SqlMapSession [com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl@659a969b] for iBATIS operation
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1c2c22f3: startup date [Thu Feb 09 10:26:27 CST 2017]; root of context hierarchy
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminatorTriggerBizDal-dao-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66]
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from location pattern [/conf/terminatorTriggerBizDal-dao-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminator-job-trigger-relation-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/conf/terminator-job-trigger-relation-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [test-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/test-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@1c2c22f3: org.springframework.beans.factory.support.DefaultListableBeanFactory@3c09711b: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,jobMetaDataDAO,endSearchDatasource,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@6f7fd0e6]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@6a4f787b]
+  INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3c09711b: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,jobMetaDataDAO,endSearchDatasource,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'hdfsIndexDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'triggerJobDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskExecLogDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDaoFacade' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'jobMetaDataDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'endSearchDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@4206a205]
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.orm.ibatis.SqlMapClientTemplate - Opened SqlMapSession [com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl@57d5872c] for iBATIS operation
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@769e7ee8: startup date [Thu Feb 09 10:26:49 CST 2017]; root of context hierarchy
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminatorTriggerBizDal-dao-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197]
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from location pattern [/conf/terminatorTriggerBizDal-dao-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@769e7ee8: org.springframework.beans.factory.support.DefaultListableBeanFactory@7c469c48: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@7ee955a8]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@1677d1]
+  INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7c469c48: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'hdfsIndexDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'triggerJobDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskExecLogDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDaoFacade' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@1d119efb]
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.orm.ibatis.SqlMapClientTemplate - Opened SqlMapSession [com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl@659a969b] for iBATIS operation
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1c2c22f3: startup date [Fri Feb 10 13:51:39 CST 2017]; root of context hierarchy
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminatorTriggerBizDal-dao-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66]
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from location pattern [/conf/terminatorTriggerBizDal-dao-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminator-job-trigger-relation-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/conf/terminator-job-trigger-relation-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [test-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/test-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@1c2c22f3: org.springframework.beans.factory.support.DefaultListableBeanFactory@3c09711b: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,jobMetaDataDAO,endSearchDatasource,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@6f7fd0e6]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@6a4f787b]
+  INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3c09711b: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,jobMetaDataDAO,endSearchDatasource,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'hdfsIndexDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'triggerJobDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskExecLogDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#234bef66#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDaoFacade' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'jobMetaDataDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'endSearchDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'endSearchDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@4206a205]
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jobMetaDataDAO'
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.orm.ibatis.SqlMapClientTemplate - Opened SqlMapSession [com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl@2f112965] for iBATIS operation
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@769e7ee8: startup date [Fri Feb 10 13:52:00 CST 2017]; root of context hierarchy
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminatorTriggerBizDal-dao-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197]
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from location pattern [/conf/terminatorTriggerBizDal-dao-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@769e7ee8: org.springframework.beans.factory.support.DefaultListableBeanFactory@7c469c48: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@7ee955a8]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@1677d1]
+  INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7c469c48: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'hdfsIndexDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'triggerJobDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#1'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskExecLogDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#2'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'taskDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#159f197#3'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'triggerJobDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskExecLogDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'taskDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDaoFacade' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@1d119efb]
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'terminatorTriggerBizDalDaoFacade'
+  DEBUG main org.springframework.orm.ibatis.SqlMapClientTemplate - Opened SqlMapSession [com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl@659a969b] for iBATIS operation
+  DEBUG main org.springframework.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+  INFO main org.springframework.context.support.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@66133adc: startup date [Wed Feb 15 18:07:03 CST 2017]; root of context hierarchy
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminatorTriggerBizDal-dao-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.orm.ibatis.SqlMapClientFactoryBean#3551a94]
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from location pattern [/conf/terminatorTriggerBizDal-dao-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [conf/terminator-job-trigger-relation-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/conf/terminator-job-trigger-relation-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [test-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/test-context.xml]
+  INFO main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+  DEBUG main org.springframework.beans.factory.xml.BeansDtdResolver - Found beans DTD [http://www.springframework.org/dtd/spring-beans.dtd] in classpath: spring-beans.dtd
+  DEBUG main org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+  DEBUG main org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [/jobtrigger-datasource-context.xml]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@66133adc: org.springframework.beans.factory.support.DefaultListableBeanFactory@7ca48474: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,jobMetaDataDAO,endSearchDatasource,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@5e5792a0]
+  DEBUG main org.springframework.context.support.ClassPathXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@42d80b78]
+  INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7ca48474: defining beans [hdfsIndexDAO,triggerJobDAO,taskExecLogDAO,taskDAO,terminatorTriggerBizDalDAO,terminatorTriggerBizDalDaoFacade,jobMetaDataDAO,endSearchDatasource,terminatorTriggerBizDalDatasource]; root of factory hierarchy
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'hdfsIndexDAO'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'hdfsIndexDAO' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'terminatorTriggerBizDalDatasource' to allow for resolving potential circular references
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'terminatorTriggerBizDalDatasource'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#3551a94'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#3551a94'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#3551a94'
+  DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'hdfsIndexDAO'
+  

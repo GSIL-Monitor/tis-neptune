@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="triggerJobManage" class="com.taobao.terminator.trigger.TriggerJobManage">
+		<property name="zkClientGetter" ref="triggerServerRegister" />
+		<property name="jobMetaDataDAO" ref="jobMetaDataDAO" />
+		<property name="triggerBizDAO" ref="terminatorTriggerBizDalDaoFacade" />
+		
+	</bean>
+
+
+	<bean id="triggerServerRegister"
+		class="com.taobao.terminator.trigger.utils.TriggerServerRegisterFactory" />
+
+	<!-- <bean id="consoleTriggerJobService" class="org.springframework.remoting.rmi.RmiServiceExporter"> 
+		<property name="serviceName"> <value>consoleTriggerJobService</value> </property> 
+		<property name="service" ref="triggerJobManage" /> <property name="serviceInterface"> 
+		<value>com.taobao.terminator.trigger.rmi.TriggerJobConsole</value> </property> 
+		<property name="registry"> <bean class="org.springframework.remoting.rmi.RmiRegistryFactoryBean"> 
+		<property name="port" value="9997" /> </bean> </property> </bean> -->
+</beans>

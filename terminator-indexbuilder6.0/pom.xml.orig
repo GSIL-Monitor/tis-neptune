@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="GBK"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>com.dfire.tis</groupId>
+		<artifactId>terminator-job-trigger-parent</artifactId>
+<<<<<<< HEAD
+		<version>3.6.5-SNAPSHOT</version>
+=======
+		<version>3.6.6</version>
+>>>>>>> f2bb0789969c6ad130687741d61579759d496dbc
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dfire.tis</groupId>
+	<artifactId>terminator-indexbuilder6.0</artifactId>
+
+<<<<<<< HEAD
+	<version>3.6.5-SNAPSHOT</version>
+=======
+	<version>3.6.6</version>
+>>>>>>> f2bb0789969c6ad130687741d61579759d496dbc
+	<packaging>jar</packaging>
+	<url>http://maven.apache.org</url>
+	<build>
+		<finalName>tsearcher-indexbuild6.0</finalName>
+		<plugins>
+			<plugin>
+				<groupId>com.dfire.tis</groupId>
+				<artifactId>tisdep-maven-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<configuration>
+					<excludeScope>provided</excludeScope>
+				</configuration>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.dfire.tis</groupId>
+				<artifactId>tisasm-maven-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<configuration>
+					<descriptor>./assembly.xml</descriptor>
+					<outputDirectory>../</outputDirectory>
+
+					<appendAssemblyId>false</appendAssemblyId>
+					<tarLongFileMode>gnu</tarLongFileMode>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>tisasm</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<properties>
+		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+		<terminator-indexbuilder.version>1.0.2</terminator-indexbuilder.version>
+
+		<test.exclude></test.exclude>
+		<test.exclude.pattern>**/${test.exclude}.java</test.exclude.pattern>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>solrdao</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-mapreduce-client-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-yarn-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-hdfs-extends</artifactId>
+		</dependency>
+
+		<dependency>
+			<artifactId>logback-flume-appender</artifactId>
+			<groupId>com.gilt.logback</groupId>
+			<version>towdfire-0.0.2</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-job-trigger-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>global-diamond-config</artifactId>
+			<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+				</exclusion>
+
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging-api</artifactId>
+				</exclusion>
+
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+
+		</dependency>
+		<!-- package change to com.dfire.tis <dependency> <groupId>com.taobao.tsearcher</groupId> 
+			<artifactId>tsearcher-paoding</artifactId> <version>1.0.0.0-SNAPSHOT</version> 
+			</dependency> -->
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tsearcher-paoding</artifactId>
+			<!-- <version>1.0.0.0</version> -->
+			<version>1.0.3</version>
+		</dependency>
+
+
+
+
+		<!-- <dependency> <groupId>com.taobao.tsearcher</groupId> <artifactId>tsearcher-paoding-pojo</artifactId> 
+			<version>1.0.0.0</version> </dependency> -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+
+			<scope>test</scope>
+		</dependency>
+		<!-- <dependency> <groupId>com.taobao.hsf</groupId> <artifactId>hsf.unit</artifactId> 
+			<version>1.0.0</version> </dependency> <dependency> <groupId>com.taobao.hsf</groupId> 
+			<artifactId>hsf.app.spring</artifactId> <version>${hfs.version}</version> 
+			</dependency> <dependency> <groupId>org.apache.hadoop</groupId> <artifactId>zookeeper</artifactId> 
+			<version>3.3.0</version> </dependency> <dependency> <groupId>org.apache.hadoop</groupId> 
+			<artifactId>hadoop-core</artifactId> <version>0.20.2-cdh3u1</version> </dependency> -->
+		<!-- <dependency> <groupId>org.apache.hadoop</groupId> <artifactId>hadoop-core</artifactId> 
+			<version>1.2.1</version> </dependency> -->
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-client</artifactId>
+		</dependency>
+
+
+
+
+
+
+		<!-- <dependency> <groupId>opensymphony</groupId> <artifactId>quartz</artifactId> 
+			<version>1.6.3</version> </dependency> <dependency> <groupId>com.taobao.terminator</groupId> 
+			<artifactId>terminator-client</artifactId> <version>3.0.2-SNAPSHOT</version> 
+			</dependency> -->
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-indexbuilder-manager</artifactId>
+			<version>${terminator-indexbuilder.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- <dependency> <groupId>com.dfire.tis</groupId> <artifactId>terminator-builder</artifactId> 
+			<version>1.0.0</version> <scope>provided</scope> </dependency> -->
+
+		<!-- <dependency> <groupId>com.taobao.terminator</groupId> <artifactId>terminator-core</artifactId> 
+			<version>3.0.2.3-SNAPSHOT</version> <version>3.1.0-SNAPSHOT</version> </dependency> -->
+		<!-- <dependency> <groupId>com.taobao.terminator</groupId> <artifactId>terminator-mapreduce</artifactId> 
+			<version>3.0.2.3-SNAPSHOT</version> </dependency> -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.5.8</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.5.8</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>terminator-pubhook-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.dfire.tis</groupId>
+			<artifactId>tis-solrcore-extend</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+
+
+
+	</dependencies>
+
+</project>
