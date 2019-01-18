@@ -24,9 +24,9 @@
 package com.qlangtech.tis.solrj.tracker.impl;
 
 import org.apache.solr.client.solrj.SolrQuery;
-import com.qlangtech.tis.magiceye.Tracing;
-import com.qlangtech.tis.magiceye.exception.ThrowableHandler;
-import com.qlangtech.tis.magiceye.util.TraceUtils;
+import com.dfire.magiceye.Tracing;
+import com.dfire.magiceye.exception.ThrowableHandler;
+import com.dfire.magiceye.util.TraceUtils;
 import com.qlangtech.tis.solrj.tracker.ISpan;
 import com.qlangtech.tis.solrj.tracker.ITracker;
 import io.opentracing.Span;
