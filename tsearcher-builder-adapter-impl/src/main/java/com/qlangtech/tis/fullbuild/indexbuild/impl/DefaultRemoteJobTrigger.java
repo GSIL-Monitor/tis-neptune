@@ -26,9 +26,9 @@ package com.qlangtech.tis.fullbuild.indexbuild.impl;
 import java.io.IOException;
 import com.qlangtech.tis.fullbuild.indexbuild.IRemoteJobTrigger;
 import com.qlangtech.tis.fullbuild.indexbuild.RunningStatus;
-import com.qlangtech.tis.build.client.JobClient;
-import com.qlangtech.tis.build.job.JobConf;
-import com.qlangtech.tis.build.job.RunningJob;
+import com.taobao.terminator.build.client.JobClient;
+import com.taobao.terminator.build.job.JobConf;
+import com.taobao.terminator.build.job.RunningJob;
 import com.qlangtech.tis.common.utils.TSearcherConfigFetcher;
 
 /* *

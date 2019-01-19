@@ -37,7 +37,7 @@ import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import com.qlangtech.tis.order.dump.task.DataSourceRegister.DBRegister;
-import com.qlangtech.tis.build.jobtask.TaskContext;
+import com.taobao.terminator.build.jobtask.TaskContext;
 import com.qlangtech.tis.common.utils.MockHDFSProvider;
 import com.qlangtech.tis.common.utils.RealtimeTerminatorBeanFactory;
 import com.qlangtech.tis.hdfs.client.bean.HdfsRealTimeTerminatorBean;

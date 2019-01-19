@@ -50,7 +50,7 @@ public class TaskExecLog extends TriggerBasicScreen {
         TaskExecLogCriteria criteria = new TaskExecLogCriteria();
         criteria.createCriteria().andTaskIdEqualTo(new Long(taskid)).andDomainEqualTo(JobConstant.DOMAIN_TERMINAOTR);
         criteria.setOrderByClause("exec_log_id desc");
-        List<com.taobao.terminator.trigger.biz.dal.pojo.TaskExecLog> taskList = this.getTaskExecLogDAO().selectByExampleWithoutBLOBs(criteria);
+        List<com.qlangtech.tis.trigger.biz.dal.pojo.TaskExecLog> taskList = this.getTaskExecLogDAO().selectByExampleWithoutBLOBs(criteria);
         context.put("loglist", taskList);
     }
 

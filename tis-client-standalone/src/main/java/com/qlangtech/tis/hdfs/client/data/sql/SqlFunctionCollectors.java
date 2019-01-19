@@ -180,7 +180,7 @@ public class SqlFunctionCollectors {
             try {
                 times = timerManager.justGetTimes();
                 date = times.startTime;
-            } catch (com.taobao.terminator.exception.TimeManageException e) {
+            } catch (com.qlangtech.tis.exception.TimeManageException e) {
                 // TODO Auto-generated catch block
                 date = new Date();
             }

@@ -44,9 +44,8 @@ public class HdfsClassLoader extends ClassLoader {
     public static final byte[] hadoopcoreJarContent;
 
     static {
-        com.taobao.terminator.hdfs.client.context.impl.tsearcher.Handler.setup();
-        // hdfsprocessJarContent =
-        // readJarContent("tsearch_hadoop_lib/yuti2hdfstransfer-terminator-hdfsprocess-1.0.1.jar");
+        //com.taobao.terminator.hdfs.client.context.impl.tsearcher.Handler.setup();
+        
         hadoopcoreJarContent = readJarContent("tsearch_hadoop_lib/hadoop-core-1.2.1.jar");
     }
 

@@ -42,7 +42,7 @@ import org.apache.hadoop.mapred.FileSplit;
 import org.apache.hadoop.util.ReflectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.qlangtech.tis.build.jobtask.TaskContext;
+import com.taobao.terminator.build.jobtask.TaskContext;
 import com.qlangtech.tis.indexbuilder.exception.RowException;
 import com.qlangtech.tis.indexbuilder.map.IndexConf;
 import com.qlangtech.tis.indexbuilder.source.SourceReader;

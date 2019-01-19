@@ -61,7 +61,7 @@ public class GroupAction extends BasicModule {
         query.setOrderByClause("group_index desc");
         List<ServerGroup> queryResult = this.getServerGroupDAO().selectByExample(query);
         int groupIndex = 0;
-        for (com.taobao.terminator.manage.biz.dal.pojo.ServerGroup group : queryResult) {
+        for (com.qlangtech.tis.manage.biz.dal.pojo.ServerGroup group : queryResult) {
             groupIndex = group.getGroupIndex() + 1;
             break;
         }

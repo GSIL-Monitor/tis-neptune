@@ -27,7 +27,7 @@ package com.qlangtech.tis.coredefine.module.screen;
  * @author 百岁（baisui@qlangtech.com）
  * @date 2019年1月17日
  */
-public class Appdomainhasnotselected extends com.taobao.terminator.runtime.module.screen.Appdomainhasnotselected {
+public class Appdomainhasnotselected extends com.qlangtech.tis.runtime.module.screen.Appdomainhasnotselected {
 
     /**
      */

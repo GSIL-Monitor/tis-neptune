@@ -30,7 +30,7 @@ import java.util.Collection;
 import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.qlangtech.tis.build.jobtask.TaskContext;
+import com.taobao.terminator.build.jobtask.TaskContext;
 import com.qlangtech.tis.hdfs.client.bean.HdfsRealTimeTerminatorBean;
 
 /* *

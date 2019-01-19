@@ -31,7 +31,7 @@ import com.qlangtech.tis.manage.spring.aop.Func;
  * @author 百岁（baisui@qlangtech.com）
  * @date 2019年1月17日
  */
-public class EditCore extends com.taobao.terminator.runtime.module.screen.jarcontent.Core {
+public class EditCore extends com.qlangtech.tis.runtime.module.screen.jarcontent.Core {
 
     private static final long serialVersionUID = 1L;
 

@@ -27,7 +27,7 @@ package com.qlangtech.tis.coredefine.module.control;
  * @author 百岁（baisui@qlangtech.com）
  * @date 2019年1月17日
  */
-public class AppDomainJstEnvironment extends com.taobao.terminator.trigger.module.control.AppDomain {
+public class AppDomainJstEnvironment extends com.qlangtech.tis.trigger.module.control.AppDomain {
 
     private static final long serialVersionUID = 1L;
 

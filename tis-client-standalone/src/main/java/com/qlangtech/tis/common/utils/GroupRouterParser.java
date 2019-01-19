@@ -57,7 +57,7 @@ public class GroupRouterParser extends AbstractSimpleBeanDefinitionParser {
     @Override
     protected Class<? extends GroupRouter> getBeanClass(Element element) {
         try {
-            String clazz = StringUtils.defaultIfEmpty(element.getAttribute("class"), com.taobao.terminator.hdfs.client.router.SolrCloudPainRouter.class.getName());
+            String clazz = StringUtils.defaultIfEmpty(element.getAttribute("class"), com.qlangtech.tis.hdfs.client.router.SolrCloudPainRouter.class.getName());
             return (Class<? extends GroupRouter>) Class.forName(clazz);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);

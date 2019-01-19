@@ -243,7 +243,7 @@ public class UploadJarAction extends BasicModule implements ModelDriven<UploadJa
         UploadResource resource = this.getUploadResourceDAO().loadFromWriteDB(new Long(rid));
         Assert.assertNotNull("resource can not be null", resource);
         Assert.assertNotNull("resource.getContent() can not null", resource.getContent());
-        Assert.assertEquals("resource type:" + resource.getResourceType() + " rid:" + rid + " is not illegal", com.taobao.terminator.runtime.module.screen.GlobalResource.UPLOAD_RESOURCE_TYPE_GLOBAL, resource.getResourceType());
+        Assert.assertEquals("resource type:" + resource.getResourceType() + " rid:" + rid + " is not illegal", com.qlangtech.tis.runtime.module.screen.GlobalResource.UPLOAD_RESOURCE_TYPE_GLOBAL, resource.getResourceType());
         Assert.assertEquals(resource.getMd5Code(), ConfigFileReader.md5file(resource.getContent()));
         getResponse().setContentType(DownloadResource.JAR_CONTENT_TYPE);
         DownloadServlet.setDownloadName(getResponse(), rid + "_" + (System.currentTimeMillis() / 1000) + ".jar");

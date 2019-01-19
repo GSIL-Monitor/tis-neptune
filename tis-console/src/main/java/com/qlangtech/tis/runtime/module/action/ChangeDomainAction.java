@@ -216,7 +216,7 @@ public class ChangeDomainAction extends BasicModule implements ModelDriven<Chang
 
     private static void setAppdomainCookie(HttpServletResponse response, HttpServletRequest request, RunEnvironment runtime, final Application app) {
         final String host = request.getHeader("Host");
-        addCookie(response, COOKIE_SELECT_APP, (app != null ? app.getProjectName() : com.taobao.terminator.manage.common.ManageUtils.getAppDomain(request).getAppName()) + "_run" + (runtime == null ? StringUtils.EMPTY : runtime.getId()), StringUtils.substringBefore(host, ":"));
+        addCookie(response, COOKIE_SELECT_APP, (app != null ? app.getProjectName() : com.qlangtech.tis.manage.common.ManageUtils.getAppDomain(request).getAppName()) + "_run" + (runtime == null ? StringUtils.EMPTY : runtime.getId()), StringUtils.substringBefore(host, ":"));
     }
 
     private static void setAppdomainCookie(HttpServletResponse response, HttpServletRequest request, RunEnvironment runtime) {

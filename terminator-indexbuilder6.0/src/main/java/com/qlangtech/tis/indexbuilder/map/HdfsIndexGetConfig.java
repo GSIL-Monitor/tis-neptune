@@ -38,9 +38,9 @@ import org.apache.hadoop.fs.Path;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.qlangtech.tis.hdfs.TISHdfsUtils;
-import com.qlangtech.tis.build.jobtask.TaskContext;
-import com.qlangtech.tis.build.task.TaskMapper;
-import com.qlangtech.tis.build.task.TaskReturn;
+import com.taobao.terminator.build.jobtask.TaskContext;
+import com.taobao.terminator.build.task.TaskMapper;
+import com.taobao.terminator.build.task.TaskReturn;
 import com.qlangtech.tis.pubhook.common.ConfigConstant;
 
 /* *

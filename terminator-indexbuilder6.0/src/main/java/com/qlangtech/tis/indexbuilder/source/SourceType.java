@@ -28,14 +28,5 @@ package com.qlangtech.tis.indexbuilder.source;
  * @date 2019年1月17日
  */
 public enum SourceType {
-
-    YUNTI,
-    YUNTI2,
-    YUNTI3,
-    HDFS,
-    HBASE094,
-    HBASE092,
-    MYSQL,
-    ODPS,
-    UNKNOWN
+	YUNTI,YUNTI2,YUNTI3,HDFS,HBASE094,HBASE092,MYSQL,ODPS,UNKNOWN
 }

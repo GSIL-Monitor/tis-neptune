@@ -33,7 +33,7 @@ public class TermiantorTSearcherNamespaceHandler extends NamespaceHandlerSupport
 
     @Override
     public void init() {
-        registerBeanDefinitionParser("query", new com.taobao.terminator.common.utils.TSearcherQueryParser());
+        registerBeanDefinitionParser("query", new com.qlangtech.tis.common.utils.TSearcherQueryParser());
         // <tsearcher:bean id="search4realpmplistnew">
         // <tsearcher:fulldump ref="fullDataProvider" />
         // <!--
@@ -41,12 +41,12 @@ public class TermiantorTSearcherNamespaceHandler extends NamespaceHandlerSupport
         // -->
         // <tsearcher:incrdump ref="incrDataProvider" />
         // </tsearcher:bean>
-        registerBeanDefinitionParser("common", new com.taobao.terminator.common.utils.TSearcherDumpAndQueryParser());
-        registerBeanDefinitionParser("realtime", new com.taobao.terminator.common.utils.TSearcherDumpAndQueryParser());
-        registerBeanDefinitionParser("fulldump", new com.taobao.terminator.common.utils.DumpProviderParser());
+        registerBeanDefinitionParser("common", new com.qlangtech.tis.common.utils.TSearcherDumpAndQueryParser());
+        registerBeanDefinitionParser("realtime", new com.qlangtech.tis.common.utils.TSearcherDumpAndQueryParser());
+        registerBeanDefinitionParser("fulldump", new com.qlangtech.tis.common.utils.DumpProviderParser());
         // 增量dump
-        registerBeanDefinitionParser("incrdump", new com.taobao.terminator.common.utils.DumpProviderParser());
-        registerBeanDefinitionParser("dataprocess", new com.taobao.terminator.common.utils.DataprocessorParser());
+        registerBeanDefinitionParser("incrdump", new com.qlangtech.tis.common.utils.DumpProviderParser());
+        registerBeanDefinitionParser("dataprocess", new com.qlangtech.tis.common.utils.DataprocessorParser());
         registerBeanDefinitionParser("grouprouter", new GroupRouterParser());
         // com.taobao.terminator.hdfs.client.router;ModGroupRouter
         registerBeanDefinitionParser("yuntidump", new TSearcherYuntiParser());

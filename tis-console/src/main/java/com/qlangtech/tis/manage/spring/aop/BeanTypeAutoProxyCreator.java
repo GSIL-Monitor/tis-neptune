@@ -41,7 +41,7 @@ public class BeanTypeAutoProxyCreator extends AbstractAutoProxyCreator {
 
     private static final long serialVersionUID = 1L;
 
-    private static final Pattern pkg_pattern = Pattern.compile("^com\\.taobao\\.terminator\\.(runtime|trigger|coredefine)\\..*");
+    private static final Pattern pkg_pattern = Pattern.compile("^com\\.qlangtech\\.tis\\.(runtime|trigger|coredefine)\\..*");
 
     @Override
     protected Object[] getAdvicesAndAdvisorsForBean(Class<?> beanClass, String beanName, TargetSource customTargetSource) throws BeansException {
@@ -53,9 +53,6 @@ public class BeanTypeAutoProxyCreator extends AbstractAutoProxyCreator {
     }
 
     public static void main(String[] arg) {
-        Matcher m = pkg_pattern.matcher("com.taobao.terminator.runtimee.spring.aop");
-        if (m.matches()) {
-            System.out.println("match");
-        }
+       
     }
 }

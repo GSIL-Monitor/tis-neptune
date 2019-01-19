@@ -345,12 +345,12 @@ public class Query_005findex_jsp extends BasicServlet {
             out.write("    </p>\r\n");
             out.write("     <div>\r\n");
             out.write("  ");
-            List<com.taobao.terminator.solrdao.pojo.PSchemaField> slist = (List<com.taobao.terminator.solrdao.pojo.PSchemaField>) request.getAttribute("sfields");
+            List<com.qlangtech.tis.solrdao.pojo.PSchemaField> slist = (List<com.qlangtech.tis.solrdao.pojo.PSchemaField>) request.getAttribute("sfields");
             List<String> selectedFields = (List<String>) request.getAttribute("selectedFields");
             if (selectedFields == null) {
                 throw new IllegalStateException(" the attr of the key 'selectedFields' can not be null in httprequest");
             }
-            for (com.taobao.terminator.solrdao.pojo.PSchemaField field : slist) {
+            for (com.qlangtech.tis.solrdao.pojo.PSchemaField field : slist) {
                 if (field.isStored()) {
                     out.write("\r\n");
                     out.write("  <input type=\"checkbox\" name=\"sfields\" ");

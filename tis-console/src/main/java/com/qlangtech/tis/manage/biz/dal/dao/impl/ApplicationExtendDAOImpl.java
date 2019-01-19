@@ -119,9 +119,7 @@ public class ApplicationExtendDAOImpl extends BasicDAO<ApplicationExtend, Applic
         }
     }
 
-    /* (non-Javadoc)
-	 * @see com.taobao.terminator.manage.common.OperationLogger#getEntityName()
-	 */
+    
     @Override
     public String getEntityName() {
         // TODO Auto-generated method stub

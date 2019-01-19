@@ -37,7 +37,7 @@ public class TResourceManagerImpl extends ResourceManagerImpl {
         // <property name="spring.resource.loader.class"
         // value="com.taobao.terminator.manage.common.webx.WebxSpringResourceLoaderAdapter"
         // />
-        rsvc.getConfiguration().setProperty("spring.resource.loader.class", "com.taobao.terminator.manage.common.webx.WebxSpringResourceLoaderAdapter");
+        rsvc.getConfiguration().setProperty("spring.resource.loader.class", "com.qlangtech.tis.manage.common.webx.WebxSpringResourceLoaderAdapter");
         super.initialize(rsvc);
     }
 }

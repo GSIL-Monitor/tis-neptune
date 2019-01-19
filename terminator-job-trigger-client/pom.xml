@@ -11,11 +11,10 @@
 	</parent>
 
 	<artifactId>terminator-job-trigger-client</artifactId>
-	<version>3.7.47</version>
 	<packaging>jar</packaging>
 
 	<properties>
-		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+		
 	</properties>
 
 	<name>terminator-job-trigger-client</name>

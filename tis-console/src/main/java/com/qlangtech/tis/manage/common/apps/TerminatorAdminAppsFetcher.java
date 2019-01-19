@@ -80,7 +80,7 @@ public class TerminatorAdminAppsFetcher extends NormalUserApplicationFetcher {
     }
 
     @Override
-    protected void setApplicationApplyCriteria(com.taobao.terminator.manage.biz.dal.pojo.ApplicationApplyCriteria.Criteria criteria) {
+    protected void setApplicationApplyCriteria(com.qlangtech.tis.manage.biz.dal.pojo.ApplicationApplyCriteria.Criteria criteria) {
     }
 
     @Override

@@ -30,8 +30,7 @@ package com.qlangtech.tis.indexbuilder.map;
 public class SuccessFlag {
 
     public enum Flag {
-
-        RUNNING, SUCCESS, KILL, FAILURE
+        RUNNING,SUCCESS,KILL,FAILURE
     }
 
     private Flag flag = Flag.RUNNING;

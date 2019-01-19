@@ -38,8 +38,8 @@ import org.apache.solr.common.SolrInputField;
 import org.apache.solr.schema.IndexSchema;
 import org.apache.solr.schema.SchemaField;
 import org.apache.solr.update.DocumentBuilder;
-import com.qlangtech.tis.build.metrics.Counters;
-import com.qlangtech.tis.build.metrics.Messages;
+import com.taobao.terminator.build.metrics.Counters;
+import com.taobao.terminator.build.metrics.Messages;
 import com.qlangtech.tis.indexbuilder.index.IndexMaker;
 import com.qlangtech.tis.indexbuilder.map.IndexConf;
 

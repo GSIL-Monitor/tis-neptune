@@ -194,7 +194,7 @@ public class TriggerJobManage implements TriggerJobConsole, InitializingBean {
     {
         try {
             final JobKey jobkey = createJobKey(schedule);
-            final JobDetail job = JobBuilder.newJob(com.taobao.terminator.trigger.socket.TriggerJob.class).withIdentity(jobkey).build();
+            final JobDetail job = JobBuilder.newJob(com.qlangtech.tis.trigger.socket.TriggerJob.class).withIdentity(jobkey).build();
             log.debug("job.getKey():" + job.getKey());
             // job.getJobDataMap().put(CONNECTION, conn);
             job.getJobDataMap().put(JOB_SCHEDULE, schedule);

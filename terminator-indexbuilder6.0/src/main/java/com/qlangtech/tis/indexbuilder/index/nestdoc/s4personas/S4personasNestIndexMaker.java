@@ -28,8 +28,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.solr.common.SolrInputDocument;
 import org.apache.solr.schema.IndexSchema;
-import com.qlangtech.tis.build.metrics.Counters;
-import com.qlangtech.tis.build.metrics.Messages;
+import com.taobao.terminator.build.metrics.Counters;
+import com.taobao.terminator.build.metrics.Messages;
 import com.qlangtech.tis.indexbuilder.index.nestdoc.NestIndexMaker;
 import com.qlangtech.tis.indexbuilder.map.IndexConf;
 

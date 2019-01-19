@@ -37,7 +37,7 @@ public class TaskLogDetail extends TriggerBasicScreen {
         this.disableNavigationBar(context);
         Long logid = new Long(this.getInt("logid"));
         Assert.assertNotNull(logid);
-        com.taobao.terminator.trigger.biz.dal.pojo.TaskExecLog log = this.getTaskExecLogDAO().loadFromWriteDB(logid);
+        com.qlangtech.tis.trigger.biz.dal.pojo.TaskExecLog log = this.getTaskExecLogDAO().loadFromWriteDB(logid);
         context.put("log", log);
     }
 

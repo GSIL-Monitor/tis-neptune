@@ -96,12 +96,7 @@ public class BuilderContext implements IBuilderContext {
         this.appName = appName;
     }
 
-    /*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.taobao.terminator.solrdao.IBuilderContext#getResourceInputStream()
-	 */
+    
     public InputStream getResourceInputStream() throws Exception {
         URL url = new URL("http://" + getServerAddress() + ":8080/terminator-search/" + getAppName() + "-0/admin/file/?contentType=text/xml;charset=utf-8&file=schema.xml");
         System.out.println(url);
@@ -109,11 +104,7 @@ public class BuilderContext implements IBuilderContext {
         return reader;
     }
 
-    /*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.taobao.terminator.solrdao.IBuilderContext#getOutputStream()
-	 */
+    
     public Writer getOutputStream() throws Exception {
         return new OutputStreamWriter(FileUtils.openOutputStream(this.getNewFileName(), false));
     }

@@ -27,7 +27,7 @@ package com.qlangtech.tis.trigger.module.control;
  * @author 百岁（baisui@qlangtech.com）
  * @date 2019年1月17日
  */
-public class AppDomain extends com.taobao.terminator.runtime.module.control.AppDomain {
+public class AppDomain extends com.qlangtech.tis.runtime.module.control.AppDomain {
 
     // @Override
     // protected String getAppDesc(AppDomainInfo appDomain, BizDomain bizDomain,

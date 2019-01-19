@@ -82,7 +82,7 @@ public class AppDomain extends BasicModule {
         return "您尚未选择应用";
     }
 
-    protected boolean shallSelectApp(com.taobao.terminator.manage.biz.dal.pojo.Department department, Application app) {
+    protected boolean shallSelectApp(com.qlangtech.tis.manage.biz.dal.pojo.Department department, Application app) {
         // return department != null && app != null;
         return true;
     }

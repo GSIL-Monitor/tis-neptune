@@ -33,7 +33,7 @@ import org.apache.hadoop.conf.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.sun.management.OperatingSystemMXBean;
-import com.qlangtech.tis.build.jobtask.Context;
+import com.taobao.terminator.build.jobtask.Context;
 import com.qlangtech.tis.indexbuilder.index.IndexMerger.MergeMode;
 import com.qlangtech.tis.indexbuilder.source.SourceType;
 import com.qlangtech.tis.pubhook.common.RunEnvironment;

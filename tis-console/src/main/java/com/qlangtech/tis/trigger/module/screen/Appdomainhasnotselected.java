@@ -27,7 +27,7 @@ package com.qlangtech.tis.trigger.module.screen;
  * @author 百岁（baisui@qlangtech.com）
  * @date 2019年1月17日
  */
-public class Appdomainhasnotselected extends com.taobao.terminator.runtime.module.screen.Appdomainhasnotselected {
+public class Appdomainhasnotselected extends com.qlangtech.tis.runtime.module.screen.Appdomainhasnotselected {
 
     private static final long serialVersionUID = 1L;
 }

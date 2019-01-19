@@ -77,12 +77,7 @@ public class TerminatorPackageBasedActionConfigBuilder extends PackageBasedActio
     public static final Pattern NAMESPACE_TIS_PATTERN = Pattern.compile("com\\.baisui\\.tis\\.(\\w+)\\.module\\.(screen|action|control)(.*)(\\..*)$");
 
     public static void main(String[] arg) {
-        Matcher matcher = NAMESPACE_PATTERN.matcher("com.taobao.terminator.runtime.module.screen.xxxxx.ApplicationContext");
-        if (matcher.matches()) {
-            System.out.println(matcher.group(1));
-            System.out.println(matcher.group(2));
-            System.out.println(matcher.group(3));
-        }
+       
     }
 
     // @Override

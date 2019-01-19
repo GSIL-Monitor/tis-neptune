@@ -27,8 +27,8 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicInteger;
 import org.apache.lucene.store.RAMDirectory;
-import com.qlangtech.tis.build.metrics.Counters;
-import com.qlangtech.tis.build.metrics.Messages;
+import com.taobao.terminator.build.metrics.Counters;
+import com.taobao.terminator.build.metrics.Messages;
 import com.qlangtech.tis.indexbuilder.map.IndexConf;
 import com.qlangtech.tis.indexbuilder.map.SuccessFlag;
 

@@ -27,7 +27,7 @@ package com.qlangtech.tis.trigger.module.control;
  * @author 百岁（baisui@qlangtech.com）
  * @date 2019年1月17日
  */
-public class Appselectboxcontrol extends com.taobao.terminator.runtime.module.control.Appselectboxcontrol {
+public class Appselectboxcontrol extends com.qlangtech.tis.runtime.module.control.Appselectboxcontrol {
 
     private static final long serialVersionUID = 1L;
 }

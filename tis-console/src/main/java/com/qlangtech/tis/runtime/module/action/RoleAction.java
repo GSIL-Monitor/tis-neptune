@@ -92,7 +92,7 @@ public class RoleAction extends BasicModule {
             this.addErrorMessage(context, "请选择功能类型");
             return;
         }
-        com.taobao.terminator.manage.biz.dal.pojo.Func func = new com.taobao.terminator.manage.biz.dal.pojo.Func();
+        com.qlangtech.tis.manage.biz.dal.pojo.Func func = new com.qlangtech.tis.manage.biz.dal.pojo.Func();
         func.setFuncGroupKey(groupType);
         func.setFunKey(funckey);
         func.setFuncName(funcName);
@@ -216,7 +216,8 @@ public class RoleAction extends BasicModule {
 
     private void createRelation(final List<Integer> funcids, Role role) {
         FuncRoleRelation relation = null;
-        com.taobao.terminator.manage.biz.dal.pojo.Func func = null;
+        com.qlangtech.tis.manage.biz.dal.pojo.Func func = null;
+        
         for (Integer id : funcids) {
             func = this.getFuncDAO().loadFromWriteDB(id);
             if (func == null) {

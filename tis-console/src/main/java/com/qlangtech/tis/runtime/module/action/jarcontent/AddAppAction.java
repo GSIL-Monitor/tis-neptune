@@ -27,7 +27,7 @@ package com.qlangtech.tis.runtime.module.action.jarcontent;
  * @author 百岁（baisui@qlangtech.com）
  * @date 2019年1月17日
  */
-public class AddAppAction extends com.taobao.terminator.runtime.module.action.AddAppAction {
+public class AddAppAction extends com.qlangtech.tis.runtime.module.action.AddAppAction {
 
     private static final long serialVersionUID = 1L;
 }

@@ -32,21 +32,21 @@ import java.util.List;
  */
 public class AppTrigger {
 
-    private final com.taobao.terminator.trigger.biz.dal.dao.TriggerJob fullTrigger;
+    private final com.qlangtech.tis.trigger.biz.dal.dao.TriggerJob fullTrigger;
 
-    private final com.taobao.terminator.trigger.biz.dal.dao.TriggerJob incTrigger;
+    private final com.qlangtech.tis.trigger.biz.dal.dao.TriggerJob incTrigger;
 
-    public AppTrigger(com.taobao.terminator.trigger.biz.dal.dao.TriggerJob fullTrigger, com.taobao.terminator.trigger.biz.dal.dao.TriggerJob incTrigger) {
+    public AppTrigger(com.qlangtech.tis.trigger.biz.dal.dao.TriggerJob fullTrigger, com.qlangtech.tis.trigger.biz.dal.dao.TriggerJob incTrigger) {
         super();
         this.fullTrigger = fullTrigger;
         this.incTrigger = incTrigger;
     }
 
-    public com.taobao.terminator.trigger.biz.dal.dao.TriggerJob getFullTrigger() {
+    public com.qlangtech.tis.trigger.biz.dal.dao.TriggerJob getFullTrigger() {
         return fullTrigger;
     }
 
-    public com.taobao.terminator.trigger.biz.dal.dao.TriggerJob getIncTrigger() {
+    public com.qlangtech.tis.trigger.biz.dal.dao.TriggerJob getIncTrigger() {
         return incTrigger;
     }
 

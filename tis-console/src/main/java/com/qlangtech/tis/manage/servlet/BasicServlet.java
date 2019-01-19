@@ -53,18 +53,7 @@ public class BasicServlet extends HttpServlet {
         return WebApplicationContextUtils.getWebApplicationContext(this.getServletContext()).getBean("rpcCoreManage", RpcCoreManage.class);
     }
 
-    // static {
-    // 
-    // try {
-    // Class.forName("com.taobao.terminator.manage.common.ActionTool");
-    // } catch (ClassNotFoundException e) {
-    // throw new RuntimeException(e);
-    // }
-    // 
-    // }
-    // protected BasicModule getBasicModule() {
-    // return getBeanByType(BasicModule.class);
-    // }
+   
     public static <T> T getBeanByType(ServletContext servletContext, Class<T> clazz) {
         for (Object context : WebApplicationContextUtils.getWebApplicationContext(servletContext).getBeansOfType(clazz).values()) {
             return clazz.cast(context);

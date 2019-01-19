@@ -128,7 +128,7 @@ public class QueryIndexServlet extends BasicServlet {
         // "true".equalsIgnoreCase(request.getParameter("debugQuery"));
         final String sort = request.getParameter("sort");
         final String fq = request.getParameter("fq");
-        if (domain instanceof com.taobao.terminator.pubhook.common.Nullable) {
+        if (domain instanceof com.qlangtech.tis.pubhook.common.Nullable) {
             throw new IllegalStateException("domain can not be nullable ");
         }
         final QueryResutStrategy queryResutStrategy = createQueryResutStrategy(domain, request, resp, this.getContext());

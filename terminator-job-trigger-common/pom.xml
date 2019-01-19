@@ -11,7 +11,7 @@
 	</parent>
 
 	<properties>
-		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+		
 	</properties>
 
 	<groupId>com.dfire.tis</groupId>

@@ -14,7 +14,7 @@
 	<version>3.7.47</version>
 
 	<properties>
-		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+		
 	</properties>
 
 	<name>terminator-job-trigger-server</name>

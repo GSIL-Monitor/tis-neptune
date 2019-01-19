@@ -31,7 +31,7 @@ import com.qlangtech.tis.common.LuceneVersion;
 import com.qlangtech.tis.fullbuild.indexbuild.IRemoteJobTrigger;
 import com.qlangtech.tis.fullbuild.indexbuild.IRemoteJobTriggerFactory;
 import com.qlangtech.tis.fullbuild.indexbuild.TaskContext;
-import com.qlangtech.tis.build.job.JobConf;
+import com.taobao.terminator.build.job.JobConf;
 import com.qlangtech.tis.common.utils.TSearcherConfigFetcher;
 import com.qlangtech.tis.pubhook.common.ConfigConstant;
 import com.qlangtech.tis.trigger.feedback.DistributeLog;

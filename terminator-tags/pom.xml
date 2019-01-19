@@ -50,8 +50,7 @@
 
 	<properties>
 		
-		<java.encoding>GBK</java.encoding>
-		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+		
 	</properties>
 
 

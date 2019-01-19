@@ -27,5 +27,5 @@ package com.qlangtech.tis.coredefine.module.control;
  * @author 百岁（baisui@qlangtech.com）
  * @date 2019年1月17日
  */
-public class Department extends com.taobao.terminator.runtime.module.control.Department {
+public class Department extends com.qlangtech.tis.runtime.module.control.Department {
 }

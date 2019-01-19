@@ -31,6 +31,6 @@ import com.qlangtech.tis.runtime.module.action.BasicModule;
  */
 public class ActionTool {
 
-    // com.taobao.terminator.runtime.module.action.BasicModuledomain
+    
     public static final String REQUEST_DOMAIN_KEY = BasicModule.class.getName() + "domain";
 }

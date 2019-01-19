@@ -216,11 +216,11 @@ public class ManageUtils {
         return openDialogScript.format(new Object[] { StringUtils.EMPTY, StringUtils.EMPTY, "function(){}", href });
     }
 
-    public String getConfigViewLink(com.taobao.terminator.manage.common.Module broker, Integer snapshotid) {
+    public String getConfigViewLink(com.qlangtech.tis.manage.common.Module broker, Integer snapshotid) {
         return getConfigViewLink(broker, snapshotid, true);
     }
 
-    public String getConfigViewLink(com.taobao.terminator.manage.common.Module broker, Integer snapshotid, boolean refeshWhenDialogClose) {
+    public String getConfigViewLink(com.qlangtech.tis.manage.common.Module broker, Integer snapshotid, boolean refeshWhenDialogClose) {
         return getConfigViewLink(broker, daoContext.getSnapshotDAO().loadFromWriteDB(snapshotid), refeshWhenDialogClose);
     }
 
@@ -241,7 +241,7 @@ public class ManageUtils {
         return 0;
     }
 
-    public String getConfigViewLink(com.taobao.terminator.manage.common.Module broker, Snapshot snapshot) {
+    public String getConfigViewLink(com.qlangtech.tis.manage.common.Module broker, Snapshot snapshot) {
         return this.getConfigViewLink(broker, snapshot, true);
     }
 
@@ -253,7 +253,7 @@ public class ManageUtils {
      *            展示的链接点进去内容是否可以直接编辑
      * @return
      */
-    public String getConfigViewLink(com.taobao.terminator.manage.common.Module broker, Snapshot snapshot, boolean refeshWhenDialogClose, boolean linkEditable) {
+    public String getConfigViewLink(com.qlangtech.tis.manage.common.Module broker, Snapshot snapshot, boolean refeshWhenDialogClose, boolean linkEditable) {
         StringBuilder url = new StringBuilder();
         Integer snapshotid = snapshot.getSnId();
         url.append("<strong>snapshot:</strong>").append(snapshotid);
@@ -288,7 +288,7 @@ public class ManageUtils {
         return url.toString();
     }
 
-    public String getConfigViewLink(com.taobao.terminator.manage.common.Module broker, Snapshot snapshot, boolean refeshWhenDialogClose) {
+    public String getConfigViewLink(com.qlangtech.tis.manage.common.Module broker, Snapshot snapshot, boolean refeshWhenDialogClose) {
         return getConfigViewLink(broker, snapshot, refeshWhenDialogClose, true);
     }
 

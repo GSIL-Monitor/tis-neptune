@@ -102,7 +102,7 @@ public class ViewPojo extends BasicScreen {
 
             @Override
             public String getTargetNameSpace() {
-                return "com.taobao.terminator";
+                return "com.qlangtech.tis";
             }
         };
         prepare.prepare(builderContext);

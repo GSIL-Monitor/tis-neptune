@@ -17,7 +17,7 @@
 
 
 	<properties>
-		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+		
 	</properties>
 
 	<dependencies>

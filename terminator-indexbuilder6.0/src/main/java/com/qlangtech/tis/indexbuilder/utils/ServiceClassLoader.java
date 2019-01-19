@@ -37,7 +37,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.qlangtech.tis.build.utils.TaskClassLoader;
+import com.taobao.terminator.build.utils.TaskClassLoader;
 import com.qlangtech.tis.indexbuilder.map.HdfsIndexBuilder;
 
 /* *

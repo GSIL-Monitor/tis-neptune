@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="GBK"?>
+<?xml version="1.0" encoding="utf8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
@@ -8,11 +8,8 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	 <modelVersion>4.0.0</modelVersion>
-	<groupId>com.dfire.tis</groupId>
+	<modelVersion>4.0.0</modelVersion>
 	<artifactId>terminator-indexbuilder6.0</artifactId>
-
-	<version>3.7.47</version>
 	<packaging>jar</packaging>
 	<url>http://maven.apache.org</url>
 	<build>
@@ -61,7 +58,7 @@
 
 
 	<properties>
-		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+		
 		<terminator-indexbuilder.version>1.0.2</terminator-indexbuilder.version>
 
 		<test.exclude></test.exclude>

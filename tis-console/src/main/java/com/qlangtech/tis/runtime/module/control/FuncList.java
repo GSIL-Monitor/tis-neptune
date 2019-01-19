@@ -44,12 +44,12 @@ public class FuncList extends BasicScreen {
     public void execute(Context context) throws Exception {
         FuncCriteria criteria = new FuncCriteria();
         // criteria.setOrderByClause("func_group_key desc");
-        Map<FuncGroup, List<com.taobao.terminator.manage.biz.dal.pojo.Func>> funcGroup = new HashMap<FuncGroup, List<com.taobao.terminator.manage.biz.dal.pojo.Func>>();
-        List<com.taobao.terminator.manage.biz.dal.pojo.Func> funcCluter = null;
-        for (com.taobao.terminator.manage.biz.dal.pojo.Func func : this.getFuncDAO().selectByExample(criteria)) {
+        Map<FuncGroup, List<com.qlangtech.tis.manage.biz.dal.pojo.Func>> funcGroup = new HashMap<FuncGroup, List<com.qlangtech.tis.manage.biz.dal.pojo.Func>>();
+        List<com.qlangtech.tis.manage.biz.dal.pojo.Func> funcCluter = null;
+        for (com.qlangtech.tis.manage.biz.dal.pojo.Func func : this.getFuncDAO().selectByExample(criteria)) {
             FuncGroup key = new FuncGroup(func.getFuncGroupKey(), func.getFuncGroupName());
             if ((funcCluter = funcGroup.get(key)) == null) {
-                funcCluter = new ArrayList<com.taobao.terminator.manage.biz.dal.pojo.Func>();
+                funcCluter = new ArrayList<com.qlangtech.tis.manage.biz.dal.pojo.Func>();
                 funcGroup.put(key, funcCluter);
             }
             funcCluter.add(func);

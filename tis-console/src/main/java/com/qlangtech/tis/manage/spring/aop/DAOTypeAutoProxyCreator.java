@@ -54,7 +54,7 @@ public class DAOTypeAutoProxyCreator extends AbstractAutoProxyCreator {
             return DO_NOT_PROXY;
         }
         try {
-            if (beanClass.equals(com.taobao.terminator.manage.biz.dal.dao.impl.OperationLogDAOImpl.class) || IDepartmentDAO.class.isAssignableFrom(beanClass)) {
+            if (beanClass.equals(com.qlangtech.tis.manage.biz.dal.dao.impl.OperationLogDAOImpl.class) || IDepartmentDAO.class.isAssignableFrom(beanClass)) {
                 return DO_NOT_PROXY;
             }
         } catch (Exception e) {
@@ -63,6 +63,6 @@ public class DAOTypeAutoProxyCreator extends AbstractAutoProxyCreator {
                 private static final long serialVersionUID = 1L;
             };
         }
-        return ((com.taobao.terminator.manage.common.OperationLogger.class.isAssignableFrom(beanClass))) ? PROXY_WITHOUT_ADDITIONAL_INTERCEPTORS : DO_NOT_PROXY;
+        return ((com.qlangtech.tis.manage.common.OperationLogger.class.isAssignableFrom(beanClass))) ? PROXY_WITHOUT_ADDITIONAL_INTERCEPTORS : DO_NOT_PROXY;
     }
 }

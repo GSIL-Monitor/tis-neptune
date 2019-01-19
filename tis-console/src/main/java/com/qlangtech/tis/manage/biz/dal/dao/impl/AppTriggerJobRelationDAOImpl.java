@@ -119,11 +119,7 @@ public class AppTriggerJobRelationDAOImpl extends BasicDAO<AppTriggerJobRelation
         }
     }
 
-    /*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.taobao.terminator.manage.common.BasicDAO#getTableName()
-	 */
+
     @Override
     public String getEntityName() {
         return "app_trigger_job_relation";

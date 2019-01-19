@@ -119,9 +119,7 @@ public class RdsDbDAOImpl extends BasicDAO<RdsDb, RdsDbCriteria> implements IRds
         }
     }
 
-    /* (non-Javadoc)
-	 * @see com.taobao.terminator.manage.common.OperationLogger#getEntityName()
-	 */
+  
     @Override
     public String getEntityName() {
         return "rds_db";

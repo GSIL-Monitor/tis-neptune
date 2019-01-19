@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="GBK"?>
+<?xml version="1.0" encoding="utf8"?>
 <project>
 	<parent>
 		<groupId>com.dfire.tis</groupId>
@@ -12,7 +12,7 @@
 	<version>3.7.47</version>
 	<name>tsearcher-cloud-common</name>
 	<properties>
-		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+		
 	</properties>
 	<dependencies>
 		<!-- <dependency> <groupId>com.taobao.tsearcher</groupId> <artifactId>tsearcher-hdfs</artifactId> 
